@@ -22,7 +22,7 @@ Mi objetivo con este curso es aprender los siguientes puntos básicos (se podrá
 * Uso de la terminal de un sistema operativo basadoe en **Linux**.
 * Creación de documentos usando **Markdown**.
 
-Más información en la [página web del curso]().
+Más información en la [página web del curso](https://mianfg.bloomgogo.com/clases-programacion/#informacion).
 
 ### Programación en C++
 
