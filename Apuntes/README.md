@@ -40,22 +40,22 @@ Otro de los objetivos de Markdown, es que puedas publicar los documentos “como
 En el lenguaje Markdown encontrarás tres tipos de elementos básicos que a su vez engloban el resto de la sintaxis. Considera esto una cheat sheet con la que guiarte.
 
 * [Elementos de bloque](#elementos-de-bloque)
-    * Párrafos y saltos de línea
-    * Encabezados
-    * Citas
-    * Listas
-    * Códigos de bloque
-    * Reglas horizontales
-* Elementos de línea
-    * Énfasis
-    * Links o enlaces
-    * Código
-    * Imágenes
-* Elementos varios
-    * Tablas
-    * Links automáticos
-    * Omitir Markdown
-* Cositas de GitHub
+    * [Párrafos y saltos de línea](#párrafos-y-saltos-de-línea)
+    * [Encabezados](#encabezados)
+    * [Citas](#citas)
+    * [Listas](#listas)
+    * [Códigos de bloque](#códigos-de-bloque)
+    * [Reglas horizontales](#reglas-horizontales)
+* [Elementos de línea](#elementos-de-línea)
+    * [Énfasis](#énfasis)
+    * [Links o enlaces](#links-o-enlaces)
+    * [Código](#código)
+    * [Imágenes](#imágenes)
+* [Elementos varios](#elementos-varios)
+    * [Tablas](#tablas)
+    * [Links automáticos](#links-automáticos)
+    * [Omitir Markdown](#omitir-markdown)
+* [Cositas de GitHub](#cositas-de-github)
 
 ## Elementos de bloque
 
@@ -450,18 +450,20 @@ Se trata de la **barra invertida** `\`.
 
 Escribiéndola justo delante de cualquiera de los elementos que verás a continuación, los mismos no tendrán efecto a la hora de convertirse en negritas, cursivas, links…
 
-\\ -> barra invertida  
-\` -> acento invertido  
-\* -> asterisco  
-\_ -> guión bajo  
-\{\} -> llaves  
-\[\] -> corchetes  
-\(\) -> paréntesis  
-\# -> almohadilla  
-\+ -> símbolo de suma  
-\- -> guión  
-\. -> punto  
-\! -> exclamación
+| Símbolo | Descripción |
+| --- | --- |
+| \\ | barra invertida |
+| \` | acento invertido |
+| \* | asterisco |
+| \_ | guión bajo |
+| \{\} | llaves |
+| \[\] | corchetes |
+| \(\) | paréntesis |
+| \# | almohadilla |
+| \+ | símbolo de suma |
+| \- | guión |
+| \. | punto |
+| \! | exclamación |
 
 ## Cositas de GitHub
 
