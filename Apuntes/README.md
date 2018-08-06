@@ -133,12 +133,10 @@ Si la cita en cuestión se compone de varios párrafos, deberás añadir el mism
 
 ~~~ md
 > Creo que los animales ven en el hombre un ser igual a ellos que ha perdido de forma extraordinariamente peligrosa el sano intelecto animal.
-
 > Es decir, que ven en él al animal irracional, al animal que ríe, al animal que llora, al animal infeliz. — Friedrich Nietzsche
 ~~~
 
 > Creo que los animales ven en el hombre un ser igual a ellos que ha perdido de forma extraordinariamente peligrosa el sano intelecto animal.
-
 > Es decir, que ven en él al animal irracional, al animal que ríe, al animal que llora, al animal infeliz. — Friedrich Nietzsche
 
 Incluso puedes concatenar varios `>>` para crear **citas anidadas**.
