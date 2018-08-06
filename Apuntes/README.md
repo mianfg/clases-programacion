@@ -362,7 +362,7 @@ Se convierte en
 
     Esto es una línea de código
 
-Ojo, ¡estos espacios deberás incluirlos en cada línea que escribas! Para añadir código en bloque es mejor utilizar la sintaxis que viste anteriormente: [códigos de bloque](#).
+Ojo, ¡estos espacios deberás incluirlos en cada línea que escribas! Para añadir código en bloque es mejor utilizar la sintaxis que viste anteriormente: [códigos de bloque](#códigos-de-bloque).
 
 ### Imágenes
 
