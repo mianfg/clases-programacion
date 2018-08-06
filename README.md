@@ -6,9 +6,10 @@ Bienvenido al repositorio de las Clases de Programación de [Miguel Ángel (@mia
 
 | Carpeta | Descripción |
 | --- | --- |
-| Ejercicios | Ejercicios de programación, por temas. |
-| Apuntes | Aquí subiremos los apuntes del curso (que lo haréis vosotros), en **Markdown**.
-| Entregas | Aquí podrás subir tus ejercicios (dentro hay una carpeta por alumno), y de ese modo podemos revisar los fallos y las dudas.
+| [Apuntes](./Apuntes) | Aquí subiremos los apuntes del curso (que lo haréis vosotros), en **Markdown**.
+| [Ejercicios](./Ejercicios) | Ejercicios de programación, por temas. |
+| [Entregas](./Entregas) | Aquí podrás subir tus ejercicios (dentro hay una carpeta por alumno), y de ese modo podemos revisar los fallos y las dudas. |
+| [Recursos](./Recursos) | Programas y recursos utilizados para las explicaciones. |
 
 ## Qué es lo que vamos a aprender
 
