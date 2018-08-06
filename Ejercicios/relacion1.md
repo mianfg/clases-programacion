@@ -1,4 +1,4 @@
-# Relación 1.  
+### Relación 1.  
 # "Hello world". Introducción a la programación en C++
 
 > **Clases de programación en C++** · agosto de 2018  
