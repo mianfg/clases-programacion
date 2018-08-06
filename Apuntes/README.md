@@ -1,5 +1,8 @@
 # Apuntes
 
+> **Clases de programación en C++** · agosto de 2018  
+> Miguel Ángel Fernández Gutiérrez ([@mianfg](https://mianfg.bloomgogo.com))
+
 ## Curso avanzado de Markdown
 
 ### ¿Cómo que _avanzado_? ¿Por qué _Markdown_?
@@ -12,7 +15,7 @@ Además, Markdown es el lenguaje que usa GitHub para los `README` y los document
 
 La mejor manera de hacerse una idea de la sintaxis de Markdown es simplemente echar un vistazo a un escrito formateado como tal.
 
-~~~ markdown
+~~~
 ## Título
 ### Subtítulo
 Este es un ejemplo de texto que da entrada a una lista genérica de elementos:
