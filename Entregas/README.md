@@ -5,4 +5,4 @@
 
 ## Directrices para subir archivos
 
-Para subir archivos, seguiremos lo especificado en el `README` de **Ejercicios**, que está [aquí](https://github.com/mianfg/clases-programacion/tree/master/Ejercicios#c%C3%B3digos).
+Para subir archivos, seguiremos lo especificado en el `README` de **Ejercicios**, que está [aquí](../Ejercicios#códigos).
