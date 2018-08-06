@@ -39,7 +39,7 @@ Otro de los objetivos de Markdown, es que puedas publicar los documentos “como
 
 En el lenguaje Markdown encontrarás tres tipos de elementos básicos que a su vez engloban el resto de la sintaxis. Considera esto una cheat sheet con la que guiarte.
 
-* Elementos de bloque
+* [Elementos de bloque](#elementos-de-bloque)
     * Párrafos y saltos de línea
     * Encabezados
     * Citas
@@ -52,8 +52,10 @@ En el lenguaje Markdown encontrarás tres tipos de elementos básicos que a su v
     * Código
     * Imágenes
 * Elementos varios
+    * Tablas
     * Links automáticos
     * Omitir Markdown
+* Cositas de GitHub
 
 ## Elementos de bloque
 
@@ -346,7 +348,7 @@ Para ello tienes disponible dos alternativas.
 
 ### Código puro `<code>`
 
-La forma más sencilla de escribir código en Markdown es envolver el texto entre dos comillas sencillas `\``. Esto se corresponde con la etiqueta HTML `<code>`.
+La forma más sencilla de escribir código en Markdown es envolver el texto entre dos **acentos graves** \`. Esto se corresponde con la etiqueta HTML `<code>`.
 
 ~~~ md
 `Esto es una línea de código`
@@ -407,41 +409,62 @@ O dos, sin ensuciar tu espacio de escritura.
 
 ## Elementos varios
 
+### Tablas
+
+Añadir una tabla es muy sencillo: simplemente sigue el siguiente formato.
+
+~~~ md
+| Nombre | Descripción |
+| ------ | ----------- |
+| Hoola  | Helouu      |
+| Adioss | Byee        |
+~~~
+
+| Nombre | Descripción |
+| ------ | ----------- |
+| Hoola  | Helouu      |
+| Adioss | Byee        |
+
+Puedes añadir el número de `-` que quieras (debe haber al menos uno), pero sólo después de la primera fila: si añades más, aparecerá _per se_, y si no lo añades tras la primera fila, no se generará la tabla.
+
 ### Links automáticos
 
 Cuando viste los tipos de links te comenté que había un tipo más: los automáticos.
 
 Estos son necesarios cuando lo que quieres es mostrar una URL completa, y no un enlace enmascarado bajo una palabra o frase como ocurre con los links en línea.
 
-Para generar links automáticos tan solo tendrás que rodearlos con los símbolos < >
+Para generar links automáticos tan solo tendrás que rodearlos con los símbolos `< >`.
 
-<http://www.limni.net>
+~~~md
+<http://example.com>
+~~~
+<http://example.com>
 
-http://www.limni.net
-Omitir Markdown
+### Omitir Markdown
 
-Si has llegado hasta aquí es probable que te estés preguntando cómo he conseguido escribir ciertos símbolos como * asteriscos o _ guiones bajos, sin que Markdown los interprete para convertirlos en negritas, cursivas…
+Si has llegado hasta aquí es probable que te estés preguntando cómo he conseguido escribir ciertos símbolos como `*` asteriscos o `_` guiones bajos, sin que Markdown los interprete para convertirlos en negritas, cursivas…
 
 Esto es muy sencillo, ya que en este lenguaje existe un elemento estrella para especificar que todo lo que escribas a continuación, no se interprete como Markdown.
 
-Se trata de la barra invertida \.
+Se trata de la **barra invertida** `\`.
 
 Escribiéndola justo delante de cualquiera de los elementos que verás a continuación, los mismos no tendrán efecto a la hora de convertirse en negritas, cursivas, links…
 
-\  barra invertida
-`  acento invertido
-*  asterisco
-_  guión bajo
-{} llaves
-[] corchetes
-() paréntesis
-#  almohadilla
-+  símbolo de suma
--  guión
-.  punto
-!  exclamación
+\\ -> barra invertida  
+\` -> acento invertido  
+\* -> asterisco  
+\_ -> guión bajo  
+\{\} -> llaves  
+\[\] -> corchetes  
+\(\) -> paréntesis  
+\# -> almohadilla  
+\+ -> símbolo de suma  
+\- -> guión  
+\. -> punto  
+\! -> exclamación
 
-Ahora que ya conoces todas las bondades de Markdown y has descubierto lo sencillo que resulta, seguro que quieres echarle el guante a alguna aplicación para empezar a escribir más cómodamente.
+## Cositas de GitHub
 
-## Bibliografía
+Los Markdown en GitHub (que deben tener extensión `.md`) tienen una serie de funcionalidades añadidas que podrás encontrar [aquí](https://guides.github.com/features/mastering-markdown/).
 
+> Basado en el texto de <https://markdown.es/>
