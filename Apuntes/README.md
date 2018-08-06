@@ -154,12 +154,24 @@ Incluso puedes concatenar varios `>>` para crear **citas anidadas**.
 
 Recuerda separar los **saltos de línea** con `>`, o `>>` si te encuentras dentro de la cita anidada; para crear párrafos dentro del mismo bloque de cita.
 
-Listas
+### Listas
 
 A diferencia de lo que ocurre en HTML, generar listas en Markdown es tremendamente sencillo. Puedes encontrarte con dos tipos.
-Listas desordenadas
 
-Para crear listas desordenadas utiliza * asteriscos, - guiones, o + símbolo de suma.
+#### Listas desordenadas
+
+Para crear **listas desordenadas** utiliza `*` **asteriscos**, `-` **guiones**, o `+` **símbolos de suma**.
+
+~~~ md
+- Elemento de lista 1
+- Elemento de lista 2
+* Elemento de lista 3
+* Elemento de lista 4
++ Elemento de lista 5
++ Elemento de lista 6
+~~~
+
+Da igual qué elemento escojas, incluso puedes intercambiarlos. Todos se verán igual al procesarse.
 
 - Elemento de lista 1
 - Elemento de lista 2
@@ -168,16 +180,16 @@ Para crear listas desordenadas utiliza * asteriscos, - guiones, o + símbolo de 
 + Elemento de lista 5
 + Elemento de lista 6
 
-Da igual qué elemento escojas, incluso puedes intercambiarlos. Todos se verán igual al procesarse.
+Para generar listas anidadas dentro de otras, simplemente tendrás que añadir cuatro espacios en blanco antes del siguiente `*`, `-` o `+` (o un tabulador).
 
-    Elemento de lista 1
-    Elemento de lista 2
-    Elemento de lista 3
-    Elemento de lista 4
-    Elemento de lista 5
-    Elemento de lista 6
-
-Para generar listas anidadas dentro de otras, simplemente tendrás que añadir **cuatro espacios en blanco antes del siguiente *, - o +.
+~~~ md
+- Elemento de lista 1
+- Elemento de lista 2
+    - Elemento de lista 3
+    - Elemento de lista 4
+        - Elemento de lista 5
+        - Elemento de lista 6
+~~~
 
 - Elemento de lista 1
 - Elemento de lista 2
@@ -186,16 +198,18 @@ Para generar listas anidadas dentro de otras, simplemente tendrás que añadir *
         - Elemento de lista 5
         - Elemento de lista 6
 
-    Elemento de lista 1
-    Elemento de lista 2
-        Elemento de lista 3
-        Elemento de lista 4
-            Elemento de lista 5
-            Elemento de lista 6
+#### Listas ordenadas
 
-Listas ordenadas
+Para crear listas ordenadas debes utilizar la sintaxis de tipo: _“número.”_ `1.`. Al igual que ocurre con las listas desordenadas, también podrás **anidarlas o combinarlas**.
 
-Para crear listas ordenadas debes utilizar la sintaxis de tipo: “número.” 1.. Al igual que ocurre con las listas desordenadas, también podrás anidarlas o combinarlas.
+~~~ md
+1. Elemento de lista 1
+2.  Elemento de lista 2
+    - Elemento de lista 3
+    - Elemento de lista 4
+        1. Elemento de lista 5
+        2. Elemento de lista 6
+~~~
 
 1. Elemento de lista 1
 2.  Elemento de lista 2
@@ -204,37 +218,41 @@ Para crear listas ordenadas debes utilizar la sintaxis de tipo: “número.” 1
         1. Elemento de lista 5
         2. Elemento de lista 6
 
-    Elemento de lista 1
-    Elemento de lista 2
-        Elemento de lista 3
-        Elemento de lista 4
-            Elemento de lista 5
-            Elemento de lista 6
-
-Códigos de bloque
+## Códigos de bloque
 
 Si quieres crear un bloque entero que contenga código. Lo único que tienes que hacer es encerrar dicho párrafo entre dos líneas formadas por tres ~ virgulillas.
 
 Tal que así:
 
+~~~ md
+\~~~
+Creando códigos de bloque.
+Puedes añadir tantas líneas y párrafos como quieras.  
+\~~~
+~~~
+
+De esta forma, obtendrás el siguiente resultado:
 
 ~~~
 Creando códigos de bloque.
 Puedes añadir tantas líneas y párrafos como quieras.  
 ~~~
 
-De esta forma, obtendrás el siguiente resultado:
+Colocando a la derecha del `~~~` el nombre del lenguaje a utilizar, se formateará el texto de acuerdo al lenguaje.
 
-Creando códigos de bloque.
-Puedes añadir tantas líneas y párrafos como quieras.
+### Reglas horizontales
 
-Reglas horizontales
-
-Las reglas horizontales se utilizan para separar secciones de una manera visual. Las estás viendo constantemente en este artículo ya que las estoy utilizando para separar los diferentes elementos de sintaxis de Markdown.
+Las `reglas horizontales` se utilizan para separar secciones de una manera visual. Las estás viendo constantemente en este artículo ya que las estoy utilizando para separar los diferentes elementos de sintaxis de Markdown.
 
 Para crearlas, en una línea en blanco deberás incluir tres de los siguientes elementos: asteriscos, guiones, o guiones bajos.
 
 Es decir
+
+~~~ md
+***
+---
+___
+~~~
 
 ***
 ---
@@ -242,37 +260,47 @@ ___
 
 También puedes separarlos mediante un espacio en blanco por pura estética.
 
+~~~ md
 * * *
 - - -
 _ _ _
+~~~
 
-Elementos de línea
-Énfasis (negritas y cursivas)
+## Elementos de línea
+### Énfasis (negritas y cursivas)
 
-Markdown utiliza asteriscos o guiones bajos para enfatizar.
+Markdown utiliza `*` **asteriscos** o `_` **guiones bajos** para enfatizar.
 
 Simplemente tendrás que envolver palabras o textos en éstos símbolos para conseguir cursivas o negritas.
-Markdown	Resultado
-*cursiva*	cursiva
-_cursiva_	cursiva
-**negrita**	negrita
-__negrita__	negrita
+
+| Markdown | Resultado |
+| --- | --- |
+| `*cursiva*` | *cursiva* |
+| `_cursiva_` | _cursiva_ |
+| `**negrita**` | **negrita** |
+| `__negrita__` | __negrita__ |
 
 Por supuesto si quieres utilizar los dos tipos de énfasis no tienes más que combinar la sintaxis, envolviendo la palabra entre tres asteriscos o tres guiones bajos.
-Markdown	Resultado
-***cursiva y negrita***	cursiva y negrita
-___cursiva y negrita___	cursiva y negrita
-Links o enlaces
+
+| Markdown | Resultado |
+| --- | --- |
+| `***cursiva y negrita***` | ***cursiva y negrita*** |
+| `___cursiva y negrita___` | ___cursiva y negrita___ |
+
+### Links o enlaces
 
 Añadir enlaces a una publicación, más que común, hoy en día es algo casi obligatorio. Con Markdown tendrás varias formas de hacerlo.
-Links o enlaces en línea
+
+#### Links o enlaces en línea
 
 Son los enlaces de toda la vida. Como su nombre indica, se encuentran en línea con el texto.
 
-Se crean escribiendo la palabra o texto enlazada entre [] corchetes, y el link en cuestión entre () paréntesis.
-Markdown	Resultado
-[enlace en línea](http://www.limni.net)	enlace en línea
-Links o enlaces como referencia
+Se crean escribiendo la palabra o texto enlazada entre `[]` **corchetes**, y el link en cuestión entre `()` **paréntesis**.
+
+| Markdown | Resultado |
+| `[enlace](http://example.com/)` | [enlace](http://example.com/) |
+
+#### Links o enlaces como referencia
 
 La desventaja del método anterior, es que si utilizas links demasiado complejos o largos pueden dificultarte la lectura de tu texto.
 
@@ -280,34 +308,42 @@ Para solucionarlo y crear tu contenido de una manera más ordenada puedes genera
 
 Esto quiere decir que en tu texto enlazarás palabras o códigos concretos (formados por letras y/o números), que en otro lugar más apartado de tu documento tendrás definidos como determinadas URL.
 
+~~~ md
 [nombre que quieres darle a tu enlace][nombre de tu referencia]
-
 [nombre de tu referencia]: http:www.tuenlace.com
+~~~
 
 Esto se ve más claro con un ejemplo.
 
-Me llamo Javier Cristóbal y tengo un blog sobre [productividad mac][blog].
+~~~ md
+Hola, soy Miguel Ángel y aquí tienes mi [página web][website].
 
-En dicha [web][blog] recopilo artículos sobre todo lo relacionado con automatización, gestión y eficiencia.
+En dicha [web][website] encontrarás más información sobre mí.
 
-[blog]: http://limni.net/blog/
+[website]: https://mianfg.bloomgogo.com/
+~~~
 
-La referencia [blog] puede estar incluida en cualquier parte del documento, así puedes organizarte mejor y de una manera más limpia, recopilando todas tus referencias en un mismo lugar.
+La referencia `[website]` puede estar incluida en cualquier parte del documento, así puedes organizarte mejor y de una manera más limpia, recopilando todas tus referencias en un mismo lugar.
 
-Además como ves a continuación, esta referencia no se incluye en el resultado final, sino que desaparece.
+Además como ves a continuación, esta referencia no se incluye en el resultado final, sino que desaparece, como se ve a continuación:
 
-“Me llamo Javier Cristóbal y tengo un blog sobre productividad mac.
+Hola, soy Miguel Ángel y aquí tienes mi [página web][website].
 
-En dicha web recopilo artículos sobre todo lo relacionado con automatización, gestión y eficiencia.”
-Links automáticos
+En dicha [web][website] encontrarás más información sobre mí.
 
-Verás esta forma dentro de elementos varios: links automáticos
-Código
+[website]: https://mianfg.bloomgogo.com/
+
+#### Links automáticos
+
+Verás esta forma dentro de **elementos varios**: [links automáticos](#).
+
+## Código
 
 En según que tipo de publicaciones (sobre todo las de carácter técnico), necesitarás añadir pequeñas secciones donde mostrar código de otro lenguaje, atajos de teclado, o demás contenido que no debería ser tratado como tal.
 
 Para ello tienes disponible dos alternativas.
-Código puro <code>
+
+### Código puro <code>
 
 La forma más sencilla de escribir código en Markdown es envolver el texto entre dos comillas sencillas `. Esto se corresponde con la etiqueta HTML <code>
 
