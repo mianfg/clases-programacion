@@ -56,7 +56,7 @@ En el lenguaje Markdown encontrarás tres tipos de elementos básicos que a su v
     * [Imágenes](#imágenes)
 * [Elementos varios](#elementos-varios)
     * [Tablas](#tablas)
-    * [Links automáticos](#links-automáticos)
+    * [Links automáticos](#links-automáticos-1)
     * [Omitir Markdown](#omitir-markdown)
 * [Cositas de GitHub](#cositas-de-github)
 
@@ -330,7 +330,7 @@ En dicha [web][website] encontrarás más información sobre mí.
 
 #### Links automáticos
 
-Verás esta forma dentro de **elementos varios**: [links automáticos](#).
+Verás esta forma dentro de **elementos varios**: [links automáticos](#links-automáticos-1).
 
 ## Código
 
