@@ -40,7 +40,7 @@ Otro de los objetivos de Markdown, es que puedas publicar los documentos “como
 
 ## Índice
 
-En el lenguaje Markdown encontrarás tres tipos de elementos básicos que a su vez engloban el resto de la sintaxis. Considera esto una cheat sheet con la que guiarte.
+En el lenguaje Markdown encontrarás tres tipos de elementos básicos que a su vez engloban el resto de la sintaxis. Considera esto una _cheat sheet_ con la que guiarte.
 
 * [Elementos de bloque](#elementos-de-bloque)
     * [Párrafos y saltos de línea](#párrafos-y-saltos-de-línea)
@@ -50,7 +50,7 @@ En el lenguaje Markdown encontrarás tres tipos de elementos básicos que a su v
     * [Códigos de bloque](#códigos-de-bloque)
     * [Reglas horizontales](#reglas-horizontales)
 * [Elementos de línea](#elementos-de-línea)
-    * [Énfasis](#énfasis)
+    * [Énfasis](#énfasis-negritas-y-cursivas)
     * [Links o enlaces](#links-o-enlaces)
     * [Código](#código)
     * [Imágenes](#imágenes)
