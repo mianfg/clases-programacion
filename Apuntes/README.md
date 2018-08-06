@@ -220,7 +220,7 @@ Para crear listas ordenadas debes utilizar la sintaxis de tipo: _“número.”_
 
 ## Códigos de bloque
 
-Si quieres crear un bloque entero que contenga código. Lo único que tienes que hacer es encerrar dicho párrafo entre dos líneas formadas por tres ~ virgulillas.
+Si quieres crear un bloque entero que contenga código. Lo único que tienes que hacer es encerrar dicho párrafo entre dos líneas formadas por tres `~` **virgulillas**.
 
 Tal que así:
 
@@ -298,6 +298,7 @@ Son los enlaces de toda la vida. Como su nombre indica, se encuentran en línea 
 Se crean escribiendo la palabra o texto enlazada entre `[]` **corchetes**, y el link en cuestión entre `()` **paréntesis**.
 
 | Markdown | Resultado |
+| --- | --- |
 | `[enlace](http://example.com/)` | [enlace](http://example.com/) |
 
 #### Links o enlaces como referencia
@@ -343,56 +344,70 @@ En según que tipo de publicaciones (sobre todo las de carácter técnico), nece
 
 Para ello tienes disponible dos alternativas.
 
-### Código puro <code>
+### Código puro `<code>`
 
-La forma más sencilla de escribir código en Markdown es envolver el texto entre dos comillas sencillas `. Esto se corresponde con la etiqueta HTML <code>
+La forma más sencilla de escribir código en Markdown es envolver el texto entre dos comillas sencillas `\``. Esto se corresponde con la etiqueta HTML `<code>`.
 
+~~~ md
 `Esto es una línea de código`
+~~~
 
-Se verá como Esto es una línea de código.
+Se verá como `Esto es una línea de código`.
 
 Como ves, es muy útil para introducir código dentro de la misma línea o párrafo, algo que no permite el método siguiente.
-Texto preformateado <pre>
 
-La otra manera de añadir código en Markdown es comenzar el párrafo con cuatro espacios en blanco. Esto se corresponde con la etiqueta HTML <pre>
+### Texto preformateado `<pre>`
 
+La otra manera de añadir código en Markdown es comenzar el párrafo con cuatro espacios en blanco. Esto se corresponde con la etiqueta HTML `<pre>`
 
+~~~ md
     Esto es una línea de código
+~~~
 
 Se convierte en
 
-Esto es una línea de código
+    Esto es una línea de código
 
-Ojo, ¡estos espacios deberás incluirlos en cada línea que escribas! Para añadir código en bloque es mejor utilizar la sintaxis que viste anteriormente: códigos de bloque.
-Imágenes
+Ojo, ¡estos espacios deberás incluirlos en cada línea que escribas! Para añadir código en bloque es mejor utilizar la sintaxis que viste anteriormente: [códigos de bloque](#).
+
+### Imágenes
 
 Insertar una imagen con Markdown se realiza de una manera prácticamente idéntica a insertar links.
 
-Solo que en este caso, deberás añadir un símbolo de ! exclamación al principio y el enlace no será otro que la ubicación de la imagen.
+Solo que en este caso, deberás añadir un símbolo de `!` **exclamación** al principio y el enlace no será otro que la ubicación de la imagen.
 
-
-
+~~~md
 ![Texto alternativo](/ruta/a/la/imagen.jpg)
+~~~
 
 El texto alternativo es lo que se mostraría si la carga de la imagen fallase.
 
 También podrás añadir un título alternativo entrecomillándolo al final de la ruta. Esto sería el título mostrado al dejar el cursor del ratón sobre la imagen.
 
+~~~
 ![Texto alternativo](/ruta/a/la/imagen.jpg "Título alternativo")
+~~~
 
 Ya que al añadir imágenes también estás tratando con URLs, puedes utilizar el método que viste anteriormente para incluir links mediante referencias, solo que en este caso los enlaces de referencia serán aquellos donde se encuentre tu imagen.
 
 De esta forma podrías insertar una imagen
+~~~
 ![nombre de la imagen][img1]
+~~~
 
 O dos, sin ensuciar tu espacio de escritura.
+~~~
 ![nombre de la imagen2][img2] 
+~~~
 
+~~~
 [img1]: /ruta/a/la/imagen.jpg "Título alternativo"
 [img2]: /ruta/a/la/imagen2.jpg "Título alternativo"
+~~~
 
-Elementos varios
-Links automáticos
+## Elementos varios
+
+### Links automáticos
 
 Cuando viste los tipos de links te comenté que había un tipo más: los automáticos.
 
