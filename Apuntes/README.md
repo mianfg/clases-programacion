@@ -50,7 +50,7 @@ En el lenguaje Markdown encontrarás tres tipos de elementos básicos que a su v
     * [Códigos de bloque](#códigos-de-bloque)
     * [Reglas horizontales](#reglas-horizontales)
 * [Elementos de línea](#elementos-de-línea)
-    * [Énfasis](#énfasis-negritas-y-cursivas)
+    * [Énfasis](#Énfasis-negritas-y-cursivas)
     * [Links o enlaces](#links-o-enlaces)
     * [Código](#código)
     * [Imágenes](#imágenes)
