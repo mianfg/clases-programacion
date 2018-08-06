@@ -109,7 +109,7 @@ cout << “Parte entera: ” << (int) x << endl;
 }
 ~~~
 
-Compara esto con cómo realizaste el [ejercicio 1.2](#): en él (probablemente) utilizaste el casting implícito. En este caso, lo hemos especificado.
+Compara esto con cómo realizaste el [ejercicio 1.2](#ejercicio-12-parte-entera-de-un-n%C3%BAmero-real): en él (probablemente) utilizaste el casting implícito. En este caso, lo hemos especificado.
 
 Tenga en cuenta que el casting es otro operador y que tiene una prioridad alta, ya que está al nivel de los operadores unarios. Si tiene alguna duda, deberá poner la expresión entre paréntesis.
 
@@ -123,7 +123,7 @@ static_cast<TIPO> (EXPRESION)
 
 que convierte el valor resultante de la `EXPRESION` al tipo `TIPO`.
 
-En el [ejercicio 1.7](#), trabajaremos la conversión de tipos entre `char` e `int` (bidireccional).
+En el [ejercicio 1.7](#ejercicio-17-caracteres-y-n%C3%BAmero-ascii-asociado), trabajaremos la conversión de tipos entre `char` e `int` (bidireccional).
 
 ##### Ejercicio 1.7. Caracteres y número ASCII asociado
 
