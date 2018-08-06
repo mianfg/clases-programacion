@@ -225,15 +225,6 @@ Para crear listas ordenadas debes utilizar la sintaxis de tipo: _“número.”_
 
 Si quieres crear un bloque entero que contenga código. Lo único que tienes que hacer es encerrar dicho párrafo entre dos líneas formadas por tres `~` **virgulillas**.
 
-Tal que así:
-
-~~~ md
-\~~~
-Creando códigos de bloque.
-Puedes añadir tantas líneas y párrafos como quieras.  
-\~~~
-~~~
-
 De esta forma, obtendrás el siguiente resultado:
 
 ~~~
