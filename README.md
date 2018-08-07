@@ -1,6 +1,6 @@
 # Clases de Programación - @mianfg
 
-Bienvenido al repositorio de las Clases de Programación de [Miguel Ángel (@mianfg)](https://mianfg.bloomgogo.com). Aquí es donde subiremos todo el trabajo que hagamos durante el [curso de introducción]().
+Bienvenido al repositorio de las Clases de Programación de [Miguel Ángel (@mianfg)](https://mianfg.bloomgogo.com). Aquí es donde subiremos todo el trabajo que hagamos durante el [curso de introducción](https://mianfg.bloomgogo.com/clases-programacion).
 
 ## Cómo está organizado este repo
 
@@ -19,9 +19,11 @@ Mi objetivo con este curso es aprender los siguientes puntos básicos (se podrá
 ### Uso de software libre esencial
 
 * Aprender a manejar `git` y **GitHub**.
+  * Tienes un manual [aquí](./Manuales/manual-github.md). :wink:
 * Manejo básico de un sistema operativo basado en **Linux**.
-* Uso de la terminal de un sistema operativo basadoe en **Linux**.
+* Uso de la terminal de un sistema operativo basado en **Linux**.
 * Creación de documentos usando **Markdown**.
+  * Tienes un manual [aquí](./Manuales/manual-markdown.md). :wink:
 
 Más información en la [página web del curso](https://mianfg.bloomgogo.com/clases-programacion/#informacion).
 
@@ -62,6 +64,10 @@ Modularización avanzada. Creación y uso de clases y estructuras.
 * entre otros
 
 No te preocupes si ahora esto suena a chino: aprenderemos qué significa cada uno de estos comandos.
+
+### ¡Aprende ahora!
+
+He hecho un **manual** para que aprendas a utilizar GitHub. Accede a él [aquí](./Manuales/manual-github.md).
 
 ## En favor del software libre: qué vamos a utilizar
 
