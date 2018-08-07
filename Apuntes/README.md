@@ -40,7 +40,7 @@ Otro de los objetivos de Markdown, es que puedas publicar los documentos “como
 
 ## Índice
 
-En el lenguaje Markdown encontrarás tres tipos de elementos básicos que a su vez engloban el resto de la sintaxis. Considera esto una cheat sheet con la que guiarte.
+En el lenguaje Markdown encontrarás tres tipos de elementos básicos que a su vez engloban el resto de la sintaxis. Considera esto una _cheat sheet_ con la que guiarte.
 
 * [Elementos de bloque](#elementos-de-bloque)
     * [Párrafos y saltos de línea](#párrafos-y-saltos-de-línea)
@@ -50,13 +50,13 @@ En el lenguaje Markdown encontrarás tres tipos de elementos básicos que a su v
     * [Códigos de bloque](#códigos-de-bloque)
     * [Reglas horizontales](#reglas-horizontales)
 * [Elementos de línea](#elementos-de-línea)
-    * [Énfasis](#énfasis)
+    * [Énfasis](#Énfasis-negritas-y-cursivas)
     * [Links o enlaces](#links-o-enlaces)
     * [Código](#código)
     * [Imágenes](#imágenes)
 * [Elementos varios](#elementos-varios)
     * [Tablas](#tablas)
-    * [Links automáticos](#links-automáticos)
+    * [Links automáticos](#links-automáticos-1)
     * [Omitir Markdown](#omitir-markdown)
 * [Cositas de GitHub](#cositas-de-github)
 
@@ -330,7 +330,7 @@ En dicha [web][website] encontrarás más información sobre mí.
 
 #### Links automáticos
 
-Verás esta forma dentro de **elementos varios**: [links automáticos](#).
+Verás esta forma dentro de **elementos varios**: [links automáticos](#links-automáticos-1).
 
 ## Código
 
@@ -362,7 +362,7 @@ Se convierte en
 
     Esto es una línea de código
 
-Ojo, ¡estos espacios deberás incluirlos en cada línea que escribas! Para añadir código en bloque es mejor utilizar la sintaxis que viste anteriormente: [códigos de bloque](#).
+Ojo, ¡estos espacios deberás incluirlos en cada línea que escribas! Para añadir código en bloque es mejor utilizar la sintaxis que viste anteriormente: [códigos de bloque](#códigos-de-bloque).
 
 ### Imágenes
 
