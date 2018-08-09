@@ -22,15 +22,7 @@ El tipo de trabajador se indicará escribiendo una letra (T o F).
 Compruebe el comportamiento del programa anterior si,
 cuando pregunta el primer dato (sueldo base), escribimos de forma conjunta sueldo base y tipo de trabajador (sin separación). Por ejemplo, si el sueldo fuese de 1065 euros y el trabajador fuese de tipo fijo escribiríamos 1065F.
 
-### Biblioteca de funciones matemáticas. Errores de aproximación
-
-Para realizar algunos de los siguientes ejercicios, deberás saber utilizar la biblioteca `cmath`. Algunas de las funciones más  interesantes son:
-
-- `sin(x)`, que devuelve el seno de `x`, en radianes.
-- `sqrt(x)`, que devuelve la raíz cuadrada de `x`.
-- `pow(a, b)`, que devuelve la `b`-ésima potencia de `a`, _a^b_.
-
-##### La instrucción `if`/`else`
+### La instrucción `if`/`else`
 
 ##### Ejercicio 2.3. Conversión de escalas
 
@@ -44,7 +36,7 @@ Para ello sabemos que:
 
 Tenga en cuenta que el programa pregunta la temperatura y que ésta se introduce como un número seguido de dos letras que indican las unidades. Por ejemplo:
 
-> 35CF indica que queremos pasar 35◦ Celsius (C) a grados Fahrenheit (F).
+> 35CF indica que queremos pasar 35º Celsius (C) a grados Fahrenheit (F).
 
 **Importante:** no se permite usar operadores lógicos (`&&`, `||`, `!`). Posiblemente la primera idea que nos viene a la cabeza para resolver este problema es establecer las fórmulas para convertir de todas a todas las escalas. Esto nos da un total de 4*4=16 fórmulas diferentes (si tuviésemos más escalas, la cantidad de fórmulas
 aumenta rápidamente). Esta solución, además, necesitaría el uso de condiciones compuestas (que usan operadores lógicos). Piense en una solución alternativa.
@@ -129,7 +121,7 @@ Compruebe si el orden de las subexpresiones afecta al funcionamiento del program
 
 ### El bucle `do`-`while`
 
-##### Ejercicio 2.9. Lectura con `do`-`while`.
+##### Ejercicio 2.9. Lectura con `do`-`while`
 
 Escriba un programa para leer un entero positivo.
 
@@ -235,22 +227,20 @@ condición opuesta. En este caso pueden ser útiles las **leyes de De Morgan** p
 
 Si en el ejemplo anterior deseamos leer números hasta que se lea un negativo o hasta leer el valor `4`, la condición del `while` quedaría como `(!(num<0 || num==4))`, que aplicando las leyes de De Morgan se podría transformar en `(num>=0 && num!=4)`.
 
-1.  Repetir mientras o repetir hasta. Escriba un programa que repite la lectura de un
-número hasta que o bien el número sea múltiplo de 3, o bien el número sea
-positivo e impar. Escriba la condición en términos de hasta y use las leyes de De
+##### Ejercicio 2.17. Repetir mientras o repetir hasta
+
+Escriba un programa que repite la lectura de un número hasta que o bien el número sea múltiplo de 3, o bien el número sea positivo e impar. Escriba la condición en términos de hasta y use las leyes de De
 Morgan para simplificarla.
 
-Clases particulares de programación en C++ · Relación de ejercicios 02
+### El bucle `for`
 
-El bucle for
-18. Tabla de equivalencia entre dólares y euros. En un banco se necesita disponer de
-una tabla de conversión entre dólares y euros. Escriba un programa que muestre
-dicha tabla para un cierto número de dólares. Para ello, el programa pedirá desde
-la entrada estándar el cambio de moneda en curso –cuántos euros vale un dólar– y
-el número de dólares para los que se desea tener la conversión. Utilice un bucle de
-tipo for para resolver el problema. Una posible ejecución sería la siguiente:
-CONSOLA
+##### Ejercicio 2.18.  Tabla de equivalencia entre dólares y euros
 
+En un banco se necesita disponer de una tabla de conversión entre dólares y euros. Escriba un programa que muestre dicha tabla para un cierto número de dólares. Para ello, el programa pedirá desde la entrada estándar el cambio de moneda en curso –cuántos euros vale un dólar– y el número de dólares para los que se desea tener la conversión. Utilice un bucle de tipo for para resolver el problema.
+
+Una posible ejecución sería la siguiente:
+
+~~~
 ¿Cuántos euros vale un dólar? 0.733
 ¿Límite de cambio? 12
 Tabla de cambio:
@@ -260,32 +250,25 @@ Tabla de cambio:
 ...
 11 $ = 8.063 €
 12 $ = 8.796 €
-Ejecutando un cierto número de veces
-19. Media y varianza. Escriba un programa que lea un número entero que indica el
-número de datos y a continuación tantos números reales como indique dicho
-entero. Como resultado, escribirá la media y la varianza de dichos datos. Tenga en
-cuenta que la media y varianza de n datos xi se pueden expresar como:
+~~~
 
-x̅=
-1
-n
-∑xi
-n
-i=1
-Var(x) =
-∑ xi
-n 2
-i=1
-n
-− x̅
-2
+#### Ejecutando un cierto número de veces
+##### Ejercicio 2.19. Media y varianza
 
-Anidamiento de bucles
-20. Mostrar cuadrado. Escriba un programa que lea un número entero N desde la
-entrada estándar y que a continuación dibuje con asteriscos –en la salida
-estándar– un cuadrado de lado N. A continuación vemos un ejemplo de ejecución:
-CONSOLA
+Escriba un programa que lea un número entero que indica el número de datos y a continuación tantos números reales como indique dicho
+entero. Como resultado, escribirá la media y la varianza de dichos datos.
 
+A continuación las ecuaciones de la media y de la varianza:
+
+![Ecuación 2.1](./resources/equation_ej2-1.png)
+
+### Anidamiento de bucles
+##### Ejercicio 2.20. Mostrar cuadrado
+
+Escriba un programa que lea un número entero `N` desde la entrada estándar y que a continuación dibuje con asteriscos –en la salida
+estándar– un cuadrado de lado `N`. A continuación vemos un ejemplo de ejecución:
+
+~~~
 Introduzca el lado del cuadrado: 6
 ******
 ******
@@ -293,27 +276,24 @@ Introduzca el lado del cuadrado: 6
 ******
 ******
 ******
+~~~
 
-Clases particulares de programación en C++ · Relación de ejercicios 02
+##### Ejercicio 2.21.  Media de medias
 
-21. Media de medias. Escriba un programa que lea una serie de temperaturas de
-diferentes ciudades con el siguiente formato:
+Escriba un programa que lea una serie de temperaturas de diferentes ciudades con el siguiente formato:
 
+~~~
 N
 T11 T12 ... -100
 T21 T22 ... -100
 T31 T32 ... -100
 ...
 TN1 TN2 ... -100
-En donde N es el número de ciudades. Cada fila es la secuencia de temperaturas
-de una ciudad. Cada fila puede tener un número diferente de medidas y siempre
-acabará con un valor especial menor o igual a -100 (centinela). El programa
-deberá calcular la temperatura media de cada ciudad y mostrará la máxima de las
-temperaturas medias, así como el número de ciudad a la que corresponde. A
-continuación puede ver un ejemplo de ejecución:
+~~~
 
-CONSOLA
+En donde `N` es el número de ciudades. Cada fila es la secuencia de temperaturas de una ciudad. Cada fila puede tener un número diferente de medidas y siempre acabará con un valor especial menor o igual a `-100` (centinela). El programa deberá calcular la temperatura media de cada ciudad y mostrará la máxima de las temperaturas medias, así como el número de ciudad a la que corresponde. A continuación puede ver un ejemplo de ejecución:
 
+~~~
 4
 13 15 15.6 14 -100
 8 12 -100
@@ -321,46 +301,37 @@ CONSOLA
 23.7 27.4 29.1 -100
 Mayor temperatura media: 26.73333
 Ciudad: 4
-Observe que en este ejemplo hay 4 ciudades. A continuación se introducen 4
-secuencias de datos (una por cada ciudad). Cada secuencia consta de un número
-arbitrario de mediciones acabadas siempre con un valor menor o igual a -100. En
-concreto las medias para cada ciudad son: 14.4, 10, 24.74 y 26.73 y, por tanto, la
-media mayor es 26.73 que se corresponde con la ciudad número 4.
+~~~
 
-Clases particulares de programación en C++ · Relación de ejercicios 02
+Observe que en este ejemplo hay 4 ciudades. A continuación se introducen 4 secuencias de datos (una por cada ciudad). Cada secuencia consta de un número arbitrario de mediciones acabadas siempre con un valor menor o igual a `-100`. En
+concreto las medias para cada ciudad son: `14.4`, `10`, `24.74` y `26.73` y, por tanto, la media mayor es `26.73` que se corresponde con la ciudad número `4`.
 
-Variables lógicas y condiciones compuestas
-22. Números en rango. Escriba un programa que lea un entero y dos números reales:
-n, min y max. Estos valores indican que hay n números de entrada y que deberían
-estar en el intervalo [min,max]. A continuación, deberá leer los n valores de
-entrada y confirmar que todos están en el intervalo indicado. En caso de que uno
-de los valores no lo esté, parará la lectura y terminará el programa indicando que
-hay valores fuera de rango. Resuelva el ejercicio usando un ciclo for. A
-continuación se muestran dos posibles ejecuciones de este programa:
+### Variables lógicas y condiciones compuestas
 
-CONSOLA
+##### Ejercicio 2.22. Números en rango
 
+Escriba un programa que lea un entero y dos números reales: _n_, _min_ y _max_. Estos valores indican que hay n números de entrada y que deberían estar en el intervalo [_min_, _max_]. A continuación, deberá leer los _n_ valores de entrada y confirmar que todos están en el intervalo indicado. En caso de que uno de los valores no lo esté, parará la lectura y terminará el programa indicando que hay valores fuera de rango. Resuelva el ejercicio usando un ciclo for. A continuación se muestran dos posibles ejecuciones de este programa:
+
+~~~
 N, min, max: 3 0.0 5.0
 Introduzca valor 0: 2.3
 Introduzca valor 1: 2
 Introduzca valor 2: 5.0
 Los 3 valores introducidos están en el intervalo [0.0,5.0]
-CONSOLA
+~~~
 
+~~~
 N, min, max: 3 0.0 10.0
 Introduzca valor 0: 12
 Error. Finalización inesperada del programa: fuera de rango
+~~~
 
-23. Cotización de las acciones. Se desea estudiar cómo progresa la cotización de una
-acción a lo largo del tiempo. Para ello, escribiremos un programa que lee la
-secuencia de valores de una acción. Esta secuencia describe el comportamiento de
-la acción durante un período de tiempo. El programa deberá escribir como
-resultado el valor máximo de la acción, el mínimo, la subida máxima, y la bajada
-máxima. Para determinar el final de la secuencia, se introducirá un valor negativo.
-Un ejemplo de ejecución es:
+##### Ejercicio 2.23. Cotización de las acciones
 
-CONSOLA
+Se desea estudiar cómo progresa la cotización de una acción a lo largo del tiempo. Para ello, escribiremos un programa que lee la
+secuencia de valores de una acción. Esta secuencia describe el comportamiento de la acción durante un período de tiempo. El programa deberá escribir como resultado el valor máximo de la acción, el mínimo, la subida máxima, y la bajada máxima. Para determinar el final de la secuencia, se introducirá un valor negativo. Un ejemplo de ejecución es:
 
+~~~
 Introduzca un valor: 1.6
 Introduzca un valor: 1.9
 Introduzca un valor: 1.4
@@ -371,26 +342,23 @@ Valor máximo: 1.9
 Valor mínimo: 1.4
 Subida máxima: 0.3
 Bajada máxima: 0.5
+~~~
 
-Clases particulares de programación en C++ · Relación de ejercicios 02
+Para finalizar el problema, vuelva a ejecutar el programa para comprobar el resultado con las siguientes secuencias:
 
-Para finalizar el problema, vuelva a ejecutar el programa para comprobar el
-resultado con las siguientes secuencias:
-• Secuencia (sin bajadas): 1 2 3 4 5 -1
-• Secuencia (sin subidas): 5 4 3 2 1 -1
-• Secuencia (vacía): -1
-Relación de ejercicios
-24. Calculadora. Escriba un programa que lea dos valores reales y que presente un
-menú con cuatro alternativas: Suma, Resta, Producto y División. El programa
-deberá pedir al usuario que seleccione una de las cuatro y presentar en la salida
-estándar el resultado de la operación correspondiente. Tenga en cuenta que el
-usuario puede responder a la selección tanto con alguno de los 4 dígitos “1234”
-como con cualquiera de los cuatro operadores “+-*/”. Si la respuesta no
-corresponde a ninguno de ellos, terminará indicando que la selección es incorrecta.
-A continuación se presentan dos ejemplos de ejecución.
+> * Secuencia (sin bajadas): `1 2 3 4 5 -1`
+> * Secuencia (sin subidas): `5 4 3 2 1 -1`
+> * Secuencia (vacía): `-1`
 
-CONSOLA
+## Relación de ejercicios
 
+##### Ejercicio 2.24. Calculadora
+
+Escriba un programa que lea dos valores reales y que presente un
+menú con cuatro alternativas: Suma, Resta, Producto y División. El programa deberá pedir al usuario que seleccione una de las cuatro y presentar en la salida estándar el resultado de la operación correspondiente. Tenga en cuenta que el usuario puede responder a la selección tanto con alguno de los 4 dígitos `1234` como con cualquiera de los cuatro operadores `+ - * /`. Si la respuesta no
+corresponde a ninguno de ellos, terminará indicando que la selección es incorrecta. A continuación se presentan dos ejemplos de ejecución.
+
+~~~
 Introduzca el primer dato: 2.5
 Introduzca el segundo dato: 10
 Opciones:
@@ -400,147 +368,140 @@ Opciones:
 4.- División
 ¿Qué operación desea realizar (1234+-*/)? *
 Resultado: 2.5 * 10 = 25
+~~~
 
-CONSOLA
-
+~~~
 Introduzca el primer dato: 1
 Introduzca el segundo dato: 2
 Opciones: ...
 ¿Qué operación desea realizar (1234+-*/)? A
 Error, la opción elegida no es correcta
-25. Espacio cartesiano. Haga un programa que lea las coordenadas de tres puntos en
-un espacio cartesiano 2D y que nos diga si forman o no un triángulo. Además,
-debe indicar si el triángulo es equilátero. Si llamamos a los puntos A, B y C,
-sabemos que forman un triángulo cuando la mayor de las distancias AB, AC, BC
-es menor que la suma de las otras dos. El triángulo es equilátero si las tres
-distancias son iguales.
+~~~
 
-Clases particulares de programación en C++ · Relación de ejercicios 02
+##### Ejercicio 2.25. Espacio cartesiano
 
-26. Notas. Escriba un programa que lea un valor entero desde la entrada estándar y
-que, según sea su valor, escriba alguno (o varios) de los siguientes mensajes:
-• Si es negativo escribirá “Es negativo”.
-• Si está entre 0 y 5 escribirá “Si fuese una nota sería suspenso”.
-• Si vale 2, 4, 8 ó 6 escribirá “Es un número positivo, par y menor que 9”.
-• Si no cumple ninguna de las anteriores dirá “Número extraño”.
-27. Notas (modificado). Reescriba el ejercicio 2.26 usando la sentencia switch.
-28. Clasificando caracteres. Escriba un programa que lea un carácter desde la
-entrada estándar y que diga si:
-• Es un dígito.
-• Es una letra mayúscula.
-• Es una letra minúscula.
-• Es un operador aritmético (+, -, *, /)
-• Es otra cosa.
-29. Monedas y billetes. Escriba un programa que lea un valor real correspondiente a
-un pago en euros y que nos indique el número mínimo de monedas y billetes
-necesarios para pagar dicha cantidad. Debe asumir que únicamente disponemos
-de monedas y billetes de 5eur, 2eur, 1eur, 50cts, 20cts, 5cts, 1cts. No tenemos
-billetes de mayor cuantía ni monedas de 10cts ni 2cts.
-Por ejemplo, si el valor a pagar son 7’37 euros, el programa dirá que necesitamos:
-1 billete de 5eur, 1 moneda de 2eur, 1 moneda de 20cts, 3 monedas de 5cts y 2
-monedas de 2cts.
-30. Calculadora ampliada. Considere el ejercicio de la calculadora (ejercicio 2.24).
-Escriba un programa con el mismo menú, añadiendo tres opciones más:
-• Modificar primer operando.
-• Modificar segundo operando.
-• Fin.
-Para ello, tenga en cuenta que el valor inicial de los operandos es cero, y que la
-solución debe contener un bucle do−while junto con una instrucción switch para
-gestionar el menú.
-31. Número perfecto. Un número perfecto es aquel que es igual a la suma de todos
-sus divisores positivos excepto él mismo. El primer número perfecto es el 6, ya que
-sus divisores son 1, 2 y 3 y 6=1+2+3. Escriba un programa que muestre el mayor
-número perfecto que sea menor a un número dado.
-32. Número narcisista. Un número entero de n dígitos se dice que es narcisista si se
-puede obtener como la suma de las potencias n-ésimas de cada uno de sus
-dígitos. Por ejemplo, 153 = 13+53+33 y 8208 = 84+24+04+84 son números
-narcisistas. Escriba un programa que lea un número entero positivo y nos diga si
-es narcisista o no.
+Haga un programa que lea las coordenadas de tres puntos en un espacio cartesiano 2D y que nos diga si forman o no un triángulo. Además,
+debe indicar si el triángulo es eqilátero. Si llamamos a los puntos A, B y C, sabemos que forman un triángulo cuando la mayor de las distancias AB, AC, BC es menor que la suma de las otras dos. El triángulo es equilátero si las tres distancias son iguales.
 
-Clases particulares de programación en C++ · Relación de ejercicios 02
+##### Ejercicio 2.26. Notas
 
-33. Mostrar figuras. Escriba un programa que lea un número entero N desde la
-entrada estándar y que a continuación dibuje con asteriscos –en la salida
+Escriba un programa que lea un valor entero desde la entrada estándar y que, según sea su valor, escriba alguno (o varios) de los siguientes mensajes:
+
+* Si es negativo escribirá `Es negativo`.
+* Si está entre 0 y 5 escribirá `Si fuese una nota sería suspenso`.
+* Si vale 2, 4, 8 ó 6 escribirá `Es un número positivo, par y menor que 9`.
+* Si no cumple ninguna de las anteriores dirá `Número extraño`.
+
+##### Ejercicio 2.27. Notas (modificado)
+
+Reescriba el [ejercicio 2.26](#here) usando la sentencia `switch`.
+
+##### Ejercicio 2.28. Clasificando caracteres
+
+Escriba un programa que lea un carácter desde la entrada estándar y que diga si:
+
+* Es un dígito.
+* Es una letra mayúscula.
+* Es una letra minúscula.
+* Es un operador aritmético (`+`, `-`, `*`, `/`)
+* Es otra cosa.
+
+##### Ejercicio 2.29. Monedas y billetes
+
+Escriba un programa que lea un valor real correspondiente a un pago en euros y que nos indique el número mínimo de monedas y billetes
+necesarios para pagar dicha cantidad. Debe asumir que únicamente disponemos de monedas y billetes de 5eur, 2eur, 1eur, 50cts, 20cts, 5cts, 1cts. No tenemos billetes de mayor cuantía ni monedas de 10cts ni 2cts.
+
+Por ejemplo, si el valor a pagar son 7’37 euros, el programa dirá que necesitamos: 1 billete de 5eur, 1 moneda de 2eur, 1 moneda de 20cts, 3 monedas de 5cts y 2 monedas de 2cts.
+
+##### Ejercicio 2.30. Calculadora ampliada
+
+Considere el ejercicio de la calculadora ([ejercicio 2.24](#here)). Escriba un programa con el mismo menú, añadiendo tres opciones más:
+
+* Modificar primer operando.
+* Modificar segundo operando.
+* Fin.
+
+Para ello, tenga en cuenta que el valor inicial de los operandos es cero, y que la solución debe contener un bucle `do`−`while` junto con una instrucción `switch` para gestionar el menú.
+
+##### Ejercicio 2.31. Número perfecto
+
+Un número perfecto es aquel que es igual a la suma de todos sus divisores positivos excepto él mismo. El primer número perfecto es el 6, ya que sus divisores son 1, 2 y 3 y 6=1+2+3. Escriba un programa que muestre el mayor número perfecto que sea menor a un número dado.
+
+##### Ejercicio 2.32. Número narcisista
+
+Un número entero de _n_ dígitos se dice que es narcisista si se
+puede obtener como la suma de las potencias _n_-ésimas de cada uno de sus dígitos. Por ejemplo, 153 = 13+53+33 y 8208 = 84+24+04+84 son números narcisistas. Escriba un programa que lea un número entero positivo y nos diga si es narcisista o no.
+
+##### Ejercicio 2.33. Mostrar figuras
+
+Escriba un programa que lea un número entero `N` desde la entrada estándar y que a continuación dibuje con asteriscos –en la salida
 estándar– las siguientes figuras:
+
 1. Triángulo de lado N
 2. Cuadrado hueco de lado N
 3. Rombo de altura N y de ancho N/2. En este caso N debe ser impar.
-A continuación, vemos una muestra de estas figuras para N=7:
 
-CONSOLA
+A continuación, vemos una muestra de estas figuras para `N=7`:
 
-* ******* *
-** * * ***
-*** * * *****
-**** * * *******
-***** * * *****
-****** * * ***
-******* ******* *
-34. Run length encoding. El método RLE (Run Length Encoding) de codificación
-permite almacenar en poco espacio largas secuencias de datos. El algoritmo
-consiste en transformar las secuencias de valores idénticos consecutivos en
-parejas compuestas por el valor y el número de repeticiones. Escriba un programa
-que lea una secuencia de números terminada con un número negativo y la
-codifique mediante el método RLE. Un ejemplo de ejecución sería el siguiente:
-CONSOLA
+~~~
+*          *******       *
+**         *     *      ***
+***        *     *     *****
+****       *     *    *******
+*****      *     *     *****
+******     *     *      ***
+*******    *******       *
+~~~
+##### Ejercicio 2.34. _Run Length Encoding_
 
+El método RLE (Run Length Encoding) de codificación permite almacenar en poco espacio largas secuencias de datos. El algoritmo consiste en transformar las secuencias de valores idénticos consecutivos en
+parejas compuestas por el valor y el número de repeticiones. Escriba un programa que lea una secuencia de números terminada con un número negativo y la codifique mediante el método RLE. Un ejemplo de ejecución sería el siguiente:
+
+~~~
 Introduzca secuencia: 1 1 1 2 2 2 2 2 3 3 3 3 3 3 5 -1
 RLE: 3 1 5 2 6 3 1 5
+~~~
+
 Donde la salida corresponde a indicar que hay 3 unos, 5 dos, 6 tres y 1 cinco.
-35. Número feliz. Se dice que un número natural es feliz si cumple que al sumar los
-cuadrados de sus dígitos y repetimos esta suma con los resultados que vamos
-obteniendo, finalmente obtenemos el dígito 1 como resultado. Por ejemplo, el
-número 203 es un número feliz ya que: 22+02+32 = 13 → 1
 
-2+32 = 10 → 1
-2+02 = 1.
-Además, un número es feliz de grado k si es feliz en un máximo de k iteraciones.
-En el ejemplo anterior, 203 es un número feliz de grado 3 (además, es feliz de
-cualquier grado mayor o igual que 3). Escriba un programa que lea un número n y
-un grado k y diga si n es feliz grado k.
+##### Ejercicio 2.35. Número feliz
 
-Clases particulares de programación en C++ · Relación de ejercicios 02
+Se dice que un número natural es feliz si cumple que al sumar los
+cuadrados de sus dígitos y repetimos esta suma con los resultados que vamos obteniendo, finalmente obtenemos el dígito 1 como resultado. 
 
-36. Secuencia más larga. Escriba un programa que lea una secuencia de enteros
-positivos terminada en un valor negativo, y que escriba en la salida estándar la
-longitud de la subsecuencia de números ordenada de mayor longitud junto con la
-posición donde comienza. Tenga en cuenta que dos números están ordenados si
-el primero es menor o igual que el segundo. Un ejemplo de ejecución es:
-CONSOLA
+Por ejemplo, el número 203 es un número feliz ya que: 2^2+0^2+3^2 = 13 → 1^2+3^2 = 10 → 1^2+0^2 = 1.
 
+Además, un número es feliz de grado _k_ si es feliz en un máximo de _k_ iteraciones.
+
+En el ejemplo anterior, 203 es un número feliz de grado 3 (además, es feliz de cualquier grado mayor o igual que 3). Escriba un programa que lea un número _n_ y un grado _k_ y diga si _n_ es feliz grado _k_.
+
+##### Ejercicio 2.36. Secuencia más larga
+
+Escriba un programa que lea una secuencia de enteros positivos terminada en un valor negativo, y que escriba en la salida estándar la
+longitud de la subsecuencia de números ordenada de mayor longitud junto con la posición donde comienza. Tenga en cuenta que dos números están ordenados si el primero es menor o igual que el segundo. Un ejemplo de ejecución es:
+
+~~~
 Secuencia (termina con negativo): 5 9 1 4 8 8 10 5 14 -1
 Máxima longitud: 5 comenzando en 2
-Observe que el elemento con índice 2 –el número 1– es el comienzo de una
-secuencia de 5 números ordenados. Para finalizar el problema, vuelva a ejecutarlo
-para comprobar el resultado de las siguientes secuencias:
-• Secuencia: -1
-• Secuencia: 1 2 3 4 5 -1
-37. Hipoteca. El valor de la cuota de una hipoteca, dado el capital, el interés y un plazo
-de devolución se puede calcular como:
+~~~
 
-Cuota =
+Observe que el elemento con índice 2 –el número 1– es el comienzo de una secuencia de 5 números ordenados. Para finalizar el problema, vuelva a ejecutarlo para comprobar el resultado de las siguientes secuencias:
 
-Capital · Interés
-100 · (1 − (1 +
-Interés
-100 )
-−Plazo)
+> * Secuencia: `-1`
+> * Secuencia: `1 2 3 4 5 -1`
 
-donde, como consideramos cuotas mensuales, el interés es el mensual –interés
-anual entre 12– y el plazo es el número de meses que dura la hipoteca.
-Como sabemos, las cuotas son idénticas todos los meses (supongamos que es a
-plazo fijo), pero realmente en las primeras se dedica un mayor porcentaje a
-intereses. Concretamente, para calcular la parte de intereses y de capital que se
-paga (amortización), tenemos que calcular:
-Intereses = Pendiente ·
-Interés
-100 Amortización = Cuota − Intereses
-donde “interés” de nuevo es el interés mensual, y “pendiente” es el capital que aún
-queda por pagar. Inicialmente será el total del préstamo, y cada mes disminuirá en
-tanto como sea la amortización.
-Escriba un programa para, a partir de los valores que definen un préstamo (capital,
-interés anual y el plazo en años) conocer cómo se irá pagando. Para ello, tenga en
-cuenta que debe escribir todas las tripletas de valores (pendiente, intereses,
-amortización) que corresponden a cada mes. Además, para cada año -es decir,
-tras doce tripletas- se dará un mensaje con el total de interés y amortización que
-se ha pagado durante ese año.
+##### Ejercicio 2.37. Hipoteca
+
+El valor de la cuota de una hipoteca, dado el capital, el interés y un plazo de devolución se puede calcular como:
+
+![Ecuación 2.3](./resources/equation_ej2-2.png)
+
+donde, como consideramos cuotas mensuales, el interés es el mensual –interés anual entre 12– y el plazo es el número de meses que dura la hipoteca.
+
+Como sabemos, las cuotas son idénticas todos los meses (supongamos que es a plazo fijo), pero realmente en las primeras se dedica un mayor porcentaje a intereses. Concretamente, para calcular la parte de intereses y de capital que se paga (amortización), tenemos que calcular:
+
+![Ecuación 2.3](./resources/equation_ej2-3.png)
+
+donde “interés” de nuevo es el interés mensual, y “pendiente” es el capital que aún queda por pagar. Inicialmente será el total del préstamo, y cada mes disminuirá en tanto como sea la amortización.
+
+Escriba un programa para, a partir de los valores que definen un préstamo (capital, interés anual y el plazo en años) conocer cómo se irá pagando. Para ello, tenga en cuenta que debe escribir todas las tripletas de valores (pendiente, intereses, amortización) que corresponden a cada mes. Además, para cada año -es decir, tras doce tripletas- se dará un mensaje con el total de interés y amortización que se ha pagado durante ese año.
