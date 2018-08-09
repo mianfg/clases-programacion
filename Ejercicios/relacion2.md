@@ -110,7 +110,7 @@ Compruebe el resultado de este programa si damos como segundo número el cero.
 ##### Ejercicio 2.8. Divisor (correcto)
 
 Como habrá comprobado, el funcionamiento del programa del
-[ejercicio 2.7](#here) es incorrecto si el segundo número es cero. Solucione este problema.
+[ejercicio 2.7](#ejercicio-27-divisor) es incorrecto si el segundo número es cero. Solucione este problema.
 
 Para ello, modifique la condición de la instrucción if/else de forma que ahora sea una condición compuesta que verifique que:
 
@@ -149,11 +149,11 @@ Aunque la teoría dice que el bucle `do`−`while` se ejecuta al menos una vez, 
 
 ##### Ejercicio 2.11.  Forzar la primera iteración del bucle `while`
 
-Considere el [ejercicio 2.9](#here). Sustituya el bucle `do`−`while` por otro de tipo `while`. Debe realizar este ejercicio sin añadir nuevas instrucciones de lectura de datos (`cin>>`).
+Considere el [ejercicio 2.9](#ejercicio-29-lectura-con-do-while). Sustituya el bucle `do`−`while` por otro de tipo `while`. Debe realizar este ejercicio sin añadir nuevas instrucciones de lectura de datos (`cin>>`).
 
 ##### Ejercicio 2.12. Procesamiento de datos con `while`
 
-Amplíe el [ejercicio 2.11](#here) con el código necesario para contar el número de dígitos que componen el número que se ha leído. Debe usar un bucle de tipo `while` para esta tarea.
+Amplíe el [ejercicio 2.11](#ejercicio-211--forzar-la-primera-iteración-del-bucle-while) con el código necesario para contar el número de dígitos que componen el número que se ha leído. Debe usar un bucle de tipo `while` para esta tarea.
 
 #### Lectura de datos con centinela
 
@@ -174,7 +174,7 @@ Considere la posibilidad de usar `while` o `do`−`while` y razone cuál de los 
 
 - - -
 
-La solución al [ejercicio 2.13](#here) tiene una desventaja: repite dos veces la comprobación sobre la validez de los datos en cada iteración, lo cual es ineficiente. En la solución con `while` hay que tener cuidado con la primera iteración ya que antes de entrar al bucle se comprueba la condición del mismo por lo que las variables que intervienen en la misma deben ser inicializadas adecuadamente.
+La solución al [ejercicio 2.13](#ejercicio-213-lectura-y-procesamiento-de-datos-con-centinela) tiene una desventaja: repite dos veces la comprobación sobre la validez de los datos en cada iteración, lo cual es ineficiente. En la solución con `while` hay que tener cuidado con la primera iteración ya que antes de entrar al bucle se comprueba la condición del mismo por lo que las variables que intervienen en la misma deben ser inicializadas adecuadamente.
 
 Una solución habitual consiste en modificar el código repitiendo la operación de lectura antes de llegar al bucle. Cuando optamos por esta solución, decimos que realizamos una lectura “adelantada” o “anticipada”.
 
@@ -192,7 +192,7 @@ Esta opción parece ser contraria a un buen diseño, ya que el hecho de repetir 
 
 ##### Ejercicio 2.14.  Lectura anticipada con `while`
 
-Modifique el programa del [ejercicio 2.13](#here) para implementar la lectura anticipada con el bucle `while`.
+Modifique el programa del [ejercicio 2.13](#ejercicio-213-lectura-y-procesamiento-de-datos-con-centinela) para implementar la lectura anticipada con el bucle `while`.
 
 ###### Ejercicio 2.15. Lectura anticipada para mostrar mensajes de entrada diferentes
 
@@ -214,7 +214,7 @@ Por ejemplo, si deseamos crear un bucle que lea datos desde la entrada estándar
 int num;
 do {
     cin >> num;
-} while (¡(num<0)); // equivale a (num>=0)
+} while (!(num<0)); // equivale a (num>=0)
 ~~~
 
 es decir, hemos escrito el bucle con la condición contraria a la que hemos expresado con palabras (iterar mientras no sea negativo). En el texto hemos indicado hasta cuándo deseamos iterar pero el lenguaje sólo nos deja expresar el problema en términos de que iteremos mientras ocurra algo.
@@ -394,7 +394,7 @@ Escriba un programa que lea un valor entero desde la entrada estándar y que, se
 
 ##### Ejercicio 2.27. Notas (modificado)
 
-Reescriba el [ejercicio 2.26](#here) usando la sentencia `switch`.
+Reescriba el [ejercicio 2.26](#ejercicio-226-notas) usando la sentencia `switch`.
 
 ##### Ejercicio 2.28. Clasificando caracteres
 
@@ -415,7 +415,7 @@ Por ejemplo, si el valor a pagar son 7’37 euros, el programa dirá que necesit
 
 ##### Ejercicio 2.30. Calculadora ampliada
 
-Considere el ejercicio de la calculadora ([ejercicio 2.24](#here)). Escriba un programa con el mismo menú, añadiendo tres opciones más:
+Considere el ejercicio de la calculadora ([ejercicio 2.24](#ejercicio-224-calculadora)). Escriba un programa con el mismo menú, añadiendo tres opciones más:
 
 * Modificar primer operando.
 * Modificar segundo operando.
