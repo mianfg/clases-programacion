@@ -214,7 +214,7 @@ Por ejemplo, si deseamos crear un bucle que lea datos desde la entrada estándar
 int num;
 do {
     cin >> num;
-} while (¡(num<0)); // equivale a (num>=0)
+} while (!(num<0)); // equivale a (num>=0)
 ~~~
 
 es decir, hemos escrito el bucle con la condición contraria a la que hemos expresado con palabras (iterar mientras no sea negativo). En el texto hemos indicado hasta cuándo deseamos iterar pero el lenguaje sólo nos deja expresar el problema en términos de que iteremos mientras ocurra algo.
