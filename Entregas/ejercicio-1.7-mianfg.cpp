@@ -1,5 +1,6 @@
 /*
  *  EJERCICIO 1.7 - Caracteres y número ASCII asociado
+ *  Clases particulares de programación en C++
  *  Autor: Miguel Ángel Fernández Gutiérrez (@mianfg)
  *  Fecha: 7 agosto, 2018
  */
