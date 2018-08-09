@@ -23,7 +23,7 @@ int main() {
 		} else if (magnitud_convertida == 'R') {
 			ctd_convertida = 9*ctd_original/5 + 491.67;
 		} else if (magnitud_convertida == 'K') {
-			ctd_convertida += 273.15;			
+			ctd_convertida = ctd_original = 273.15;			
 		} else {
 			cout << "Magnitud a convertir no reconocida";
 			mostrar = false;
