@@ -20,12 +20,12 @@
     4.2 [Comprobación de tamaño: `size()`](#42--comprobación-de-tamaño-size)  
     4.3 [Variación de tamaño: `push_back()`, `pop_back()`, `clear()`](#43--variación-de-tamaño-push_back-pop_back-y-clear)  
     4.4 [Otros operadores](#44--otros-operadores)  
-5. [Recorridos sobre vectores](#)  
-    5.1 [Algoritmos de búsqueda](#)  
-        — 5.1.1 [Búsqueda secuencial](#)  
-        — 5.1.2 [Búsqueda binaria](#)  
-        — 5.1.3 [Otros algoritmos de búsqueda](#)  
-    5.2 [Modificación de elementos de un vector](#)  
+5. [Recorridos sobre vectores](#5-recorridos-sobre-vectores)  
+    5.1 [Algoritmos de búsqueda](#51--algoritmos-de-búsqueda)  
+        — 5.1.1 [Búsqueda secuencial](#511--algoritmo-de-búsqueda-secuencial)  
+        — 5.1.2 [Búsqueda binaria](#512--algoritmo-de-búsqueda-binaria)  
+        — 5.1.3 [Otros algoritmos de búsqueda](#513--otros-algoritmos-de-búsqueda)  
+    5.2 [Modificación de elementos de un vector](#52--modificación-de-los-elementos-de-un-vector)  
         — 5.2.1 [Inserción de un valor](#)  
         — 5.2.2 [Eliminación de un valor](#)  
     5.3 [Algoritmos de ordenación](#)  
@@ -41,6 +41,10 @@
 * [Ejemplo 3.2](#ejemplo-32--resolución-parcial-del-problema-de-las-notas-versión-2) — resolución parcial del problema de las notas (versión 2)
 * [Ejemplo 3.3](#ejemplo-33--resolución-del-problema-de-las-notas-versión-1) — resolución del problema de las notas (versión 1)
 * [Ejemplo 3.4](#ejemplo-34--resolución-del-problema-de-las-notas-versión-2) — resolución del problema de las notas (versión 2)
+* [Algoritmo 3.5](#algoritmo-35--búsqueda-secuencial) — búsqueda secuencial
+* [Algoritmo 3.6](#algoritmo-36--búsqueda-binaria) — búsqueda binaria
+* [Algoritmo 3.7](#algoritmo-37--búsqueda-del-máximo-de-un-vector) — búsqueda del máximo de un vector
+* [Algoritmo 3.8](#algoritmo-38--encontrar-un-vector-dentro-de-otro) — encontrar un vector dentro de otro
 
 - - -
 
