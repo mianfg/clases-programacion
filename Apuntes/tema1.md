@@ -36,10 +36,14 @@ Primer programa: hello world
 
 Un algoritmo es un conjunto ordenado de operaciones sistemáticas que permite hacer un cálculo y hallar la solución de un tipo de problemas.
 
+![Imagen 1.1](./resources/tema1-img1.png)
+
 > Definición más formal:  
 > “Secuencia finita y ordenada de instrucciones determinísticas y precisas tal que ejecutadas en un tiempo finito da respuesta al problema para el que ha sido diseñado.”
 
 #### Propiedades de un algoritmo
+
+![Imagen 1.2](./resources/tema1-img2.png)
 
 - - -
 
@@ -48,6 +52,8 @@ Un algoritmo es un conjunto ordenado de operaciones sistemáticas que permite ha
 Un **dato** es una representación simbólica de una característica o propiedad de una entidad.
 
 Los algoritmos operan sobre **datos de entrada** y **datos de salida**.
+
+![Imagen 1.3](./resources/tema1-img3.png)
 
 - - -
 
@@ -112,6 +118,8 @@ Existen tres tipos de tipos de datos en C++:
 - **Estructurados:** contienen dos o más tipos de datos en él.
 
 ### 6.2  Tipos de datos primitivos
+
+![Imagen 1.4](./resources/tema1-img4.png)
 
 #### Tipo de dato `int`
 
