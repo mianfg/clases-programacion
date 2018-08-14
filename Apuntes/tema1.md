@@ -4,6 +4,21 @@
 > **Clases de programación en C++** · agosto de 2018  
 > Miguel Ángel Fernández Gutiérrez ([@mianfg](https://mianfg.bloomgogo.com))
 
+- - -
+
+## Tabla de contenidos
+
+1. Las estructuras de control de flujo
+2. La estructura de selección
+    2.1 Las estructuras `if` e `if`/`else`
+    2.2 Condiciones compuestas: operadores lógicos
+3. La estructura de iteración: diseño de bucles
+    3.1 El bucle `while` y `do`-`while`
+    3.2 El bucle `for`
+4. Anidamiento de estructuras
+
+- - -
+
 ## 1. Estructuras de control de flujo
 
 El interés del diseño de algoritmo radica en poder ejecutar instrucciones dependiendo de condiciones.
@@ -238,6 +253,19 @@ for (<init>; <condición>; <incremento>) {
 
 ![Imagen 2.3](./resources/tema2-img3.png)
 
-| Imagen | Función | Descripción |
-| --- | --- | --- |
-| ![Imagen 3.8](./resources/tema3-img8.png) | `v.push_back(x)` | Inserta al vector el elemento `x` al final de éste. 
+- - -
+
+## 4. Anidamiento de estructuras
+
+Las estructuras de control de flujo pueden ser **anidadas** a conveniencia: podemos colocar una estructura dentro de otra (un `if` dentro de un `while`, un `for` dentro de un `if`...).
+
+Sin embargo, hay que tener cuidado: anidar estructuras puede hacer nuestro programa más lento e ineficiente (incluso dar fallos en nociones más avanzadas de programación, como el uso de memoria dinámica). Debemos siempre ser muy conscientes de qué queremos anidar, y si existe alguna otra alternativa que nos permita no utilizarlo, será mucho mejor si no complica el código en exceso.
+
+- - -
+
+## Repaso de conceptos
+
+- ¿Qué es el flujo de ejecución de un programa?
+- Uso de todas las estructuras de control de flujo
+- Comprensión de la funcionalidad de cada estructura
+- Conocimiento de la posibilidad de anidamiento
