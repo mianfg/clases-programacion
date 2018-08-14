@@ -30,64 +30,106 @@ En C++ tenemos las siguientes:
 - `if ... else if ... else` (estructura de selección compuesta)
 - `switch`/`case` (estructura de selección compuesta)
 
+### 2.1  Las estructuras `if` e `if`/`else`
 
-
-
-| Imagen | Función | Descripción |
-| --- | --- | --- |
-| ![Imagen 3.8](./resources/tema3-img8.png) | `v.push_back(x)` | Inserta al vector el elemento `x` al final de éste. Debe ser del mismo tipo que el vector. |
-| ![Imagen 3.9](./resources/tema3-img9.png) | `v.pop_back()` | Elimina el último elemento del vector. |
-| ![Imagen 3.10](./resources/tema3-img10.png) | `v.clear()` | Vacía el vector. |
-
-- - -
-
-##### ¡Ahora podemos mejorar la solución a nuestro problema!
+#### Cuerpo básico de una estructura `if`/`else`
 
 ~~~ c++
-#include<iostream>
-#include<vector>
-using namespace std;
-
-int main() {
-    vector<double> notas;
-    double entrada;
-
-    cout << "Inserte todas las notas que quiera,
-            finalice con una nota no válida: ";
-    
-    do {
-        cin >> entrada;
-        if ( entrada >= 0 && entrada <= 10 )
-            notas.push_back(entrada);
-    } while ( entrada >= 0 && entrada <= 10 );
-
-    double media = 0;
-    for ( int i = 0; i < notas.size(); i++ )
-        media += notas[i];
-    media /= notas.size();
-    double moda = 0;
-
-    int superan_media = 0;
-    for ( int i = 0; i < notas.size(); i++ )
-        if ( notas[i] > media )
-            superan_media++;
-
-    for ( int i = 0; i < notas.size(); i++ )
-        if ( notas[i] > moda )
-        moda = notas[i];
-
-    cout << "Media: " << media << endl
-         << "Superan la media: " << superan_media << endl
-         << "Moda: " << moda << endl;
+if (<condición>) {
+    <instrucciones_v>
+} else {
+    <instrucciones_f>
 }
 ~~~
 
 - - -
 
-### 4.4  Otros operadores
+##### Ejemplo 2.1 — comprobar si un número es par
 
-La clase `vector` tiene definida multitud de operadores. Sin embargo, con los anteriores, podemos resolver todos los problemas que hagan falta con vectores.
+~~~ c++
+int num;
 
-En la relación de ejercicios se introducen otros operadores. La lista completa la puedes ver en la referencia de C++:
+cout << "Introduce entero: ";
+cin >> num;
 
-<http://www.cplusplus.com/reference/vector/vector/>
+if ( num % 2 == 0 )
+    cout << num << " es par\n";
+else
+    cout << num << " es impar\n";
+~~~
+
+- - -
+
+##### Ejemplo 2.2 — comprobar si un número es par (versión modificada)
+
+_¿Cuál es la diferencia entre este ejemplo y el anterior? ¿Qué ocurriría si intentásemos comprobar la divisibilidad por otros números?_
+
+~~~ c++
+int num;
+
+cout << "Introduce entero: ";
+cin >> num;
+
+if ( num % 2 == 0 )
+    cout << num << " es par\n";
+if ( num % 2 != 0 )
+    cout << num << " es impar\n";
+~~~
+
+- - -
+
+### 2.2  Condiciones compuestas: operadores lógicos
+
+~~~ c++
+if (<condición_1>) {
+    <instrucciones_1>
+} else if (<condición_2>) {
+    <instrucciones_2>
+} ... {
+    ...
+} else {
+    <instrucciones_f>
+}
+~~~
+
+Esta estructura es similar a la anterior, pero evalúa los `if`s de la siguiente manera: si se cumple la primera condición, evalúa su cuerpo, si no, comprueba si se cumple la segunda, y así sucesivamente hasta ejecutar el cuerpo del `else` en caso de que no se cumpla ninguna de las anteriores.
+
+En `<condición>`, debemos insertar una **expresión lógica**. Las expresiones lógicas son construcciones con **operadores lógicos** (aunque también pueden incluir otros operadores).
+
+> Los operadores lógicos fueron vistos en el bloque anterior.
+
+El resultado de una expresión lógica es un valor booleano (`true` o `false`). Cuando el programa encuentra un `if`, evalúa la condición y ejecuta su cuerpo si el resultado es `true`.
+
+- - -
+
+##### Ejemplo 2.3 — comprobaciones de divisibilidad
+
+~~~ c++
+... // código para leer num por entrada estándar
+
+if ( num % 2 == 0 )
+    cout << num << "es múltiplo de 2\n";
+else if ( num % 4 == 0 )
+    cout << num << "es múltiplo de 4\n";
+else if ( num % 5 == 0 )
+    cout << num << "es múltiplo de 5\n";
+else
+    cout << num << "es un número :)\n";
+~~~
+
+_¿Qué mostrará este código si..._
+- _`num` es múltiplo de 2?_
+- _`num` es múltiplo de 5?_
+- _`num` es múltiplo de 4?_
+- _`num` es múltiplo de 2 y no de 4?_
+- _`num` no es múltiplo de 2, ni de 4, ni de 5?_
+
+- - -
+
+### 2.3  La estructura de bifurcación `switch`
+
+
+
+| Imagen | Función | Descripción |
+| --- | --- | --- |
+| ![Imagen 3.8](./resources/tema3-img8.png) | `v.push_back(x)` | Inserta al vector el elemento `x` al final de éste. 
