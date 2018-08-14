@@ -8,14 +8,22 @@
 
 ## 👉 Tabla de contenidos
 
-1. Las estructuras de control de flujo
-2. La estructura de selección  
-    2.1 Las estructuras `if` e `if`/`else`  
-    2.2 Condiciones compuestas: operadores lógicos  
-3. La estructura de iteración: diseño de bucles  
-    3.1 El bucle `while` y `do`-`while`  
-    3.2 El bucle `for`  
-4. Anidamiento de estructuras
+1. [Las estructuras de control de flujo](#1-estructuras-de-control-de-flujo)
+2. [La estructura de selección](#2-la-estructura-de-selección)  
+    2.1 [Las estructuras `if` e `if`/`else`](#21--las-estructuras-if-e-ifelse)  
+    2.2 [Condiciones compuestas: operadores lógicos](#22--condiciones-compuestas-operadores-lógicos)
+    2.3 [La estructura de bifurcación `switch`](#23--la-estructura-de-bifurcación-switch)  
+3. [La estructura de iteración: diseño de bucles](#3-la-estructura-de-iteración-diseño-de-bucles)  
+    3.1 [El bucle `while` y `do`-`while`](#31--el-bucle-while-y-do-while)  
+    3.2 [El bucle `for`](#32--el-bucle-for)  
+4. [Anidamiento de estructuras](#4-anidamiento-de-estructuras)
+
+##### Ejemplos
+
+* [Ejemplo 2.1](#ejemplo-21--comprobar-si-un-número-es-par) — comprobar si un número es par
+* [Ejemplo 2.2](#ejemplo-22--comprobar-si-un-número-es-par-versión-modificada) — comprobar si un número es par (versión modificada)
+* [Ejemplo 2.3](#ejemplo-23--comprobaciones-de-divisibilidad) — comprobaciones de divisibilidad
+* [Ejemplo 2.4](#ejemplo-24--iterando-con-while) — iterando con `while`
 
 - - -
 
