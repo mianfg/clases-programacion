@@ -14,6 +14,8 @@ Para realizar estos ejercicios basta con saber usar las operaciones básicas con
 
 ##### Ejercicio 3.1 — Mostrar elementos de un vector
 
+> 🌟 Este es un ejercicio **muy recomendado**.  
+
 Tengamos el siguiente programa, que muestra la funcionalidad básica de un objeto tipo `vector`:
 
 ~~~c++
@@ -43,6 +45,8 @@ Es muy importante tener en cuenta que la operación `at()` no se puede aplicar c
 
 ##### Ejercicio 3.2 — Acceso a los elementos
 
+> 🌟 Este es un ejercicio **muy recomendado**.
+
 Considere el programa del [ejercicio anterior](#ejercicio-31--mostrar-elementos-de-un-vector) y añada las siguientes líneas para ver tres elementos concretos:
 
 ~~~c++
@@ -70,6 +74,8 @@ por lo que es la más habitual. Por supuesto, su uso obliga a tener mucho cuidad
 
 ##### Ejercicio 3.3 — Acceso con corchetes
 
+> 🌟 Este es un ejercicio **muy recomendado**.  
+
 Considere el [ejercicio 3.2](#ejercicio-32--acceso-a-los-elementos) y cambie el operador `at()` por el operador `[]`. Es decir, añada estas líneas:
 
 ~~~c++
@@ -86,9 +92,9 @@ cout << "Elemento en size−1: " << v[v.size()−1] << endl;
 
 ##### Ejercicio 3.4 — Media, desviación y varianza
 
-Escriba un programa que lea un número entero que indica el número
-de datos a analizar y a continuación tantos números reales como indique dicho entero. Como resultado, escribirá la media,
-la desviación media y la varianza de dichos datos (véase la relación de problemas del tema anterior [aquí](#here)).
+> ⭐ Este es un ejercicio recomendado.  
+
+Escriba un programa que lea un número entero que indica el número de datos a analizar y a continuación tantos números reales como indique dicho entero. Como resultado, escribirá la media, la desviación media y la varianza de dichos datos (véase la relación de problemas del tema anterior [aquí](#here)).
 
 Para ello, pida un número entero positivo, declare un vector con dicho tamaño, y luego lea todos los elementos en el vector antes de realizar los cálculos.
 
@@ -96,8 +102,10 @@ Para ello, pida un número entero positivo, declare un vector con dicho tamaño,
 
 ##### Ejercicio 3.5 — Criba de Eratóstenes
 
-Escriba un programa que calcule todos los números primos menores que un número `N` dado (este número será leído desde la entrada estándar). Para ello, use la [**criba de Eratóstenes**](http://es.wikipedia.org/wiki/Criba_de_Eratóstenes
-).
+> ⭐ Este es un ejercicio recomendado.  
+> 🤔 Este ejercicio es de dificultad **alta**.
+
+Escriba un programa que calcule todos los números primos menores que un número `N` dado (este número será leído desde la entrada estándar). Para ello, use la [**criba de Eratóstenes**](http://es.wikipedia.org/wiki/Criba_de_Eratóstenes).
 
 La idea de este algoritmo consiste en escribir todos los números hasta el n, y recorrerlos de uno en uno. Si un número no se ha tachado, se tacharán todos sus múltiplos. Cuando hemos recorrido todos los números, aquellos no tachados son los números primos.
 
@@ -113,6 +121,8 @@ Como resultado, el programa escribirá todos los primos resultantes.
 
 ##### Ejercicio 3.6 — Criba de Eratóstenes (versión 2)
 
+> 🤔 Este ejercicio es de dificultad **alta**.
+
 Modifique el [ejercicio 3.5](#ejercicio-35--criba-de-eratóstenes) para que, como resultado del algoritmo de la criba, tengamos un vector sólo con los números primos y sin los números tachados.
 
 - - -
@@ -125,11 +135,15 @@ Para resolver estos ejercicios, debe saber utilizar las funciones de modificaci�
 
 ##### Ejercicio 3.7 — Media, desviación y varianza de números positivos
 
+> 🌟 Este es un ejercicio **muy recomendado**.  
+
 Escriba un programa similar al del [ejercicio 3.4](#ejercicio-34--media-desviación-y-varianza), pero teniendo en cuenta que los valores que se analizarán serán no negativos. La entrada de datos se realizará leyendo valores hasta que se lea un valor negativo. En ese momento, se obtendrán en la salida estándar los valores de la media, desviación y varianza de los datos introducidos.
 
 - - -
 
 ##### Ejercicio 3.8 — Eliminar pares
+
+> ⭐ Este es un ejercicio recomendado.  
 
 Escriba un programa que lea números positivos y los almacene en un vector (la lectura será similar a la que ha hecho en el [ejercicio 3.7](#ejercicio-37--media-desviación-y-varianza-de-números-positivos)). A continuación, el programa eliminará del vector todos los números que sean pares. Para ello, deberá recorrer el vector y cada vez que encuentre un número par, lo intercambiará con el último y a continuación lo eliminará con la operación `pop_back()`. Observe que el vector resultante no mantiene el orden original de los elementos impares.
 
@@ -152,8 +166,7 @@ Revise el [ejercicio 3.7](#ejercicio-37--media-desviación-y-varianza-de-número
 
 ##### Ejercicio 3.10 — Parejas de producto par
 
-Haga un programa que lea una serie de números enteros –positivos y
-negativos– desde la entrada estándar hasta que el usuario introduzca un valor cero. El número total de números introducidos ha de ser par y al menos debería haber dos números. Si cuando el usuario introduce un cero el número total de números fuese impar, se descartaría el cero y se seguirían leyendo datos. La serie de datos se almacenará en un vector que incluirá como último dato el valor cero.
+Haga un programa que lea una serie de números enteros –positivos y negativos– desde la entrada estándar hasta que el usuario introduzca un valor cero. El número total de números introducidos ha de ser par y al menos debería haber dos números. Si cuando el usuario introduce un cero el número total de números fuese impar, se descartaría el cero y se seguirían leyendo datos. La serie de datos se almacenará en un vector que incluirá como último dato el valor cero.
 
 A continuación deberá recorrer el vector e indicar si existe al menos una pareja de números enteros consecutivos cuyo producto sea par. Observe que este bucle deberá detenerse en el momento en que encuentre una pareja que cumpla la condición o bien cuando se llegue al final del vector. Para ello se recomienda el uso de un bucle de tipo `while`.
 
