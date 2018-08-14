@@ -37,10 +37,10 @@
 
 ##### Ejemplos
 
-* [Ejemplo 3.1](#ejemplo-11--primer-algoritmo-cálculo-de-la-media) — resolución parcial del problema de las notas (versión 1)
-* [Ejemplo 3.2](#ejemplo-12--acceso-a-variables) — resolución parcial del problema de las notas (versión 2)
-* [Ejemplo 3.3](#ejemplo-13--entradasalida-estándar-con-iostream) — resolución del problema de las notas (versión 1)
-* [Ejemplo 3.4](#ejemplo-14--primer-programa-hello-world) — resolución del problema de las notas (versión 2)
+* [Ejemplo 3.1](#ejemplo-31--resolución-parcial-del-problema-de-las-notas-versión-1) — resolución parcial del problema de las notas (versión 1)
+* [Ejemplo 3.2](#ejemplo-32--resolución-parcial-del-problema-de-las-notas-versión-2) — resolución parcial del problema de las notas (versión 2)
+* [Ejemplo 3.3](#ejemplo-33--resolución-del-problema-de-las-notas-versión-1) — resolución del problema de las notas (versión 1)
+* [Ejemplo 3.4](#ejemplo-34--resolución-del-problema-de-las-notas-versión-2) — resolución del problema de las notas (versión 2)
 
 - - -
 
@@ -234,7 +234,7 @@ cout << notas.size();  // muestra 5
 
 > ***¡Ya estamos en condiciones de resolver nuestro problema!***
 
-##### Ejemplo 3.3 — resolución parcial del problema de las notas (versión 1)
+##### Ejemplo 3.3 — resolución del problema de las notas (versión 1)
 
 ~~~ c++
 #include<iostream>
