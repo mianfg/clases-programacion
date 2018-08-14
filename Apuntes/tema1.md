@@ -6,15 +6,15 @@
 
 - - -
 
-## Tabla de contenidos
+## 👉 Tabla de contenidos
 
 1. Las estructuras de control de flujo
-2. La estructura de selección
-    2.1 Las estructuras `if` e `if`/`else`
-    2.2 Condiciones compuestas: operadores lógicos
-3. La estructura de iteración: diseño de bucles
-    3.1 El bucle `while` y `do`-`while`
-    3.2 El bucle `for`
+2. La estructura de selección  
+    2.1 Las estructuras `if` e `if`/`else`  
+    2.2 Condiciones compuestas: operadores lógicos  
+3. La estructura de iteración: diseño de bucles  
+    3.1 El bucle `while` y `do`-`while`  
+    3.2 El bucle `for`  
 4. Anidamiento de estructuras
 
 - - -
