@@ -128,7 +128,115 @@ _¿Qué mostrará este código si..._
 
 ### 2.3  La estructura de bifurcación `switch`
 
+El cuerpo de la estructura de bifurcación `switch` es como sigue:
 
+~~~ c++
+switch (<var>) {
+    case <caso_1>:
+        <instrucciones_1>
+        break;
+    ...
+    case <caso_n>:
+        <instrucciones_n>
+        break;
+    default;
+        <instrucciones_d>
+        break;
+~~~
+
+En donde `<var>` **debe ser** una variable de tipo `int`, y el cual es completamente equivalente a:
+
+~~~ c++
+if ( <var> == <caso_1> ) {
+    <instrucciones_1>
+} ... {
+    ...
+} else if ( <var> == <caso_n> ) {
+    <instrucciones_n> {
+} else {
+    <instrucciones_d>
+}
+~~~
+
+> **Una matización:** nótese cómo en el `switch` utilizamos el nombre `break`. Esto es así para mantener la estructura de bifurcación característica del `if`/`else if`/`else`, la más característica en programación. Si omitiésemos el `break`, también se comprobaría la condición siguiente, y no se saldría del `switch` al verificar alguno de los casos.
+
+- - -
+
+## 3. La estructura de iteración: diseño de bucles
+
+Las **estructuras de control iterativas** o **de repetición** inician o repiten un bloque de instrucciones si se cumple una condición o mientras se cumple una condición.
+
+En C++ tenemos las siguientes:
+- Bucle `while` (***post-test***) y `do`-`while` (***pre-test***).
+- Bucle `for` (**iterador**).
+
+### 3.1  El bucle `while` y `do`-`while`
+
+#### Bucle `while` (***post-test***)
+
+~~~ c++
+while (<condición>) {
+    <instrucciones>
+}
+~~~
+
+#### Bucle `do`-`while` (***pre-test***)
+
+Este bucle fuerza la primera iteración del `while`.
+
+~~~ c++
+do {
+    <instrucciones>
+} while (<condición>);
+~~~
+
+Nótese cómo el `do`-`while` es exactamente equivalente a un `while` con las instrucciones repetidas en precondición.
+
+~~~ c++
+<instrucciones>
+while (<condición>) {
+    <instrucciones>
+}
+~~~
+
+- - -
+
+El esquema de flujo para estos bucles es:
+
+![Imagen 2.2](./resources/tema2-img2.png)
+
+- - -
+
+##### Ejemplo 2.4 — iterando con `while`
+
+~~~ c++
+int i = 0;
+
+while ( i <= 100 ) {
+    cout << i << ' ';
+    i++;
+}
+~~~
+
+_¿Qué hace este código? ¿Qué pasaría si..._
+- _omitiésemos la línea `i++;`?_
+- _sustituyésemos el `<=` por `<` en `while ( i <= 100 )`?_
+- _intercambiásemos las líneas `cout << i << ' ';` y `i++;`?_
+- _lo hiciésemos con un `do`-`while`?_
+- _cambiásemos la línea `i++;` por `i += 2;`?_
+- _cambiásemos la línea `int i = 0;` por `int i;`?
+
+- - -
+
+### 3.2  El bucle `for`
+
+~~~ c++
+for (<init>; <condición>; <incremento>) {
+    <instrucciones>
+}
+~~~
+
+![Imagen 2.3](./resources/tema2-img3.png)
 
 | Imagen | Función | Descripción |
 | --- | --- | --- |
