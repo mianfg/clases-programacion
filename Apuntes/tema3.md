@@ -335,3 +335,77 @@ La clase `vector` tiene definida multitud de operadores. Sin embargo, con los an
 En la relación de ejercicios se introducen otros operadores. La lista completa la puedes ver en la referencia de C++:
 
 <http://www.cplusplus.com/reference/vector/vector/>
+
+- - -
+
+## 5. Recorridos sobre vectores
+
+### 5.1  Algoritmos de búsqueda
+
+Los **algoritmos de búsqueda** son unos de los algoritmos más utilizados para todo tipo de tareas. Su objetivo es localizar el índice de un elemento específico en un vector.
+
+Existen diversos tipos de algoritmos, pero veremos dos:
+
+* **Algoritmo de búsqueda secuencial o lineal:** muy sencillo pero poco eficiente.
+* **Algoritmo de búsqueda binaria:** muy eficiente, requiere que el vector esté ordenado.
+
+#### 5.1.1  Algoritmo de búsqueda secuencial
+
+El objetivo de este algoritmo es recorrer el vector hasta encontrar el elemento buscado.
+
+- - -
+
+##### Algoritmo 3.5 — búsqueda secuencial
+
+###### Pseudocódigo
+
+~~~
+~~~
+
+###### Código en C++. Versión 1: usando `while`
+
+~~~ c++
+vector<type> v(<tamaño>);
+<type> buscado = <elemento_a_buscar>
+
+i = 0;
+indice_encontrado = -1;
+encontrado = false;
+
+while ( i < v.size() && !encontrado ) {
+    if ( v[i] == buscado ) {
+    	encontrado = true;
+	indice_encontrado = i;
+    } else
+    	i++;
+}
+~~~
+
+###### Código en ++. Versión 2: usando `for`
+
+~~~ c++
+vector<type> v(<tamaño>);
+<type> buscado = <elemento_a_buscar>
+
+indice_encontrado = -1;
+encontrado = false;
+
+for ( int i = 0; i < v.size() && !encontrado; i++ ) {
+    if ( v[i] == buscado ) {
+    	encontrado = true;
+	indice_encontrado = i;
+    }
+}
+~~~
+
+###### Casos clave a comprobar para este algoritmo
+
+* Que el valor a buscar esté al principio.
+* Que el valor a buscar esté en medio.
+* Que el valor a buscar esté al final.
+* Que el valor a buscar no se encuentre.
+* Que el valor a buscar se encuentre varias veces.
+* Que el vector esté vacío.
+* Que el vector tenga un único componente.
+
+- - -
