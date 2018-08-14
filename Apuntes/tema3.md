@@ -423,9 +423,19 @@ for ( int i = 0; i < v.size() && !encontrado; i++ ) {
 
 #### 5.1.2  Algoritmo de búsqueda binaria
 
-Para poder ejecutar este algoritmo, el vector **debe estar ordenado**.
+Para poder ejecutar este algoritmo, el vector **debe estar ordenado**. La idea es crear tres localizadores para delimitar la lista, e ir ensanchando la búsqueda.
+
+* `izquierda` es el delimitador de la izquierda.
+* `derecha` es el delimitador de la derecha.
+* `centro` es la posición central entre el delimitador izquierdo y el derecho (se calcula haciendo `(derecha-izquierda)/2`, nótese que en caso de que no haya un elemento central se toma el que se encuentra algo a la izquierda por el truncamiento natural del tipo `int`).
+
+Comprobaremos continuamente si `centro` es el elemento que queremos buscar, e iremos cambiando los delimitadores para buscar dicho elemento (la idea es que el elemento que queremos buscar siempre esté entre `izquierda` y `derecha`, y lo localizaremos con `centro`).
+
+En la siguiente animación se aprecia mejor este algoritmo:
 
 ![Imagen 3.12](./resources/tema3-img12.gif)
+
+Es **importante** notar que este algoritmo no garantiza que se encuentre la primera posición en caso de que el dato a buscar se encuentre repetido.
 
 - - -
 
@@ -473,13 +483,15 @@ while ( izquierda <= derecha && !encontrado ) {
 * Que el valor a buscar esté en medio.
 * Que el valor a buscar esté al final.
 * Que el valor a buscar no se encuentre.
-* Que el valor a buscar se encuentre varias veces.
+* Que el valor a buscar se encuentre varias veces (ver nota suuperior).
 * Que el vector esté vacío.
 * Que el vector tenga un único componente.
 
 - - -
 
 #### 5.1.3  Otros algoritmos de búsqueda
+
+En lugar de buscar un elemento específico, podremos buscar un elemento más característico, como el máximo o el mínimo de un vector, e incluso un vector en sí mismo.
 
 - - -
 
@@ -509,16 +521,13 @@ for ( int i = 0; i < v.size(); i++ )
 
 ~~~ c++
 vector<type> v(<tamaño>);
-<type> buscado = <elemento_a_buscar>
+vector<type> v2(<tamaño_2>);
 
-int indice_maximo = -1;
+// queremos comprobar si v2 está en v
 
-if ( v.size() > 0 )
-    indice_maximo = 0;
-
-for ( int i = 0; i < v.size(); i++ )
-    if ( v[i] >= v[indice_maximo] )
-    	indice_maximo = i;
+for ( int i = 0; i + v <= && !encontrado ) {
+    if 
+}
 ~~~
 
 - - -
