@@ -25,7 +25,7 @@
         — 5.1.1 [Búsqueda secuencial](#)  
         — 5.1.2 [Búsqueda binaria](#)  
         — 5.1.3 [Otros algoritmos de búsqueda](#)  
-    5.2 [Modificación de elementos del vector](#)  
+    5.2 [Modificación de elementos de un vector](#)  
         — 5.2.1 [Inserción de un valor](#)  
         — 5.2.2 [Eliminación de un valor](#)  
     5.3 [Algoritmos de ordenación](#)  
@@ -415,7 +415,7 @@ for ( int i = 0; i < v.size() && !encontrado; i++ ) {
 
 - - -
 
-#### 5.2.2  Algoritmo de búsqueda binaria
+#### 5.1.2  Algoritmo de búsqueda binaria
 
 - - -
 
@@ -455,7 +455,6 @@ while ( izquierda <= derecha && !encontrado ) {
     else
     	izquierda = centro + 1;
 }
-
 ~~~
 
 ###### Casos clave a comprobar para este algoritmo
@@ -469,3 +468,49 @@ while ( izquierda <= derecha && !encontrado ) {
 * Que el vector tenga un único componente.
 
 - - -
+
+#### 5.1.3  Otros algoritmos de búsqueda
+
+- - -
+
+##### Algoritmo 3.7 — búsqueda del máximo de un vector
+
+> Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+
+~~~ c++
+vector<type> v(<tamaño>);
+<type> buscado = <elemento_a_buscar>
+
+int indice_maximo = -1;
+
+if ( v.size() > 0 )
+    indice_maximo = 0;
+
+for ( int i = 0; i < v.size(); i++ )
+    if ( v[i] >= v[indice_maximo] )
+    	indice_maximo = i;
+~~~
+
+- - -
+
+##### Algoritmo 3.8 — encontrar un vector dentro de otro
+
+> Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+
+~~~ c++
+vector<type> v(<tamaño>);
+<type> buscado = <elemento_a_buscar>
+
+int indice_maximo = -1;
+
+if ( v.size() > 0 )
+    indice_maximo = 0;
+
+for ( int i = 0; i < v.size(); i++ )
+    if ( v[i] >= v[indice_maximo] )
+    	indice_maximo = i;
+~~~
+
+- - -
+
+### 5.2  Modificación de los elementos de un vector
