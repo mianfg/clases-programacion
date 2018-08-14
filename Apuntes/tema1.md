@@ -161,7 +161,7 @@ Existen tres tipos de tipos de datos en C++:
 
 ###### Operador de disyunción (OR) `||`
 
-| `a` | `b` | `a || b` |
+| `a` | `b` | `a \|\| b` |
 | --- | --- | --- |
 | `false` | `false` | `false` |
 | `false` | `true` | `true` |
