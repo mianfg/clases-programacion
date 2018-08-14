@@ -20,6 +20,10 @@
     4.2 [Funciones no `void`](#)  
 5. [Valores por defecto y sobrecarga](#)  
 6. [Diseño de funciones: los _disclaimer_](#)  
+7. [Funciones recursivas](#)  
+    7.1 [Caso general y caso base](#)  
+    7.2 [Funciones recursivas con varios puntos de salida](#)  
+    7.3 [Múltiples casos base y/o generales](#)
 
 ##### Ejemplos
 
