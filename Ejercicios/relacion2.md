@@ -356,7 +356,7 @@ Error. Finalización inesperada del programa: fuera de rango
 
 ##### Ejercicio 2.23. Cotización de las acciones
 
-> ⭐ Este es un ejercicio recomendado.
+> ⭐ Este es un ejercicio recomendado.  
 > 🤔 Este ejercicio es de dificultad **alta**.
 
 Se desea estudiar cómo progresa la cotización de una acción a lo largo del tiempo. Para ello, escribiremos un programa que lee la
@@ -411,7 +411,7 @@ Error, la opción elegida no es correcta
 
 ##### Ejercicio 2.25. Espacio cartesiano
 
-> ⭐ Este es un ejercicio recomendado.
+> ⭐ Este es un ejercicio recomendado.  
 > 🤯 Este ejercicio es de dificultad **muy alta**.
 
 Haga un programa que lea las coordenadas de tres puntos en un espacio cartesiano 2D y que nos diga si forman o no un triángulo. Además, debe indicar si el triángulo es eqilátero. Si llamamos a los puntos A, B y C, sabemos que forman un triángulo cuando la mayor de las distancias AB, AC, BC es menor que la suma de las otras dos. El triángulo es equilátero si las tres distancias son iguales.
@@ -470,7 +470,7 @@ Un número entero de _n_ dígitos se dice que es narcisista si se puede obtener 
 
 ##### Ejercicio 2.33. Mostrar figuras
 
-> ⭐ Este es un ejercicio recomendado.
+> ⭐ Este es un ejercicio recomendado.  
 > 🤯 Este ejercicio es de dificultad **muy alta**.
 
 Escriba un programa que lea un número entero `N` desde la entrada estándar y que a continuación dibuje con asteriscos –en la salida
@@ -493,7 +493,7 @@ A continuación, vemos una muestra de estas figuras para `N=7`:
 ~~~
 ##### Ejercicio 2.34. _Run Length Encoding_
 
-> ⭐ Este es un ejercicio recomendado.
+> ⭐ Este es un ejercicio recomendado.  
 > 🤯 Este ejercicio es de dificultad **muy alta**.
 
 El método RLE (Run Length Encoding) de codificación permite almacenar en poco espacio largas secuencias de datos. El algoritmo consiste en transformar las secuencias de valores idénticos consecutivos en
@@ -521,7 +521,7 @@ En el ejemplo anterior, 203 es un número feliz de grado 3 (además, es feliz de
 
 ##### Ejercicio 2.36. Secuencia más larga
 
-> ⭐ Este es un ejercicio recomendado.
+> ⭐ Este es un ejercicio recomendado.  
 > 🤔 Este ejercicio es de dificultad **alta**.
 
 Escriba un programa que lea una secuencia de enteros positivos terminada en un valor negativo, y que escriba en la salida estándar la
