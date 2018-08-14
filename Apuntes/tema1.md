@@ -32,8 +32,6 @@ En C++ tenemos las siguientes:
 
 ### 2.1  Las estructuras `if` e `if`/`else`
 
-#### Cuerpo básico de una estructura `if`/`else`
-
 ~~~ c++
 if (<condición>) {
     <instrucciones_v>
@@ -41,6 +39,8 @@ if (<condición>) {
     <instrucciones_f>
 }
 ~~~
+
+![Imagen 2.1](./resources/tema2-img1.png)
 
 - - -
 
