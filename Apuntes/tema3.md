@@ -360,6 +360,9 @@ El objetivo de este algoritmo es recorrer el vector hasta encontrar el elemento 
 ###### Pseudocódigo
 
 ~~~
+recorrer las componentes del vector
+    - hasta que se llegue al final del vector
+    - hasta que encontremos el elemento a buscar
 ~~~
 
 ###### Código en C++. Versión 1: usando `while`
