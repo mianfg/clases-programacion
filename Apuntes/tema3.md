@@ -373,9 +373,9 @@ recorrer las componentes del vector
 vector<type> v(<tamaño>);
 <type> buscado = <elemento_a_buscar>
 
-i = 0;
-indice_encontrado = -1;
-encontrado = false;
+int i = 0;
+int indice_encontrado = -1;
+bool encontrado = false;
 
 while ( i < v.size() && !encontrado ) {
     if ( v[i] == buscado ) {
@@ -392,8 +392,8 @@ while ( i < v.size() && !encontrado ) {
 vector<type> v(<tamaño>);
 <type> buscado = <elemento_a_buscar>
 
-indice_encontrado = -1;
-encontrado = false;
+int indice_encontrado = -1;
+bool encontrado = false;
 
 for ( int i = 0; i < v.size() && !encontrado; i++ ) {
     if ( v[i] == buscado ) {
@@ -415,6 +415,7 @@ for ( int i = 0; i < v.size() && !encontrado; i++ ) {
 
 - - -
 
+#### 5.2.2  Algoritmo de búsqueda binaria
 
 - - -
 
@@ -425,45 +426,36 @@ for ( int i = 0; i < v.size() && !encontrado; i++ ) {
 ###### Pseudocódigo
 
 ~~~
-recorrer las componentes del vector
-    - hasta que se llegue al final del vector
-    - hasta que encontremos el elemento a buscar
+comparamos el elemento a buscar con el elemento en el centro del vector
+si coinciden, el elemento se ha encontrado
+si es mayor que él, se repite el proceso con la mitad inferior
+si es menor que él, se repite el proceso con la mitad superior
 ~~~
 
-###### Código en C++. Versión 1: usando `while`
+###### Código en C++
 
 ~~~ c++
 vector<type> v(<tamaño>);
 <type> buscado = <elemento_a_buscar>
 
-i = 0;
-indice_encontrado = -1;
-encontrado = false;
+int izquierda = 0;
+int derecha = v.size() - 1;
+int centro;
+int indice_encontrado = -1;
+bool encontrado = false;
 
-while ( i < v.size() && !encontrado ) {
-    if ( v[i] == buscado ) {
-    	encontrado = true;
-	indice_encontrado = i;
-    } else
-    	i++;
+while ( izquierda <= derecha && !encontrado ) {
+    centro = (derecha - izquierda)/2;
+    
+    if ( v[centro] == buscado ) {
+    	indice_encontrado = centro;
+	encontrado = true;
+    } else if ( buscado < v[centro] )
+    	derecha = centro - 1;
+    else
+    	izquierda = centro + 1;
 }
-~~~
 
-###### Código en C++. Versión 2: usando `for`
-
-~~~ c++
-vector<type> v(<tamaño>);
-<type> buscado = <elemento_a_buscar>
-
-indice_encontrado = -1;
-encontrado = false;
-
-for ( int i = 0; i < v.size() && !encontrado; i++ ) {
-    if ( v[i] == buscado ) {
-    	encontrado = true;
-	indice_encontrado = i;
-    }
-}
 ~~~
 
 ###### Casos clave a comprobar para este algoritmo
