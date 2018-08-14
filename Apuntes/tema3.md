@@ -229,9 +229,9 @@ int main() {
     
     do {
         cin >> entrada;
-        if ( entrada < 0 || entrada > 10 )
-            notas.push_back(entrada_notas);
-    } while ( entrada < 0 || entrada > 10 );
+        if ( entrada >= 0 && entrada <= 10 )
+            notas.push_back(entrada);
+    } while ( entrada >= 0 && entrada <= 10 );
 
     double media = 0;
     for ( int i = 0; i < notas.size(); i++ )
