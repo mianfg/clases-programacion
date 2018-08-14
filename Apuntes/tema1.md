@@ -8,27 +8,19 @@
 
 ## 👉 Tabla de contenidos
 
-
-Concepto de dato
-Lenguaje de programación
-Implementación y especificación
-Compilación y ejecución
-Tipos de datos. Variables y operadores. Expresiones
-Primer programa: hello world
-
-1. [Concepto de algoritmo](#1-estructuras-de-control-de-flujo)
-2. [Concepto de dato](#2-la-estructura-de-selección)  
-3. [La estructura de iteración: diseño de bucles](#3-la-estructura-de-iteración-diseño-de-bucles)  
-    3.1 [El bucle `while` y `do`-`while`](#31--el-bucle-while-y-do-while)  
-    3.2 [El bucle `for`](#32--el-bucle-for)  
-4. [Anidamiento de estructuras](#4-anidamiento-de-estructuras)
+1. [Concepto de algoritmo](#1-concepto-de-algoritmo)
+2. [Concepto de dato](#2-concepto-de-dato)
+3. [Lenguaje de programación](#3-lenguaje-de-programación)
+4. [Implementación y especificación](#4-implementación-y-especificación)
+5. [Compilación y ejecución](#5-compilación-y-ejecución)
+6. [Tipos de datos. Variables y operadores. Expresiones](#6-tipos-de-datos-variables-y-operadores-expresiones)
 
 ##### Ejemplos
 
-* [Ejemplo 2.1](#ejemplo-21--comprobar-si-un-número-es-par) — comprobar si un número es par
-* [Ejemplo 2.2](#ejemplo-22--comprobar-si-un-número-es-par-versión-modificada) — comprobar si un número es par (versión modificada)
-* [Ejemplo 2.3](#ejemplo-23--comprobaciones-de-divisibilidad) — comprobaciones de divisibilidad
-* [Ejemplo 2.4](#ejemplo-24--iterando-con-while) — iterando con `while`
+* [Ejemplo 1.1](#ejemplo-21--comprobar-si-un-número-es-par) — primer algoritmo: cálculo de la media
+* [Ejemplo 1.2](#ejemplo-22--comprobar-si-un-número-es-par-versión-modificada) — acceso a variables
+* [Ejemplo 1.3](#ejemplo-23--comprobaciones-de-divisibilidad) — entrada/salida estándar con `iostream`
+* [Ejemplo 1.4](#ejemplo-24--iterando-con-while) — primer programa: `hello world`
 
 - - -
 
@@ -57,7 +49,7 @@ Los algoritmos operan sobre **datos de entrada** y **datos de salida**.
 
 - - -
 
-##### Ejemplo 1.1 - primer algoritmo: cálculo de la media
+##### Ejemplo 1.1 — primer algoritmo: cálculo de la media
 
 - Datos de entrada: `valor_1`, `valor_2`, ..., `valor_n`
 - Datos de salida: `media`
@@ -125,13 +117,85 @@ Existen tres tipos de tipos de datos en C++:
 
 #### Tipo de dato `int`
 
+* El tamaño depende de la arquitectura del procesador: 32/64bit.
+* Rango para 32 bits: [-2^31, 2^31-1]
+
+* **Variantes:** `short`, `long`, `unsigned`
+* **Operadores:** binarios (`+`, `-`, `*`, `/`, `%`, `+=`, `-=`, `*=`, `/=`) y unarios (`++`, `--`)
+
 #### Tipos de dato `float` y `double`
+
+* Representan un subconjunto finito de los números reales.
+* `float`: 32 bits, `double`: 64 bits.
+* Errores de redondeo y precisión.
+* Mismas variantes y operadores que `int` (excepto `%`).
+
+* **Muy importante:** _casting_ entre `float` y `double`.
 
 #### Tipo de dato `char`
 
+* Representa un carácter ASCII: 256 símbolos.  
+    _Más información en la relación de ejercicios del tema._
+* Como literal: 'M' (no confundir con `"M"`, que es `string`).
+
 #### Tipo de dato `string`
 
+* Son un tipo de dato de la STL, definidas en la biblioteca `string` (es necesario hacer `#include <string>` para poder usar las funciones implementadas en su clase).
+* Internamente, son un _array_ de caracteres (`char*`) con más funcionalidades (las implementadas en su clase).
+* Su representación como literal es: `"mianfg"`.
+
 #### Tipo de dato `bool`
+
+* Representan un **valor de verdad** o **valor booleano**: `true`/`false`.
+
+##### Operadores (operadores lógicos usuales en álgebra de Boole)
+
+###### Operador de conjunción (AND) `&&`
+
+| `a` | `b` | `a && b` |
+| --- | --- | --- |
+| `false` | `false` | `false` |
+| `false` | `true` | `false` |
+| `true` | `false` | `false` |
+| `true` | `true` | `true` |
+
+###### Operador de disyunción (OR) `||`
+
+| `a` | `b` | `a || b` |
+| --- | --- | --- |
+| `false` | `false` | `false` |
+| `false` | `true` | `true` |
+| `true` | `false` | `true` |
+| `true` | `true` | `true` |
+
+###### Operador de negación (NOT, unario) `!`
+
+| `a` | `!a` |
+| --- | --- |
+| `false` | `true` |
+| `true` | `false` |
+
+###### Operador de igualdad `==`
+
+| `a` | `b` | `a == b` |
+| --- | --- | --- |
+| `false` | `false` | `true` |
+| `false` | `true` | `false` |
+| `true` | `false` | `false` |
+| `true` | `true` | `true` |
+
+También puede usarse con valores que no sean booleanos:
+
+| `a` | `b` | `a == b` |
+| --- | --- | --- |
+| `5` | `5` | `true` |
+| `5` | `3` | `false` |
+| `'A'` | `'A'` | `true` |
+| `"Hello"` | `"hello"` | `false` |
+
+igualdad: ==
+desigualdad: !=
+orden: > < >= <=
 
 ### 6.3  Variables: declaración, inicialización, asignación y acceso
 
@@ -143,6 +207,10 @@ Una **variable** es una zona de memoria reservada para almacenar un dato de un t
 - Inicialización: `<tipo> <identificador> = <literal>;`
 
 Podemos **acceder** al valor almacenado en una variable escribiendo el identificador de dicha variable.
+
+- - -
+
+##### Ejemplo 1.2 — acceso a variables
 
 ~~~ c++
 // declaración
@@ -161,9 +229,13 @@ bool valor2 = true;
 cout << valor << ' ' << valor2 << '\n';
 ~~~
 
+- - -
+
 ### 6.4  Operadores: entrada/salida estándar, `cin` y `cout`
 
 Al hacer uso de la biblioteca `iostream`, podemos hacer uso del flujo de entrada por teclado y salida por pantalla (**flujo estándar**).
+
+##### Ejemplo 1.3 — entrada/salida estándar con `iostream`
 
 ~~~ c++
 /* Variación del programa anterior:
@@ -191,6 +263,10 @@ Un programa básico de C++ se compone, generalmente, de:
 1. Los **“`include`”**: bibliotecas y clases externas.
 2. **`using namespace std`**: el espacio de nombres del `std`, que utilizaremos continuamente.
 3. La **función `main()`**: es la que ejecuta C++ de forma nativa al iniciar el programa.
+
+- - -
+
+##### Ejemplo 1.4 — primer programa: `hello world`
 
 ~~~ c++
 #include <iostream>     // 1. Los "include"
