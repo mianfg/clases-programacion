@@ -1,7 +1,7 @@
 /*
- *  EJERCICIO 2.5 - Rect·ngulo
- *  Clases particulares de programaciÛn en C++
- *  Autor: Miguel ¡ngel Fern·ndez GutiÈrrez (@mianfg)
+ *  EJERCICIO 2.5 - Rect√°ngulo
+ *  Clases particulares de programaci√≥n en C++
+ *  Autor: Miguel √Ångel Fern√°ndez Guti√©rrez (@mianfg)
  *  Fecha: 9 agosto, 2018
  */
 
@@ -12,8 +12,8 @@ using namespace std;
 int main() {
 	/*
 	 *  Las variables son:
-	 *     A(x1, x2) y B(y1, y2) definen el rect·ngulo
-	 *     P(Px, Py) es el punto que queremos comprobar si est· en su interior
+	 *     A(x1, x2) y B(y1, y2) definen el rect√°ngulo
+	 *     P(Px, Py) es el punto que queremos comprobar si est√° en su interior
 	 */
 	
 	double x1, x2, y1, y2, Px, Py;
@@ -43,16 +43,3 @@ int main() {
 		cout << "El punto esta en el borde del rectangulo";
 	}
 }
-		
-/*
-	if ((   ((x1 <= Px) && (Px <= y1)) || ((x1 >= Px) && (Px >= y1)))  &&  
-	        (((x2 < Py) && (Py < y2)) || ((x2 > Py) && (Py > y2)))) {
-		cout << "El punto C esta en el rectangulo";
-	} else {
-		cout << "El punto C no esta en el rectangulo";
-	}
-if (contenido o borde if (contenido) else (borde)) else (no esta en el rectangulo)
-
-if (
-}
-*/
