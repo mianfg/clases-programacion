@@ -11,7 +11,7 @@
 1. [Las estructuras de control de flujo](#1-estructuras-de-control-de-flujo)
 2. [La estructura de selección](#2-la-estructura-de-selección)  
     2.1 [Las estructuras `if` e `if`/`else`](#21--las-estructuras-if-e-ifelse)  
-    2.2 [Condiciones compuestas: operadores lógicos](#22--condiciones-compuestas-operadores-lógicos)
+    2.2 [Condiciones compuestas: operadores lógicos](#22--condiciones-compuestas-operadores-lógicos)  
     2.3 [La estructura de bifurcación `switch`](#23--la-estructura-de-bifurcación-switch)  
 3. [La estructura de iteración: diseño de bucles](#3-la-estructura-de-iteración-diseño-de-bucles)  
     3.1 [El bucle `while` y `do`-`while`](#31--el-bucle-while-y-do-while)  
