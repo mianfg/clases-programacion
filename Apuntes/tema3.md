@@ -4,6 +4,35 @@
 > **Clases de programación en C++** · agosto de 2018  
 > Miguel Ángel Fernández Gutiérrez ([@mianfg](https://mianfg.bloomgogo.com))
 
+- - -
+
+## 👉 Tabla de contenidos
+
+1. [Motivación al uso de vectores](#)
+2. [Concepto de vector](#)
+3. [Operaciones básicas con vectores](#)  
+    3.1 [Declaración](#)  
+    3.2 [Asignación](#)  
+    3.3 [Acceso: operador `[]`](#)  
+    3.4 [Modificación (asignación por elementos)](#)  
+4. [Operaciones específicas de la clase `vector`](#)  
+    4.1 [Acceso y modificación: operador `at()`](#)  
+    4.2 [Comprobación de tamaño: `size()`](#)  
+    4.3 [Variación de tamaño: `push_back()`, `pop_back()`, `clear()`](#)  
+    4.4 [Otros operadores](#)  
+5. [Recorridos sobre vectores](#)  
+    5.1 [Algoritmos de búsqueda](#)  
+        5.1.1 [Algoritmo 1](#)  
+    5.2 [Algoritmos de ordenación](#)  
+6. [Concepto de matriz](#)
+7. [Vectores vs. arrays](#)
+
+##### Ejemplos
+
+* 
+
+- - -
+
 ## 1. Motivación al uso de vectores
 
 Queremos resolver el siguiente problema:
