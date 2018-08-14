@@ -22,7 +22,7 @@
     4.4 [Otros operadores](#)  
 5. [Recorridos sobre vectores](#)  
     5.1 [Algoritmos de búsqueda](#)  
-        5.1.1 [Algoritmo 1](#)  
+        — 5.1.1 [Algoritmo 1](#)  
     5.2 [Algoritmos de ordenación](#)  
 6. [Concepto de matriz](#)
 7. [Vectores vs. arrays](#)
