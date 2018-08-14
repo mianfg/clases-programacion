@@ -35,7 +35,7 @@
 6. [Concepto de matriz](#)
 7. [Vectores vs. arrays](#)
 
-##### Ejemplos
+##### Ejemplos y algoritmos
 
 * [Ejemplo 3.1](#ejemplo-31--resolución-parcial-del-problema-de-las-notas-versión-1) — resolución parcial del problema de las notas (versión 1)
 * [Ejemplo 3.2](#ejemplo-32--resolución-parcial-del-problema-de-las-notas-versión-2) — resolución parcial del problema de las notas (versión 2)
@@ -357,6 +357,8 @@ El objetivo de este algoritmo es recorrer el vector hasta encontrar el elemento 
 
 ##### Algoritmo 3.5 — búsqueda secuencial
 
+> Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+
 ###### Pseudocódigo
 
 ~~~
@@ -384,7 +386,70 @@ while ( i < v.size() && !encontrado ) {
 }
 ~~~
 
-###### Código en ++. Versión 2: usando `for`
+###### Código en C++. Versión 2: usando `for`
+
+~~~ c++
+vector<type> v(<tamaño>);
+<type> buscado = <elemento_a_buscar>
+
+indice_encontrado = -1;
+encontrado = false;
+
+for ( int i = 0; i < v.size() && !encontrado; i++ ) {
+    if ( v[i] == buscado ) {
+    	encontrado = true;
+	indice_encontrado = i;
+    }
+}
+~~~
+
+###### Casos clave a comprobar para este algoritmo
+
+* Que el valor a buscar esté al principio.
+* Que el valor a buscar esté en medio.
+* Que el valor a buscar esté al final.
+* Que el valor a buscar no se encuentre.
+* Que el valor a buscar se encuentre varias veces.
+* Que el vector esté vacío.
+* Que el vector tenga un único componente.
+
+- - -
+
+
+- - -
+
+##### Algoritmo 3.6 — búsqueda binaria
+
+> Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+
+###### Pseudocódigo
+
+~~~
+recorrer las componentes del vector
+    - hasta que se llegue al final del vector
+    - hasta que encontremos el elemento a buscar
+~~~
+
+###### Código en C++. Versión 1: usando `while`
+
+~~~ c++
+vector<type> v(<tamaño>);
+<type> buscado = <elemento_a_buscar>
+
+i = 0;
+indice_encontrado = -1;
+encontrado = false;
+
+while ( i < v.size() && !encontrado ) {
+    if ( v[i] == buscado ) {
+    	encontrado = true;
+	indice_encontrado = i;
+    } else
+    	i++;
+}
+~~~
+
+###### Código en C++. Versión 2: usando `for`
 
 ~~~ c++
 vector<type> v(<tamaño>);
