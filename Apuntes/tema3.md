@@ -423,6 +423,10 @@ for ( int i = 0; i < v.size() && !encontrado; i++ ) {
 
 #### 5.1.2  Algoritmo de búsqueda binaria
 
+Para poder ejecutar este algoritmo, el vector **debe estar ordenado**.
+
+![Imagen 3.12](./resources/tema3-img12.gif)
+
 - - -
 
 ##### Algoritmo 3.6 — búsqueda binaria
