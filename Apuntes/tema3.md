@@ -26,14 +26,14 @@
         — 5.1.2 [Búsqueda binaria](#512--algoritmo-de-búsqueda-binaria)  
         — 5.1.3 [Otros algoritmos de búsqueda](#513--otros-algoritmos-de-búsqueda)  
     5.2 [Modificación de elementos de un vector](#52--modificación-de-los-elementos-de-un-vector)  
-        — 5.2.1 [Inserción de un valor](#)  
-        — 5.2.2 [Eliminación de un valor](#)  
-    5.3 [Algoritmos de ordenación](#)  
-        — 5.3.1 [Ordenación por selección](#)  
-        — 5.3.2 [Ordenación por inserción](#)  
-        — 5.3.3 [Ordenación por intercambio directo (_método de la burbuja_)](#)  
-6. [Concepto de matriz](#)
-7. [Vectores vs. arrays](#)
+        — 5.2.1 [Inserción de un valor](#521--inserción-de-un-valor)  
+        — 5.2.2 [Eliminación de un valor](#522--eliminación-de-un-valor)  
+    5.3 [Algoritmos de ordenación](#53--algoritmos-de-ordenación)  
+        — 5.3.1 [Ordenación por selección](#531--ordenación-por-selección)  
+        — 5.3.2 [Ordenación por inserción](#532--ordenación-por-inserción)  
+        — 5.3.3 [Ordenación por intercambio directo (_método de la burbuja_)](#533--ordenación-por-intercambio-directo-método-de-la-burbuja)  
+6. [Concepto de matriz](#6-concepto-de-matriz)
+7. [Vectores vs. arrays](#7-vectores-vs-arrays)
 
 ##### Ejemplos y algoritmos
 
