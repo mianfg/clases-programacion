@@ -361,7 +361,7 @@ El objetivo de este algoritmo es recorrer el vector hasta encontrar el elemento 
 
 ##### Algoritmo 3.5 — búsqueda secuencial
 
-> Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+> 😏 Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
 
 ###### Pseudocódigo
 
@@ -425,7 +425,7 @@ for ( int i = 0; i < v.size() && !encontrado; i++ ) {
 
 ##### Algoritmo 3.6 — búsqueda binaria
 
-> Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+> 😏 Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
 
 ###### Pseudocódigo
 
@@ -479,7 +479,7 @@ while ( izquierda <= derecha && !encontrado ) {
 
 ##### Algoritmo 3.7 — búsqueda del máximo de un vector
 
-> Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+> 😏 Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
 
 ~~~ c++
 vector<type> v(<tamaño>);
@@ -499,7 +499,7 @@ for ( int i = 0; i < v.size(); i++ )
 
 ##### Algoritmo 3.8 — encontrar un vector dentro de otro
 
-> Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+> 😏 Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
 
 ~~~ c++
 vector<type> v(<tamaño>);
@@ -525,7 +525,7 @@ for ( int i = 0; i < v.size(); i++ )
 
 ##### Algoritmo 3.9 — inserción de un valor en un vector
 
-> Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+> 😏 Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
 
 ~~~ c++
 vector<type> v(<tamaño>);
@@ -561,7 +561,7 @@ v_insertado.clear();  // para no desperdiciar memoria
 
 ##### Algoritmo 3.10 — eliminación de un valor de un vector
 
-> Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+> 😏 Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
 
 ~~~ c++
 vector<type> v(<tamaño>);
