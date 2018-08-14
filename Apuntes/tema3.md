@@ -357,6 +357,8 @@ Existen diversos tipos de algoritmos, pero veremos dos:
 
 El objetivo de este algoritmo es recorrer el vector hasta encontrar el elemento buscado.
 
+![Imagen 3.11](./resources/tema3-img11.gif)
+
 - - -
 
 ##### Algoritmo 3.5 — búsqueda secuencial
