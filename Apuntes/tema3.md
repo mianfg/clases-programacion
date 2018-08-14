@@ -8,28 +8,39 @@
 
 ## 👉 Tabla de contenidos
 
-1. [Motivación al uso de vectores](#)
-2. [Concepto de vector](#)
-3. [Operaciones básicas con vectores](#)  
-    3.1 [Declaración](#)  
-    3.2 [Asignación](#)  
-    3.3 [Acceso: operador `[]`](#)  
-    3.4 [Modificación (asignación por elementos)](#)  
-4. [Operaciones específicas de la clase `vector`](#)  
-    4.1 [Acceso y modificación: operador `at()`](#)  
-    4.2 [Comprobación de tamaño: `size()`](#)  
-    4.3 [Variación de tamaño: `push_back()`, `pop_back()`, `clear()`](#)  
-    4.4 [Otros operadores](#)  
+1. [Motivación al uso de vectores](#1-motivación-al-uso-de-vectores)
+2. [Concepto de vector](#2-concepto-de-vector)
+3. [Operaciones básicas con vectores](#3-operaciones-básicas-con-vectores)  
+    3.1 [Declaración](#31--declaración)  
+    3.2 [Asignación](#32--asignación)  
+    3.3 [Acceso: operador `[]`](#33--acceso-operador-)  
+    3.4 [Modificación (asignación por elementos)](#34--modificación-asignación-por-elementos)  
+4. [Operaciones específicas de la clase `vector`](#4-operaciones-específicas-de-la-clase-vector)  
+    4.1 [Acceso y modificación: operador `at()`](#41--acceso-y-modificación-operador-at)  
+    4.2 [Comprobación de tamaño: `size()`](#42--comprobación-de-tamaño-size)  
+    4.3 [Variación de tamaño: `push_back()`, `pop_back()`, `clear()`](#43--variación-de-tamaño-push_back-pop_back-y-clear)  
+    4.4 [Otros operadores](#44--otros-operadores)  
 5. [Recorridos sobre vectores](#)  
     5.1 [Algoritmos de búsqueda](#)  
-        — 5.1.1 [Algoritmo 1](#)  
-    5.2 [Algoritmos de ordenación](#)  
+        — 5.1.1 [Búsqueda secuencial](#)  
+        — 5.1.2 [Búsqueda binaria](#)  
+        — 5.1.3 [Otros algoritmos de búsqueda](#)  
+    5.2 [Modificación de elementos del vector](#)  
+        — 5.2.1 [Inserción de un valor](#)  
+        — 5.2.2 [Eliminación de un valor](#)  
+    5.3 [Algoritmos de ordenación](#)  
+        — 5.3.1 [Ordenación por selección](#)  
+        — 5.3.2 [Ordenación por inserción](#)  
+        — 5.3.3 [Ordenación por intercambio directo (_método de la burbuja_)](#)  
 6. [Concepto de matriz](#)
 7. [Vectores vs. arrays](#)
 
 ##### Ejemplos
 
-* 
+* [Ejemplo 3.1](#ejemplo-11--primer-algoritmo-cálculo-de-la-media) — resolución parcial del problema de las notas (versión 1)
+* [Ejemplo 3.2](#ejemplo-12--acceso-a-variables) — resolución parcial del problema de las notas (versión 2)
+* [Ejemplo 3.3](#ejemplo-13--entradasalida-estándar-con-iostream) — resolución del problema de las notas (versión 1)
+* [Ejemplo 3.4](#ejemplo-14--primer-programa-hello-world) — resolución del problema de las notas (versión 2)
 
 - - -
 
@@ -46,7 +57,35 @@ Para contextualizar el problema, digamos que esos valores son las notas de una c
 
 - - -
 
-Vamos a comenzar resolviendo el problema dejando la moda: más adelante, terminaremos de resolver nuestro problema.
+##### Ejemplo 3.1 — resolución parcial del problema de las notas (versión 1)
+
+Comenzaremos resolviendo el problema usando los conocimientos del tema anterior acumulando las notas insertadas en una variable, mediante la cual calcularemos la media. Sin embargo, de este modo es imposible decir cuántos alumnos superan la media, pues no tenemos los alumnos almacenados _per se_.
+
+~~~ c++
+int contador = 0;
+double media = 0, entrada;
+double nota_max = 0;
+
+cout << "Inserte las notas hasta insertar una no válida: ";
+	
+do {
+	cin >> entrada;
+	if ( entrada >= 0 && entrada <= 10 ) {
+		if ( entrada > nota_max )
+			nota_max = entrada;
+		media += entrada;
+		contador++;
+	}
+} while ( entrada >= 0 && entrada <= 10 );
+media /= contador;
+cout << "La media es: " << media << endl;
+~~~
+
+- - -
+
+##### Ejemplo 3.2 — resolución parcial del problema de las notas (versión 2)
+
+Podemos resolver el problema también de la siguiente forma, dejando la moda:
 
 ~~~c++
 int nota_1, nota_2, nota_3;
@@ -193,7 +232,9 @@ cout << notas.size();  // muestra 5
 
 - - -
 
-##### ¡Ya estamos en condiciones de resolver nuestro problema!
+> ***¡Ya estamos en condiciones de resolver nuestro problema!***
+
+##### Ejemplo 3.3 — resolución parcial del problema de las notas (versión 1)
 
 ~~~ c++
 #include<iostream>
@@ -242,7 +283,9 @@ int main() {
 
 - - -
 
-##### ¡Ahora podemos mejorar la solución a nuestro problema!
+> ***¡Ahora podemos mejorar la solución a nuestro problema!***
+
+##### Ejemplo 3.4 — resolución del problema de las notas (versión 2)
 
 ~~~ c++
 #include<iostream>
