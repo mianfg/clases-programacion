@@ -519,7 +519,7 @@ for ( int i = 0; i < v.size(); i++ )
 
 ### 5.2  Modificación de los elementos de un vector
 
-#### 5.1  Inserción de un valor
+#### 5.2.1  Inserción de un valor
 
 - - -
 
@@ -540,8 +540,9 @@ vector<type> v_insertado;  // el vector a devolver
 for ( int i = 0; i < insertar_posicion )
     v_insertado.push_back(v[i]);
 
-// insertamos el elemento deseado
-v_insertado.push_back(insertar_valor);
+// insertamos el elemento deseado, comprobando antes que la posición donde colocarlo es válida
+if ( insertar_posicion <= v.size()
+    v_insertado.push_back(insertar_valor);
 
 // parte derecha del vector (completamos el vector)
 for ( int i = insertar_posicion; i < v.size(); i++ )
@@ -553,3 +554,50 @@ v_insertado.clear();  // para no desperdiciar memoria
 ~~~
 
 - - -
+
+#### 5.2.2  Eliminación de un valor
+
+- - -
+
+##### Algoritmo 3.10 — eliminación de un valor de un vector
+
+> Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+
+~~~ c++
+vector<type> v(<tamaño>);
+<type> buscado = <elemento_a_buscar>
+
+<type> insertar_valor = <valor_a_insertar>;
+int insertar_posicion = <posicion_a_insertar>;
+
+vector<type> v_insertado;  // el vector a devolver
+
+// parte izquierda del vector (antes de la posición en la que queremos insertar)
+for ( int i = 0; i < insertar_posicion )
+    v_insertado.push_back(v[i]);
+
+// insertamos el elemento deseado, comprobando antes que la posición donde colocarlo es válida
+if ( insertar_posicion <= v.size()
+    v_insertado.push_back(insertar_valor);
+
+// parte derecha del vector (completamos el vector)
+for ( int i = insertar_posicion; i < v.size(); i++ )
+    v_insertado.push_back(v[i]);
+
+// opcionalmente podemos modificar v
+v = v_insertado;
+v_insertado.clear();  // para no desperdiciar memoria
+~~~
+
+- - -
+
+### 5.3  Algoritmos de ordenación
+
+#### 5.3.1  Ordenación por selección
+#### 5.3.2  Ordenación por inserción
+#### 5.3.3  Ordenación por intercambio directo (_método de la burbuja_)
+
+- - -
+
+## 6. Concepto de matriz
+## 7. Vectores vs. arrays
