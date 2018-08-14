@@ -43,7 +43,7 @@ Es muy importante tener en cuenta que la operación `at()` no se puede aplicar c
 
 ##### Ejercicio 3.2 — Acceso a los elementos
 
-Considere el programa del [ejercicio anterior](#here) y añada las siguientes líneas para ver tres elementos concretos:
+Considere el programa del [ejercicio anterior](#ejercicio-31--mostrar-elementos-de-un-vector) y añada las siguientes líneas para ver tres elementos concretos:
 
 ~~~c++
 cout << "Elemento en 0: " << v.at(0) << endl;
@@ -59,7 +59,7 @@ Antes de ejecutar este código piense qué valores son los que se mostrarían. A
 
 Además de la operación `at()`, podemos usar los corchetes para poder referirnos a un elemento de un vector. En lugar de escribir `v.at(i)`, usamos la sintaxis `v[i]`. La diferencia fundamental está en que:
 
-* En la operación `at()` se comprueba que el índice está en el rango correcto. Si no lo está, directamente obtenemos un resultado como el que ha visto en el [ejercicio 3.2](#here).
+* En la operación `at()` se comprueba que el índice está en el rango correcto. Si no lo está, directamente obtenemos un resultado como el que ha visto en el [ejercicio 3.2](#ejercicio-32--acceso-a-los-elementos).
 * En la operación `[]` no se hacen comprobaciones. Por tanto, se intenta realizar la operación aunque estemos en un índice
 incorrecto. Esto hace que sea muy peligroso, pues accedemos a posiciones de memoria incorrectas, aunque permite que el código no pierda tiempo en las comprobaciones si estamos seguros de que son correctas.
 
@@ -70,7 +70,7 @@ por lo que es la más habitual. Por supuesto, su uso obliga a tener mucho cuidad
 
 ##### Ejercicio 3.3 — Acceso con corchetes
 
-Considere el [ejercicio 3.2](#here) y cambie el operador `at()` por el operador `[]`. Es decir, añada estas líneas:
+Considere el [ejercicio 3.2](#ejercicio-32--acceso-a-los-elementos) y cambie el operador `at()` por el operador `[]`. Es decir, añada estas líneas:
 
 ~~~c++
 cout << "Elemento en 0: " << v[0] << endl;
@@ -113,7 +113,7 @@ Como resultado, el programa escribirá todos los primos resultantes.
 
 ##### Ejercicio 3.6 — Criba de Eratóstenes (versión 2)
 
-Modifique el [ejercicio 3.5](#here) para que, como resultado del algoritmo de la criba, tengamos un vector sólo con los números primos y sin los números tachados.
+Modifique el [ejercicio 3.5](#ejercicio-35--criba-de-eratóstenes) para que, como resultado del algoritmo de la criba, tengamos un vector sólo con los números primos y sin los números tachados.
 
 - - -
 
@@ -125,13 +125,13 @@ Para resolver estos ejercicios, debe saber utilizar las funciones de modificaci�
 
 ##### Ejercicio 3.7 — Media, desviación y varianza de números positivos
 
-Escriba un programa similar al del [ejercicio 3.4](#here), pero teniendo en cuenta que los valores que se analizarán serán no negativos. La entrada de datos se realizará leyendo valores hasta que se lea un valor negativo. En ese momento, se obtendrán en la salida estándar los valores de la media, desviación y varianza de los datos introducidos.
+Escriba un programa similar al del [ejercicio 3.4](#ejercicio-34--media-desviación-y-varianza), pero teniendo en cuenta que los valores que se analizarán serán no negativos. La entrada de datos se realizará leyendo valores hasta que se lea un valor negativo. En ese momento, se obtendrán en la salida estándar los valores de la media, desviación y varianza de los datos introducidos.
 
 - - -
 
-### Ejercicio 3.8 — Eliminar pares
+##### Ejercicio 3.8 — Eliminar pares
 
-Escriba un programa que lea números positivos y los almacene en un vector (la lectura será similar a la que ha hecho en el [ejercicio 3.7](#here)). A continuación, el programa eliminará del vector todos los números que sean pares. Para ello, deberá recorrer el vector y cada vez que encuentre un número par, lo intercambiará con el último y a continuación lo eliminará con la operación `pop_back()`. Observe que el vector resultante no mantiene el orden original de los elementos impares.
+Escriba un programa que lea números positivos y los almacene en un vector (la lectura será similar a la que ha hecho en el [ejercicio 3.7](#ejercicio-37--media-desviación-y-varianza-de-números-positivos)). A continuación, el programa eliminará del vector todos los números que sean pares. Para ello, deberá recorrer el vector y cada vez que encuentre un número par, lo intercambiará con el último y a continuación lo eliminará con la operación `pop_back()`. Observe que el vector resultante no mantiene el orden original de los elementos impares.
 
 - - -
 
@@ -144,13 +144,13 @@ Este esquema también se usa con cierta frecuencia al tratar datos almacenados e
 
 - - -
 
-### Ejercicio 3.9 — Media, desviación y varianza de números positivos con lectura adelantada
+##### Ejercicio 3.9 — Media, desviación y varianza de números positivos con lectura adelantada
 
-Revise el [ejercicio 3.7](#here) y asegúrese de que en la lectura de datos está utilizando un esquema de lectura adelantada. Con este esquema únicamente debería hacer inserciones con `push_back()` y no debería hacer ningún borrado con `pop_back()`.
+Revise el [ejercicio 3.7](#ejercicio-37--media-desviación-y-varianza-de-números-positivos) y asegúrese de que en la lectura de datos está utilizando un esquema de lectura adelantada. Con este esquema únicamente debería hacer inserciones con `push_back()` y no debería hacer ningún borrado con `pop_back()`.
 
 - - -
 
-### Ejercicio 3.10 — Parejas de producto par
+##### Ejercicio 3.10 — Parejas de producto par
 
 Haga un programa que lea una serie de números enteros –positivos y
 negativos– desde la entrada estándar hasta que el usuario introduzca un valor cero. El número total de números introducidos ha de ser par y al menos debería haber dos números. Si cuando el usuario introduce un cero el número total de números fuese impar, se descartaría el cero y se seguirían leyendo datos. La serie de datos se almacenará en un vector que incluirá como último dato el valor cero.
