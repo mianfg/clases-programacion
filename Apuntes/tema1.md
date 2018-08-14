@@ -53,7 +53,7 @@ Un **dato** es una representación simbólica de una característica o propiedad
 
 Los algoritmos operan sobre **datos de entrada** y **datos de salida**.
 
-![Imagen 1.3](./resources/tema1-img3.png)
+![Imagen 1.1](./resources/tema1-img1.png)
 
 - - -
 
@@ -78,6 +78,8 @@ devolver resultado
 Un **lenguaje de programación** es un conjunto de símbolos y reglas sintácticas y semánticas que definen su estructura y el significado de sus elementos y expresiones.
 
 Al proceso por el cual se escribe, se prueba, se depura, se compila (de ser necesario) y se mantiene el código fuente de un programa informático se le llama **programación**.
+
+![Imagen 1.3](./resources/tema1-img3.png)
 
 - - -
 
