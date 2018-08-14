@@ -73,6 +73,9 @@ En la siguiente lista tiene algunos datos para verificar que el ejercicio es cor
 
 ##### Ejercicio 2.5. Rectángulo
 
+> ⭐ Este es un ejercicio recomendado.  
+> 🤔 Este ejercicio es de dificultad **alta**.
+
 Escriba un programa que lea las coordenadas que definen un
 rectángulo –dos esquinas opuestas– y las coordenadas de un punto en el espacio.
 
@@ -83,6 +86,8 @@ Además, tenga en cuenta que no sabemos las esquinas que introduce el usuario, s
 **Nota:** No use operadores aritméticos.
 
 ##### Ejercicio 2.6. Fecha correcta
+
+> ⭐ Este es un ejercicio recomendado.
 
 Escriba un programa que lea una fecha –día, mes y año– y
 compruebe si es válida. Para ello, use una única instrucción if/else (con una condición compuesta) que escriba si es correcta o no, es decir:
@@ -123,9 +128,13 @@ Compruebe si el orden de las subexpresiones afecta al funcionamiento del program
 
 ##### Ejercicio 2.9. Lectura con `do`-`while`
 
+> ⭐ Este es un ejercicio recomendado.
+
 Escriba un programa para leer un entero positivo.
 
 ##### Ejercicio 2.10. Menú y circunferencia
+
+> ⭐ Este es un ejercicio recomendado.
 
 Realice un programa que permita realizar algunos cálculos sobre una circunferencia. En concreto calculará el área del círculo y el perímetro correspondiente. El programa presentará un menú de opciones al usuario como el siguiente:
 
@@ -149,9 +158,13 @@ Aunque la teoría dice que el bucle `do`−`while` se ejecuta al menos una vez, 
 
 ##### Ejercicio 2.11.  Forzar la primera iteración del bucle `while`
 
+> ⭐ Este es un ejercicio recomendado.
+
 Considere el [ejercicio 2.9](#ejercicio-29-lectura-con-do-while). Sustituya el bucle `do`−`while` por otro de tipo `while`. Debe realizar este ejercicio sin añadir nuevas instrucciones de lectura de datos (`cin>>`).
 
 ##### Ejercicio 2.12. Procesamiento de datos con `while`
+
+> ⭐ Este es un ejercicio recomendado.
 
 Amplíe el [ejercicio 2.11](#ejercicio-211--forzar-la-primera-iteración-del-bucle-while) con el código necesario para contar el número de dígitos que componen el número que se ha leído. Debe usar un bucle de tipo `while` para esta tarea.
 
@@ -161,6 +174,8 @@ Como hemos visto antes, es frecuente usar el bucle `do`−`while` para filtrar l
 datos de entrada. En estas situaciones es habitual usar un bucle de tipo `while`.
 
 ##### Ejercicio 2.13. Lectura y procesamiento de datos con centinela
+
+> ⭐ Este es un ejercicio recomendado.
 
 Escriba un programa que lea una serie de números enteros positivos y que al terminar muestre la sumatoria de todos ellos. Para terminar, el usuario dará un valor negativo. Por ejemplo, si la secuencia de datos que da el usuario es esta:
 
@@ -192,14 +207,19 @@ Esta opción parece ser contraria a un buen diseño, ya que el hecho de repetir 
 
 ##### Ejercicio 2.14.  Lectura anticipada con `while`
 
+> ⭐ Este es un ejercicio recomendado.
+
 Modifique el programa del [ejercicio 2.13](#ejercicio-213-lectura-y-procesamiento-de-datos-con-centinela) para implementar la lectura anticipada con el bucle `while`.
 
 ###### Ejercicio 2.15. Lectura anticipada para mostrar mensajes de entrada diferentes
 
-Se desea implementar un programa que lea un valor entero en el rango `[0,100]`. La primera petición del dato deberá mostrar el mensaje `“Escriba un valor entero”`. Si el usuario escribe un valor fuera del rango el programa mostrará el mensaje `“El
-número debe estar en el intervalo [0,100]. Por favor, escriba otro número”` y pedirá de nuevo el dato.
+> ⭐ Este es un ejercicio recomendado.
+
+Se desea implementar un programa que lea un valor entero en el rango `[0,100]`. La primera petición del dato deberá mostrar el mensaje `“Escriba un valor entero”`. Si el usuario escribe un valor fuera del rango el programa mostrará el mensaje `“El número debe estar en el intervalo [0,100]. Por favor, escriba otro número”` y pedirá de nuevo el dato.
 
 ##### Ejercicio 2.16. Lectura anticipada con centinela
+
+> ⭐ Este es un ejercicio recomendado.
 
 Se desea implementar un programa que cuente la cantidad de datos que son positivos y negativos en una secuencia de valores enteros. Implemente un programa que lea datos hasta que se lea el valor cero. Como resultado, indicará por la salida estándar cuántos han sido positivos y cuántos han sido negativos.
 
@@ -228,6 +248,8 @@ condición opuesta. En este caso pueden ser útiles las **leyes de De Morgan** p
 Si en el ejemplo anterior deseamos leer números hasta que se lea un negativo o hasta leer el valor `4`, la condición del `while` quedaría como `(!(num<0 || num==4))`, que aplicando las leyes de De Morgan se podría transformar en `(num>=0 && num!=4)`.
 
 ##### Ejercicio 2.17. Repetir mientras o repetir hasta
+
+> ⭐ Este es un ejercicio recomendado.
 
 Escriba un programa que repite la lectura de un número hasta que o bien el número sea múltiplo de 3, o bien el número sea positivo e impar. Escriba la condición en términos de hasta y use las leyes de De
 Morgan para simplificarla.
@@ -265,6 +287,8 @@ A continuación las ecuaciones de la media y de la varianza:
 ### Anidamiento de bucles
 ##### Ejercicio 2.20. Mostrar cuadrado
 
+> ⭐ Este es un ejercicio recomendado.
+
 Escriba un programa que lea un número entero `N` desde la entrada estándar y que a continuación dibuje con asteriscos –en la salida
 estándar– un cuadrado de lado `N`. A continuación vemos un ejemplo de ejecución:
 
@@ -279,6 +303,8 @@ Introduzca el lado del cuadrado: 6
 ~~~
 
 ##### Ejercicio 2.21.  Media de medias
+
+> ⭐ Este es un ejercicio recomendado.
 
 Escriba un programa que lea una serie de temperaturas de diferentes ciudades con el siguiente formato:
 
@@ -310,6 +336,8 @@ concreto las medias para cada ciudad son: `14.4`, `10`, `24.74` y `26.73` y, por
 
 ##### Ejercicio 2.22. Números en rango
 
+> ⭐ Este es un ejercicio recomendado.
+
 Escriba un programa que lea un entero y dos números reales: _n_, _min_ y _max_. Estos valores indican que hay n números de entrada y que deberían estar en el intervalo [_min_, _max_]. A continuación, deberá leer los _n_ valores de entrada y confirmar que todos están en el intervalo indicado. En caso de que uno de los valores no lo esté, parará la lectura y terminará el programa indicando que hay valores fuera de rango. Resuelva el ejercicio usando un ciclo for. A continuación se muestran dos posibles ejecuciones de este programa:
 
 ~~~
@@ -327,6 +355,9 @@ Error. Finalización inesperada del programa: fuera de rango
 ~~~
 
 ##### Ejercicio 2.23. Cotización de las acciones
+
+> ⭐ Este es un ejercicio recomendado.
+> 🤔 Este ejercicio es de dificultad **alta**.
 
 Se desea estudiar cómo progresa la cotización de una acción a lo largo del tiempo. Para ello, escribiremos un programa que lee la
 secuencia de valores de una acción. Esta secuencia describe el comportamiento de la acción durante un período de tiempo. El programa deberá escribir como resultado el valor máximo de la acción, el mínimo, la subida máxima, y la bajada máxima. Para determinar el final de la secuencia, se introducirá un valor negativo. Un ejemplo de ejecución es:
@@ -380,8 +411,10 @@ Error, la opción elegida no es correcta
 
 ##### Ejercicio 2.25. Espacio cartesiano
 
-Haga un programa que lea las coordenadas de tres puntos en un espacio cartesiano 2D y que nos diga si forman o no un triángulo. Además,
-debe indicar si el triángulo es eqilátero. Si llamamos a los puntos A, B y C, sabemos que forman un triángulo cuando la mayor de las distancias AB, AC, BC es menor que la suma de las otras dos. El triángulo es equilátero si las tres distancias son iguales.
+> ⭐ Este es un ejercicio recomendado.
+> 🤯 Este ejercicio es de dificultad **muy alta**.
+
+Haga un programa que lea las coordenadas de tres puntos en un espacio cartesiano 2D y que nos diga si forman o no un triángulo. Además, debe indicar si el triángulo es eqilátero. Si llamamos a los puntos A, B y C, sabemos que forman un triángulo cuando la mayor de las distancias AB, AC, BC es menor que la suma de las otras dos. El triángulo es equilátero si las tres distancias son iguales.
 
 ##### Ejercicio 2.26. Notas
 
@@ -425,14 +458,20 @@ Para ello, tenga en cuenta que el valor inicial de los operandos es cero, y que 
 
 ##### Ejercicio 2.31. Número perfecto
 
+> 🤔 Este ejercicio es de dificultad **alta**.
+
 Un número perfecto es aquel que es igual a la suma de todos sus divisores positivos excepto él mismo. El primer número perfecto es el 6, ya que sus divisores son 1, 2 y 3 y 6=1+2+3. Escriba un programa que muestre el mayor número perfecto que sea menor a un número dado.
 
 ##### Ejercicio 2.32. Número narcisista
 
-Un número entero de _n_ dígitos se dice que es narcisista si se
-puede obtener como la suma de las potencias _n_-ésimas de cada uno de sus dígitos. Por ejemplo, 153 = 13+53+33 y 8208 = 84+24+04+84 son números narcisistas. Escriba un programa que lea un número entero positivo y nos diga si es narcisista o no.
+> 🤔 Este ejercicio es de dificultad **alta**.
+
+Un número entero de _n_ dígitos se dice que es narcisista si se puede obtener como la suma de las potencias _n_-ésimas de cada uno de sus dígitos. Por ejemplo, 153 = 13+53+33 y 8208 = 84+24+04+84 son números narcisistas. Escriba un programa que lea un número entero positivo y nos diga si es narcisista o no.
 
 ##### Ejercicio 2.33. Mostrar figuras
+
+> ⭐ Este es un ejercicio recomendado.
+> 🤯 Este ejercicio es de dificultad **muy alta**.
 
 Escriba un programa que lea un número entero `N` desde la entrada estándar y que a continuación dibuje con asteriscos –en la salida
 estándar– las siguientes figuras:
@@ -454,6 +493,9 @@ A continuación, vemos una muestra de estas figuras para `N=7`:
 ~~~
 ##### Ejercicio 2.34. _Run Length Encoding_
 
+> ⭐ Este es un ejercicio recomendado.
+> 🤯 Este ejercicio es de dificultad **muy alta**.
+
 El método RLE (Run Length Encoding) de codificación permite almacenar en poco espacio largas secuencias de datos. El algoritmo consiste en transformar las secuencias de valores idénticos consecutivos en
 parejas compuestas por el valor y el número de repeticiones. Escriba un programa que lea una secuencia de números terminada con un número negativo y la codifique mediante el método RLE. Un ejemplo de ejecución sería el siguiente:
 
@@ -466,6 +508,8 @@ Donde la salida corresponde a indicar que hay 3 unos, 5 dos, 6 tres y 1 cinco.
 
 ##### Ejercicio 2.35. Número feliz
 
+> 🤔 Este ejercicio es de dificultad **alta**.
+
 Se dice que un número natural es feliz si cumple que al sumar los
 cuadrados de sus dígitos y repetimos esta suma con los resultados que vamos obteniendo, finalmente obtenemos el dígito 1 como resultado. 
 
@@ -476,6 +520,9 @@ Además, un número es feliz de grado _k_ si es feliz en un máximo de _k_ itera
 En el ejemplo anterior, 203 es un número feliz de grado 3 (además, es feliz de cualquier grado mayor o igual que 3). Escriba un programa que lea un número _n_ y un grado _k_ y diga si _n_ es feliz grado _k_.
 
 ##### Ejercicio 2.36. Secuencia más larga
+
+> ⭐ Este es un ejercicio recomendado.
+> 🤔 Este ejercicio es de dificultad **alta**.
 
 Escriba un programa que lea una secuencia de enteros positivos terminada en un valor negativo, y que escriba en la salida estándar la
 longitud de la subsecuencia de números ordenada de mayor longitud junto con la posición donde comienza. Tenga en cuenta que dos números están ordenados si el primero es menor o igual que el segundo. Un ejemplo de ejecución es:
