@@ -17,10 +17,10 @@
 
 ##### Ejemplos
 
-* [Ejemplo 1.1](#ejemplo-21--comprobar-si-un-número-es-par) — primer algoritmo: cálculo de la media
-* [Ejemplo 1.2](#ejemplo-22--comprobar-si-un-número-es-par-versión-modificada) — acceso a variables
-* [Ejemplo 1.3](#ejemplo-23--comprobaciones-de-divisibilidad) — entrada/salida estándar con `iostream`
-* [Ejemplo 1.4](#ejemplo-24--iterando-con-while) — primer programa: `hello world`
+* [Ejemplo 1.1](#ejemplo-11--primer-algoritmo-cálculo-de-la-media) — primer algoritmo: cálculo de la media
+* [Ejemplo 1.2](#ejemplo-12--acceso-a-variables) — acceso a variables
+* [Ejemplo 1.3](#ejemplo-13--entradasalida-estándar-con-iostream) — entrada/salida estándar con `iostream`
+* [Ejemplo 1.4](#ejemplo-14--primer-programa-hello-world) — primer programa: `hello world`
 
 - - -
 
@@ -193,9 +193,27 @@ También puede usarse con valores que no sean booleanos:
 | `'A'` | `'A'` | `true` |
 | `"Hello"` | `"hello"` | `false` |
 
-igualdad: ==
-desigualdad: !=
-orden: > < >= <=
+###### Operador de desigualdad `!=`
+
+| `a` | `b` | `a != b` |
+| --- | --- | --- |
+| `false` | `false` | `false` |
+| `false` | `true` | `true` |
+| `true` | `false` | `true` |
+| `true` | `true` | `false` |
+
+También puede usarse con valores que no sean booleanos:
+
+| `a` | `b` | `a != b` |
+| --- | --- | --- |
+| `5` | `5` | `false` |
+| `5.3` | `3.7` | `true` |
+| `'A'` | `'A'` | `false` |
+| `"Hello"` | `"hello"` | `true` |
+
+###### Operadores de orden `<` `>` `<=` `>=`
+
+Devuelven `true` si se verifica la relación de orden definida para el tipo, se usa mayoritariamente con valores no booleanos.
 
 ### 6.3  Variables: declaración, inicialización, asignación y acceso
 
@@ -234,6 +252,8 @@ cout << valor << ' ' << valor2 << '\n';
 ### 6.4  Operadores: entrada/salida estándar, `cin` y `cout`
 
 Al hacer uso de la biblioteca `iostream`, podemos hacer uso del flujo de entrada por teclado y salida por pantalla (**flujo estándar**).
+
+- - -
 
 ##### Ejemplo 1.3 — entrada/salida estándar con `iostream`
 
