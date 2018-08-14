@@ -518,3 +518,38 @@ for ( int i = 0; i < v.size(); i++ )
 - - -
 
 ### 5.2  Modificación de los elementos de un vector
+
+#### 5.1  Inserción de un valor
+
+- - -
+
+##### Algoritmo 3.9 — inserción de un valor en un vector
+
+> Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+
+~~~ c++
+vector<type> v(<tamaño>);
+<type> buscado = <elemento_a_buscar>
+
+<type> insertar_valor = <valor_a_insertar>;
+int insertar_posicion = <posicion_a_insertar>;
+
+vector<type> v_insertado;  // el vector a devolver
+
+// parte izquierda del vector (antes de la posición en la que queremos insertar)
+for ( int i = 0; i < insertar_posicion )
+    v_insertado.push_back(v[i]);
+
+// insertamos el elemento deseado
+v_insertado.push_back(insertar_valor);
+
+// parte derecha del vector (completamos el vector)
+for ( int i = insertar_posicion; i < v.size(); i++ )
+    v_insertado.push_back(v[i]);
+
+// opcionalmente podemos modificar v
+v = v_insertado;
+v_insertado.clear();  // para no desperdiciar memoria
+~~~
+
+- - -
