@@ -534,7 +534,15 @@ for ( int i = 0; i + v <= && !encontrado ) {
 
 ### 5.2  Modificación de los elementos de un vector
 
+La clase vector incorpora multitud de funciones para poder variar los elementos del vector, así como el tamaño de éste. Hemos visto las funciones `push_back()`, `pop_back()` y `clear()`, pero... ¿y si queremos insertar o eliminar valores que no estén necesariamente al final del vector?
+
+Existen funciones, como hemos dicho, ya hechas para este cometido en la clase `vector`, pero... **¿por qué no las hacemos nosotros?** Aquí van algunas...
+
 #### 5.2.1  Inserción de un valor
+
+En este algoritmo, insertaremos el valor `insertar_valor` en la posición `insertar_posicion` del vector `v`. En este caso, haremos uso de `push_back()` para crear un segundo vector, `v_insertado`, en el que se encontrará el valor insertado. Luego, si queremos guardar nuestros cambios en `v`, reasignaremos `v_insertado` a `v`. Finalmente, tendremos dos copias de un mismo vector, lo cual no es óptimo en memoria. Por ello, hacemos `clear()` sobre `v_insertado`, para quedarnos únicamente con `v`.
+
+**Muy importante:** esta es una solución posible, pero ni mucho menos es la más óptima. De hecho, hemos hecho uso de funciones de la clase `vector`, por lo que no podríamos usar este algoritmo con arrays. Intenta hacer tú una solución alternativa, ¡hay multitud de ellas!
 
 - - -
 
@@ -544,7 +552,6 @@ for ( int i = 0; i + v <= && !encontrado ) {
 
 ~~~ c++
 vector<type> v(<tamaño>);
-<type> buscado = <elemento_a_buscar>
 
 <type> insertar_valor = <valor_a_insertar>;
 int insertar_posicion = <posicion_a_insertar>;
@@ -568,9 +575,20 @@ v = v_insertado;
 v_insertado.clear();  // para no desperdiciar memoria
 ~~~
 
+###### Casos clave para comprobar este algoritmo
+
+* Que queramos insertar nuestro elemento al principio.
+* Que queramos insertar nuestro elemento al final.
+* Que queramos insertar nuestro elemento en medio del vector.
+* Que queramos insertar nuestro elemento en una posición no permitida:
+	* Una posición con un valor menor que cero (índice inválido).
+	* Un índice que exceda el tamaño del vector resultante (el índice máximo al que podemos llegar es a `v.size()`, en caso de que queramos insertar el elemento al final — luego el vector se redimensionaría para alojar un elemento más).
+
 - - -
 
 #### 5.2.2  Eliminación de un valor
+
+Intentaremos resolver el problema de la siguiente manera: vamos a ir pasando, a partir del elemento que queremos eliminar, todos los vectores hacia la izquierda. Luego, bastará hacer `pop_back()` para eliminar el último elemento del vector, que será una copia del elemento anterior a él.
 
 - - -
 
@@ -582,33 +600,35 @@ v_insertado.clear();  // para no desperdiciar memoria
 vector<type> v(<tamaño>);
 <type> buscado = <elemento_a_buscar>
 
-<type> insertar_valor = <valor_a_insertar>;
-int insertar_posicion = <posicion_a_insertar>;
+int eliminar_posicion = <posicion_a_eliminar>;
 
-vector<type> v_insertado;  // el vector a devolver
+for ( int i = eliminar_posicion; i < v.size() - 1; i++ )
+    v[i] = v[i+1];
 
-// parte izquierda del vector (antes de la posición en la que queremos insertar)
-for ( int i = 0; i < insertar_posicion )
-    v_insertado.push_back(v[i]);
-
-// insertamos el elemento deseado, comprobando antes que la posición donde colocarlo es válida
-if ( insertar_posicion <= v.size()
-    v_insertado.push_back(insertar_valor);
-
-// parte derecha del vector (completamos el vector)
-for ( int i = insertar_posicion; i < v.size(); i++ )
-    v_insertado.push_back(v[i]);
-
-// opcionalmente podemos modificar v
-v = v_insertado;
-v_insertado.clear();  // para no desperdiciar memoria
+v.pop_back();
 ~~~
 
 - - -
 
 ### 5.3  Algoritmos de ordenación
 
+Además de encontrar cosas, es imprescindible poder ordenar los vectores. De hecho, uno de los prerrequisitos del _binary search_ es que la lista esté ordenada.
+
+Para poder ordenar vectores, el vector debe ser de un tipo en el que haya establecida una relación de orden.
+
+Este problema es uno de los problemas más importantes en ciencias de la computación, por su gran cantidad de aplicaciones. Por eso, es necesario que la solución a este problema sea **óptima**, ya que es necesario ordenar en algunas ocasiones conjuntos descomunales de datos.
+
+Aquí veremos los más fundamentales, aunque puedes hacerte una idea de cómo funcionan los otros en este enlace [aquí](https://www.toptal.com/developers/sorting-algorithms) (tiene animaciones muy chulas 😜).
+
 #### 5.3.1  Ordenación por selección
+
+La idea tras este algoritmo es dividir el vector en dos **subvectores**:
+
+* El subvector **izquierdo**, ordenado.
+* El subvector **derecho**, todavía por ordenar.
+
+Se recorrerá el subvector derecho y se insertará el valor mínimo de este al final del subvector izquierdo, hasta haber ocupado el subvector izquierdo todo el vector, quedando éste ordenado.
+
 #### 5.3.2  Ordenación por inserción
 #### 5.3.3  Ordenación por intercambio directo (_método de la burbuja_)
 
