@@ -32,7 +32,7 @@
         — 5.3.1 [Ordenación por selección](#531--ordenación-por-selección)  
         — 5.3.2 [Ordenación por inserción](#532--ordenación-por-inserción)  
         — 5.3.3 [Ordenación por intercambio directo (_método de la burbuja_)](#533--ordenación-por-intercambio-directo-método-de-la-burbuja)  
-6. [Concepto de matriz](#6-concepto-de-matriz)
+6. [Vectores de vectores. Matrices](#6-vectores-de-vectores-matrices)
 7. [Vectores vs. arrays](#7-vectores-vs-arrays)
 
 ##### Ejemplos y algoritmos
@@ -777,5 +777,5 @@ Los mismos que en el [algoritmo 3.11](#algoritmo-311--algoritmo-de-ordenación-p
 
 - - -
 
-## 6. Concepto de matriz
+## 6. Vectores de vectores. Matrices
 ## 7. Vectores vs. arrays
