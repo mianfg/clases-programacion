@@ -280,7 +280,7 @@ dediquemos un coste a la ordenación para hacer que las siguientes búsquedas se
 
 ##### Ejercicio 3.18 — Frecuencias de los datos (2)
 
-Considere el programa del [ejercicio 3.15](#), donde se calculan las frecuencias asociadas a una serie de datos. Se desea mejorar el programa para los casos en los que existen pocos datos y altas frecuencias. Para ello, se propone que no se ordenen los datos de entrada, sino que se creen los dos vectores solución (datos y frecuencias) y se vayan modificando con cada uno de los datos de entrada. El algoritmo, básicamente, consiste en coger un nuevo dato y, si ya se ha obtenido previamente, incrementar su frecuencia, y si no, insertarlo en la solución con frecuencia uno.
+Considere el programa del [ejercicio 3.15](#ejercicio-315--frecuencias-de-los-datos), donde se calculan las frecuencias asociadas a una serie de datos. Se desea mejorar el programa para los casos en los que existen pocos datos y altas frecuencias. Para ello, se propone que no se ordenen los datos de entrada, sino que se creen los dos vectores solución (datos y frecuencias) y se vayan modificando con cada uno de los datos de entrada. El algoritmo, básicamente, consiste en coger un nuevo dato y, si ya se ha obtenido previamente, incrementar su frecuencia, y si no, insertarlo en la solución con frecuencia uno.
 
 - - -
 
