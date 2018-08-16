@@ -770,7 +770,7 @@ cout << "i=" << i << endl;  // mostraría i=10
 
 ###### Casos clave para comprobar este algoritmo
 
-Los mismos que en el [algoritmo 3.11](#algoritmo-311--algoritmo-de-ordenación-por-selección).
+Los mismos que en el [algoritmo 3.11](#casos-clave-para-comprobar-este-algoritmo-2).
 
 - - -
 
@@ -823,7 +823,7 @@ for ( int i = 0; i < v.size() && continuar; i++ ) {
 
 ###### Casos clave para comprobar este algoritmo
 
-Los mismos que en el [algoritmo 3.11](#algoritmo-311--algoritmo-de-ordenación-por-selección).
+Los mismos que en el [algoritmo 3.11](#casos-clave-para-comprobar-este-algoritmo-2).
 
 - - -
 
