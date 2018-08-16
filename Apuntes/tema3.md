@@ -50,6 +50,8 @@
 * [Algoritmo 3.11](#algoritmo-311--algoritmo-de-ordenación-por-selección) — algoritmo de ordenación por selección
 * [Algoritmo 3.12](#algoritmo-312--algoritmo-de-ordenación-por-inserción) — algoritmo de ordenación por inserción
 * [Algoritmo 3.13](#algoritmo-313--método-de-la-burbuja-para-la-ordenación-de-vectores) — método de la burbuja para la ordenación de vectores
+* [Ejemplo 3.14](#ejemplo-314--vectores-de-vectores) — vectores de vectores
+* [Ejemplo 3.15](#ejemplo-315--matrices) — matrices
 
 - - -
 
