@@ -523,10 +523,21 @@ for ( int i = 0; i < v.size(); i++ )
 vector<type> v(<tamaño>);
 vector<type> v2(<tamaño_2>);
 
-// queremos comprobar si v2 está en v
+// queremos comprobar si v2 está en v, y almacenar el inicio de v2 en v
+int inicio_vector = 0;
+int j = 0;
+bool encontrado = false;
 
-for ( int i = 0; i + v <= && !encontrado ) {
-    if 
+for ( int i = 0; i < v.size() && !encontrado ) {
+    if ( v[i] == v2[j] ) {
+    	j++;
+	if ( j == v2.size() )
+	    encontrado = true;
+    } else {
+    	j = 0;
+	inicio_vector = i;
+	i--;
+    }
 }
 ~~~
 
@@ -608,6 +619,10 @@ for ( int i = eliminar_posicion; i < v.size() - 1; i++ )
 v.pop_back();
 ~~~
 
+###### Casos clave para comprobar este algoritmo
+
+* Que queramos eliminar un elemento en una posición no permitida.
+
 - - -
 
 ### 5.3  Algoritmos de ordenación
@@ -629,8 +644,125 @@ La idea tras este algoritmo es dividir el vector en dos **subvectores**:
 
 Se recorrerá el subvector derecho y se insertará el valor mínimo de este al final del subvector izquierdo, hasta haber ocupado el subvector izquierdo todo el vector, quedando éste ordenado.
 
+En definitiva, una animación siempre lo explica mejor:
+
+- - -
+
+##### Algoritmo 3.11 — algoritmo de ordenación por selección
+
+> 😏 Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+
+~~~ c++
+vector<type> v(<tamaño>);  // vector a ordenar
+
+for ( int i = 0; i < v.size(); i++ ) {
+    int pos_minimo = i;
+    
+    for ( int j = i + 1; j < v.size(); j++ )
+        if ( v[j] < v[i] )
+	    pos_minimo = j;
+    
+    int aux = v[i];
+    v[i] = v[pos_minimo];
+    v[pos_minimo] = aux;
+}
+~~~
+
+###### Casos clave para comprobar este algoritmo
+
+* Que el vector esté vacío.
+* Que el vector sólo tenga una componente.
+* Que el vector tenga un número de componentes par / impar.
+* Que el vector ya estuviese ordenado.
+* Que el vector ya estuviese ordenado de mayor a menor.
+* Que el vector tenga todas las componentes iguales.
+* Que tenga dos componentes iguales de forma contigua en cualquier parte del vector.
+* Que tenga dos componentes iguales separadas en cualquier parte del vector.
+
+- - -
+
 #### 5.3.2  Ordenación por inserción
+
+Este algoritmo es similar al algoritmo interior: también tenemos dos secciones. Sin embargo, este toma el primer elemento de la sección derecha y lo coloca en la posición necesariade la sección izquierda de forma que la sección izquierda quede ordenada. Esto implica desplazar todos los vectores de la parte izquierda que hagan falta para poder colocar el primer vector de la parte derecha en su sitio.
+
+Podrás apreciar esto mejor con la siguiente animación:
+
+- - -
+
+##### Algoritmo 3.12 — algoritmo de ordenación por inserción
+
+> 😏 Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+
+~~~ c++
+vector<type> v(<tamaño>);  // vector a ordenar
+
+for ( int i = 0; i < v.size(); i++ ) {
+    int pos_intercambiar = i;
+    
+    for ( int j = i; j > 0 && v[pos_intercambiar] < v[j-1]; j-- )
+        v[j] = v[j-1];
+    
+    v[j] = v[pos_intercambiar];
+}
+~~~
+
+###### Casos clave para comprobar este algoritmo
+
+Los mismos que en el [algoritmo 3.11](#here).
+
+- - -
+
 #### 5.3.3  Ordenación por intercambio directo (_método de la burbuja_)
+
+Al igual que en los métodos anteriores, dejamos a la izquierda un subvector ordenado. Para ello, se compara dos a dos desde el final hacia al principio del vector y se intercambian los elementos para que el de la izquierda sea menor que el de la derecha. Tras tantas iteraciones como elementos tenga el vector, la parte izquierda se incrementará en uno en cada iteración, hasta llegar a tener el vector completamente ordenado.
+
+Aclarémoslo con la siguiente animación:
+
+- - -
+
+##### Algoritmo 3.13 — método de la burbuja para la ordenación de vectores
+
+> 😏 Este es un algoritmo muy importante: que lo entiendas es **fundamental**. Por eso, **¡intenta resolverlo tú primero!**
+
+~~~ c++
+vector<type> v(<tamaño>);  // vector a ordenar
+
+for ( int i = 0; i < v.size(); i++ ) {
+    for ( int j = v.size() - 1; j > i; j-- ) {
+        if ( vector[j] < vector[j-1] ) {
+	    int aux = vector[j];
+	    vector[j] = vector[j-1];
+	    vector[j-1] = aux;
+	}
+    }
+}
+~~~
+
+###### Una pequeña optimización de este algoritmo
+
+Si al pasar el bucle `for` interno no se produce ninguna variación, el vector ya está ordenado y no hacen falta más comprobaciones. Incorporémoslo.
+
+~~~ c++
+vector<type> v(<tamaño>);  // vector a ordenar
+
+bool continuar = true;
+
+for ( int i = 0; i < v.size() && continuar; i++ ) {
+    continuar = false;
+    for ( int j = v.size() - 1; j > i; j-- ) {
+        if ( vector[j] < vector[j-1] ) {
+	    continuar = true;
+	    int aux = vector[j];
+	    vector[j] = vector[j-1];
+	    vector[j-1] = aux;
+	}
+    }
+}
+~~~
+
+###### Casos clave para comprobar este algoritmo
+
+Los mismos que en el [algoritmo 3.11](#here).
 
 - - -
 
