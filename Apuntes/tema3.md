@@ -390,13 +390,12 @@ int i = 0;
 int indice_encontrado = -1;
 bool encontrado = false;
 
-while ( i < v.size() && !encontrado ) {
+while ( i < v.size() && !encontrado )
     if ( v[i] == buscado ) {
     	encontrado = true;
 	indice_encontrado = i;
     } else
     	i++;
-}
 ~~~
 
 ###### Código en C++. Versión 2: usando `for`
@@ -408,12 +407,26 @@ vector<type> v(<tamaño>);
 int indice_encontrado = -1;
 bool encontrado = false;
 
-for ( int i = 0; i < v.size() && !encontrado; i++ ) {
+for ( int i = 0; i < v.size() && !encontrado; i++ )
     if ( v[i] == buscado ) {
     	encontrado = true;
 	indice_encontrado = i;
     }
-}
+~~~
+
+###### Código en C++. Versión 3: usando `for` y haciendo uso del `-1`
+
+Tenemos que `indice_encontrado` vale `-1` si no hemos encontrado nada. Podemos hacer usto de eso para evitar tener que usar el booleano `encontrado`. Por tanto, el código anterior es completamente equivalente a:
+
+~~~ c++
+vector<type> v(<tamaño>);
+<type> buscado = <elemento_a_buscar>
+
+int indice_encontrado = -1;
+
+for ( int i = 0; i < v.size() && indice_encontrado == -1; i++ )
+    if ( v[i] == buscado )
+	indice_encontrado = i;
 ~~~
 
 ###### Casos clave a comprobar para este algoritmo
@@ -434,7 +447,7 @@ Para poder ejecutar este algoritmo, el vector **debe estar ordenado**. La idea e
 
 * `izquierda` es el delimitador de la izquierda.
 * `derecha` es el delimitador de la derecha.
-* `centro` es la posición central entre el delimitador izquierdo y el derecho (se calcula haciendo `(derecha-izquierda)/2`, nótese que en caso de que no haya un elemento central se toma el que se encuentra algo a la izquierda por el truncamiento natural del tipo `int`).
+* `centro` es la posición central entre el delimitador izquierdo y el derecho (se calcula haciendo `(derecha+izquierda)/2`, nótese que en caso de que no haya un elemento central se toma el que se encuentra algo a la izquierda por el truncamiento natural del tipo `int`).
 
 Comprobaremos continuamente si `centro` es el elemento que queremos buscar, e iremos cambiando los delimitadores para buscar dicho elemento (la idea es que el elemento que queremos buscar siempre esté entre `izquierda` y `derecha`, y lo localizaremos con `centro`).
 
@@ -472,7 +485,7 @@ int indice_encontrado = -1;
 bool encontrado = false;
 
 while ( izquierda <= derecha && !encontrado ) {
-    centro = (derecha - izquierda)/2;
+    centro = (derecha + izquierda)/2;
     
     if ( v[centro] == buscado ) {
     	indice_encontrado = centro;
@@ -508,9 +521,8 @@ En lugar de buscar un elemento específico, podremos buscar un elemento más car
 
 ~~~ c++
 vector<type> v(<tamaño>);
-<type> buscado = <elemento_a_buscar>
 
-int indice_maximo = -1;
+int indice_maximo = -1;  // en caso de que el vector sea vacío, devolvemos un -1
 
 if ( v.size() > 0 )
     indice_maximo = 0;
@@ -519,6 +531,12 @@ for ( int i = 0; i < v.size(); i++ )
     if ( v[i] >= v[indice_maximo] )
     	indice_maximo = i;
 ~~~
+
+###### Unos detalles respecto a este algoritmo...
+
+Fíjate cómo hemos comparado usando un `>=`. _¿Cuál es la diferencia entre usar `>=` y `>`? Pista: la diferencia fundamental se encuentra en el caso en el que el elemento máximo se encuentre repetido._
+
+Evidentemente, podemos encontrar el mínimo modificando `>=` por `<` o `<=`.
 
 - - -
 
@@ -578,7 +596,7 @@ int insertar_posicion = <posicion_a_insertar>;
 vector<type> v_insertado;  // el vector a devolver
 
 // parte izquierda del vector (antes de la posición en la que queremos insertar)
-for ( int i = 0; i < insertar_posicion )
+for ( int i = 0; i < insertar_posicion; i++ )
     v_insertado.push_back(v[i]);
 
 // insertamos el elemento deseado, comprobando antes que la posición donde colocarlo es válida
@@ -619,7 +637,6 @@ Intentaremos resolver el problema de la siguiente manera: vamos a ir pasando, a 
 
 ~~~ c++
 vector<type> v(<tamaño>);
-<type> buscado = <elemento_a_buscar>
 
 int eliminar_posicion = <posicion_a_eliminar>;
 
@@ -710,17 +727,45 @@ Podrás apreciar esto mejor con la siguiente animación:
 ~~~ c++
 vector<type> v(<tamaño>);  // vector a ordenar
 
-for ( int i = 0; i < v.size(); i++ ) {
-    int pos_intercambiar = i;
-    <type> valor_intercambiar = v[i];
-    
-    for ( int j = i; j > 0 && v[pos_intercambiar] < v[j-1]; j-- ) {
-        v[j] = v[j-1];
-        pos_intercambiar = j;
+int i, j, aux;  // ver nota al pie
+
+for ( i = 1; i < v.size(); i++ ) {
+    j = i;
+    while ( j > 0 && v[j-1] > v[j] ) {
+    	aux = v[j];
+	v[j] = v[j-1];
+	v[j-1] = aux;
+	j--;
     }
-    
-    v[pos_intercambiar] = valor_intercambiar;
 }
+~~~
+
+###### Nota importante respecto a este algoritmo
+
+Nota cómo hemos declarado los iteradores antes del `for`. El motivo está en el _scope_ de las variables de un `for`.
+
+> Esto es **muy importante** de entender, y es fundamental a la hora de usar iteradores tipo `for`.
+
+#### Iteradores y _scope_
+
+Al hacer un `for`, declaramos una variable (la mayoría de las veces) en su cuerpo. Sin embargo, esa variable es accesible sólo desde el cuerpo del `for`. Al acabar el `for`, dicha variable queda destruida.
+
+~~~ c++
+for ( int i = 0; i < 10; i++ )
+    cout << "i=" << i << endl;
+
+cout << "i=" << i << endl;  // no funcionaría, porque i ya no "existe"
+~~~
+
+Esto puede evitarse si declaramos el iterador antes del `for`.
+
+~~~ c++
+int i;
+
+for ( i = 0; i < 10; i++ )
+    cout << "i=" << i << endl;
+
+cout << "i=" << i << endl;  // mostraría i=10
 ~~~
 
 ###### Casos clave para comprobar este algoritmo
