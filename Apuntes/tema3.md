@@ -778,4 +778,87 @@ Los mismos que en el [algoritmo 3.11](#algoritmo-311--algoritmo-de-ordenación-p
 - - -
 
 ## 6. Vectores de vectores. Matrices
+
+Un vector puede contener elementos de cualquier tipo, incluyendo vectores. Aquí nace la idea de los **vectores de vectores**.
+
+### Vectores de vectores
+
+Para **declarar** vectores de vectores, basta hacer lo siguiente:
+
+~~~ c++
+vector<vector<type> > v;
+~~~
+
+Nótese que hemos colocado **un espacio, el cual es muy importante**. Si no estuviese el espacio, C++ interpretaría el signo `>>`, el cual es el operador de salida.
+
+Para **acceder** a los componentes del vector de vectores basta usar los corchetes `[]` o el operador `at()` de forma sucesiva. Por ejemplo, si tenemos un vector de la siguiente forma: `v = {{1,2,3},{4},{5,6}`, podemos acceder a `v[2][1]`, el cual contiene el valor `6`. También podemos hacer, equivalentemente, `v.at(2).at(1)`.
+
+- - -
+
+##### Ejemplo 3.14 — vectores de vectores
+
+~~~ c++
+vector<int> v;
+vector<vector<int> > v2;
+
+v2.push_back(v);           // v2 queda como {{}}
+cout << v2.size() < endl;  // muestra 0
+cout << v.size() < endl;   // muestra 1
+v2[0].push_back(5);	   // añade un 5 al primer vector (elemento) del vector v2
+			   // v2 queda como {{5}}
+v2.push_back(v2[0]);       // v2 queda como {{5},{5}}
+cout << v2[1][0] << endl;  // escribe 5
+~~~
+
+- - -
+
+### Matrices
+
+Las **matrices** son un caso particular de los vectores de vectores, en el que todos los vectores contenidos tienen el mismo tamaño. Así, una matriz 4x3 se representará, en forma de vectores de vectores, como `{{a_11, a_12, a_13}, {a_21, a_22, a_23}, {a_31, a_32, a_33}, {a_41, a_42, a_43, a_44}}`.
+
+- - -
+
+##### Ejemplo 3.15 — matrices
+
+~~~ c++
+// matriz de 5x7 usando la variable v
+vector<double> v(7,0.0); // 7 posiciones con valor cero
+vector<vector<double> > matriz5x7(5,v); // cada posición un vector de 7
+
+// matriz de 10x20 en una sola línea
+vector<vector<int> > matriz10x20 ( 10 , vector<int>(20,0) );
+~~~
+
+- - -
+
 ## 7. Vectores vs. arrays
+
+Hemos trabajado con vectores, objetos de la clase `vector`. Existe un tipo nativo de C++, basado en punteros, llamado _array_, un tanto más tedioso de trabajar, pero **fundamental**: la clase `vector` se basa en los arrays.
+
+Las principales diferencias entre vectores y arrays son:
+
+###### Los arrays...
+
+* son un elemento del lenguaje C++, y también de C.
+* no han sido modificados prácticamente desde C89.
+* proporcionan una secuencia de elementos indexable y continua.
+* son de tamaño fijo, no pueden redimensionarse.
+* su tamaño debe ser constante en tiempo de compilación: debe decidirse al programarse.
+* si los declaramos dinámicamente, debemos liberarlos dinámicamente para no eliminar memoria.
+* son punteros.
+* no pueden devolverse en una función.
+* no pueden ser copiados o asignados directamente.
+* requieren de constructores: no tienen un constructor diseñado.
+
+###### Los vectores (`vector`)...
+
+* son una plantilla de clase.
+* son una construcción única de C++ (no están en C).
+* es implementado como un array dinámico.
+* su tamaño puede ser modificado de forma dinámica.
+* administran de forma automática su memoria, que se libera en su destrucción.
+* pueden ser pasados y devueltos por funciones.
+* pueden ser copiados y asignados.
+* no son punteros de forma nativa.
+
+Entre otras muchas diferencias, las anteriores son las más significativas.
