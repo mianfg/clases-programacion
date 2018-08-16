@@ -173,3 +173,164 @@ A continuación deberá recorrer el vector e indicar si existe al menos una pare
 El cero no se considera para los cálculos. Las parejas que deben considerarse son las de las posiciones 0-1, 1-2, 2-3, ...
 
 - - -
+
+### Vectores de vectores
+
+- - -
+
+##### Ejercicio 3.11 — Control de ventas
+
+Una empresa de ventas recibe una secuencia de enteros para controlar el número de ventas de cada uno de sus vendedores. Las ventas de un vendedor consisten en una secuencia de números enteros no negativos terminada con un valor `-1` que indica final de secuencia. El conjunto de ventas total se compone de una secuencia de ventas de vendedores terminada con un número `-2` para indicar final de vendedores. Por ejemplo, en la siguiente secuencia se muestran las ventas de 4 vendedores:
+
+~~~
+3 5 0 2 -1 4 11 2 -1 7 1 -1 8 9 5 10 2 -1 -2
+~~~
+
+donde vemos que han vendido `10`, `17`, `8` y `34` unidades cada uno.
+
+Escriba un programa que lea una secuencia como la anterior, calcule el número de ventas de cada vendedor, y escriba
+el número de vendedor con mayores ventas así como su secuencia correspondiente.
+
+Observe que en este ejercicio hay que implementar dos esquemas de lectura adelantada anidados. Se necesita hacer
+una lectura adelantada de “secuencias” acabadas con el valor especial `-2`. Cada una de estas “secuencias” es, a su vez, un esquema de lectura anticipada de series de datos acabadas en el valor especial `-1`.
+
+- - -
+
+### Matrices
+
+- - -
+
+##### Ejercicio 3.12 — Traza de una matriz
+
+Implemente un programa que lea una matriz cuadrada desde la entrada estándar de tamaño arbitrario y que calcule y muestre su traza.
+
+- - -
+
+##### Ejercicio 3.13 — Suma de matrices
+
+Implemente un programa que lea dos matrices rectangulares de igual tamaño y que calcule y muestre su suma (elemento a elemento).
+
+- - -
+
+##### Ejercicio 3.14 — Máximos de cada fila
+
+Implemente un programa que lea los datos de una matriz de tamaño arbitrario (también leído desde la entrada estándar). El programa calculará y mostrará el elemento mayor de cada fila.
+
+- - -
+
+### Ordenación y búsqueda
+
+Los algoritmos de ordenación y búsqueda son fundamentales. En principio, es interesante practicar con ellos intentado no copiar anteriores implementaciones, sino reescribiéndolas sabiendo cómo funcionan.
+
+- - -
+
+##### Ejercicio 3.15 — Frecuencias de los datos
+
+Escriba un programa para obtener la frecuencia de los datos de entrada.
+
+El programa recibe un entero que indica el número de datos, seguido de los datos. La salida será el conjunto de datos
+introducidos junto con su frecuencia. Un ejemplo de ejecución podría ser este:
+
+~~~
+¿Cuántos datos hay? 14
+Introduzca datos: 1 5 5 17 4 1 2 17 1 5 4 5 2 1
+Resultado:
+1 : 4 veces
+2 : 2 veces
+4 : 2 veces
+5 : 4 veces
+17 : 2 veces
+~~~
+
+Para resolverlo se recomienda:
+* Ordenar los datos introducidos.
+* A partir del vector de datos ordenados, obtener dos nuevos vectores, uno con los datos sin repetir y otro con las
+frecuencias.
+
+- - -
+
+Los algoritmos de ordenación son básicos para resolver otros problemas. Por ejemplo, se puede obtener la mediana de un
+conjunto de valores si ordenamos los datos y seleccionamos el valor central.
+
+- - -
+
+##### Ejercicio 3.16 — Mediana
+
+Escriba un programa que reciba un entero indicando el número de datos que se van a introducir, seguido de tantos datos como indique dicho número, y obtenga como salida la mediana de los datos.
+
+La mediana es el valor que deja por debajo a la mitad de los datos y por encima a la otra mitad. Si el número de datos
+es impar, la mediana corresponde al valor central, y si es par, se puede obtener como la media de los dos centrales.
+
+- - -
+
+##### Ejercicio 3.17 — Mezcla de vectores ordenados
+
+Escriba un programa que recibe dos secuencias de elementos ordenadas y escribe el resultado como una secuencia mezcla de las dos anteriores. Cada secuencia se introduce como un entero que indica el número de elementos seguido de dichos elementos.
+
+El programa debe asegurar que si cualquiera de las secuencias no está ordenada, se ordena antes de la mezcla.
+
+- - -
+
+El algoritmo de búsqueda binaria es especialmente potente gracias a la eficiencia cuando el número de elementos es
+muy alto. Así, si disponemos de un conjunto de datos ordenado, resulta especialmente recomendable que optemos por este
+algoritmo. Incluso si no estuvieran ordenados, pero vamos a realizar múltiples búsquedas, podría ser recomendable que
+dediquemos un coste a la ordenación para hacer que las siguientes búsquedas sean muy rápidas.
+
+- - -
+
+##### Ejercicio 3.18 — Frecuencias de los datos (2)
+
+Considere el programa del [ejercicio 3.15](#), donde se calculan las frecuencias asociadas a una serie de datos. Se desea mejorar el programa para los casos en los que existen pocos datos y altas frecuencias. Para ello, se propone que no se ordenen los datos de entrada, sino que se creen los dos vectores solución (datos y frecuencias) y se vayan modificando con cada uno de los datos de entrada. El algoritmo, básicamente, consiste en coger un nuevo dato y, si ya se ha obtenido previamente, incrementar su frecuencia, y si no, insertarlo en la solución con frecuencia uno.
+
+- - -
+
+## Relación de ejercicios
+
+- - -
+
+##### Ejercicio 3.19 — Letras más usadas
+
+Se desea realizar un programa para calcular la frecuencia de las letras en un documento. Para ello, se analizarán las apariciones de cada una de las letras de la parte básica de la tabla ASCII (los caracteres del cero al 127).
+
+Escriba un programa que lea los caracteres de un texto hasta encontrar el carácter `#`. Para cada uno de los caracteres
+leídos, calculará la frecuencia de aparición. Como resultado, escribirá en la salida estándar cada uno de los pares
+carácter/frecuencia de mayor a menor frecuencia. Sólo se imprimirán los caracteres que hayan aparecido, al menos, una
+vez.
+
+- - -
+
+##### Ejercicio 3.20 — Descomposición en números primos
+
+Escriba un programa que lea un número positivo y escriba su descomposición en números primos. El programa almacenará la descomposición en un vector.
+
+- - -
+
+##### Ejercicio 3.21 — Columnas únicas
+
+Escriba un programa que lea una matriz bidimensional desde la entrada estándar y que indique cuántas de sus columnas son únicas. Una columna se considera única si no se repite, es decir, si no hay otra igual a ella.
+
+- - -
+
+##### Ejercicio 3.22 — Traspuesta de una matriz
+
+Implemente un programa que lea una matriz por la entrada estándar y que calcule y muestre su correspondiente traspuesta.
+
+- - -
+
+##### Ejercicio 3.23 — Punto de silla
+
+Implemente un programa que lea los datos de una matriz de tamaño arbitrario (también leído desde la entrada estándar). El programa nos dirá si existe o no algún elemento que sea a la vez máximo de su fila y mínimo de su columna.
+
+- - -
+
+##### Ejercicio 3.24 — Transformaciones de una matriz
+
+Implemente un programa que lea una matriz cuadrada y que, a elección del usuario, permita realizar:
+
+* Una rotación de 90 grados a la derecha.
+* Una rotación de 90 grados a la izquierda.
+* Una rotación de 180 grados.
+* Una simetría respecto al eje central vertical.
+* Una simetría respecto al eje central horizontal.
+
+- - -
