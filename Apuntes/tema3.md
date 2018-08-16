@@ -553,6 +553,8 @@ Existen funciones, como hemos dicho, ya hechas para este cometido en la clase `v
 
 En este algoritmo, insertaremos el valor `insertar_valor` en la posición `insertar_posicion` del vector `v`. En este caso, haremos uso de `push_back()` para crear un segundo vector, `v_insertado`, en el que se encontrará el valor insertado. Luego, si queremos guardar nuestros cambios en `v`, reasignaremos `v_insertado` a `v`. Finalmente, tendremos dos copias de un mismo vector, lo cual no es óptimo en memoria. Por ello, hacemos `clear()` sobre `v_insertado`, para quedarnos únicamente con `v`.
 
+![Imagen 3.13](./resources/tema3-img13.gif)
+
 **Muy importante:** esta es una solución posible, pero ni mucho menos es la más óptima. De hecho, hemos hecho uso de funciones de la clase `vector`, por lo que no podríamos usar este algoritmo con arrays. Intenta hacer tú una solución alternativa, ¡hay multitud de ellas!
 
 - - -
@@ -601,6 +603,8 @@ v_insertado.clear();  // para no desperdiciar memoria
 
 Intentaremos resolver el problema de la siguiente manera: vamos a ir pasando, a partir del elemento que queremos eliminar, todos los vectores hacia la izquierda. Luego, bastará hacer `pop_back()` para eliminar el último elemento del vector, que será una copia del elemento anterior a él.
 
+![Imagen 3.14](./resources/tema3-img14.gif)
+
 - - -
 
 ##### Algoritmo 3.10 — eliminación de un valor de un vector
@@ -646,6 +650,8 @@ Se recorrerá el subvector derecho y se insertará el valor mínimo de este al f
 
 En definitiva, una animación siempre lo explica mejor:
 
+![Imagen 3.15](./resources/tema3-img15.gif)
+
 - - -
 
 ##### Algoritmo 3.11 — algoritmo de ordenación por selección
@@ -687,6 +693,8 @@ Este algoritmo es similar al algoritmo interior: también tenemos dos secciones.
 
 Podrás apreciar esto mejor con la siguiente animación:
 
+![Imagen 3.16](./resources/tema3-img16.gif)
+
 - - -
 
 ##### Algoritmo 3.12 — algoritmo de ordenación por inserción
@@ -717,6 +725,8 @@ Los mismos que en el [algoritmo 3.11](#here).
 Al igual que en los métodos anteriores, dejamos a la izquierda un subvector ordenado. Para ello, se compara dos a dos desde el final hacia al principio del vector y se intercambian los elementos para que el de la izquierda sea menor que el de la derecha. Tras tantas iteraciones como elementos tenga el vector, la parte izquierda se incrementará en uno en cada iteración, hasta llegar a tener el vector completamente ordenado.
 
 Aclarémoslo con la siguiente animación:
+
+![Imagen 3.17](./resources/tema3-img17.gif)
 
 - - -
 
