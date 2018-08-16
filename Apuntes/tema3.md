@@ -712,13 +712,14 @@ vector<type> v(<tamaño>);  // vector a ordenar
 
 for ( int i = 0; i < v.size(); i++ ) {
     int pos_intercambiar = i;
+    <type> valor_intercambiar = v[i];
     
     for ( int j = i; j > 0 && v[pos_intercambiar] < v[j-1]; j-- ) {
         v[j] = v[j-1];
         pos_intercambiar = j;
     }
     
-    v[pos_intercambiar] = v[i];
+    v[pos_intercambiar] = valor_intercambiar;
 }
 ~~~
 
