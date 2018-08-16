@@ -862,3 +862,13 @@ Las principales diferencias entre vectores y arrays son:
 * no son punteros de forma nativa.
 
 Entre otras muchas diferencias, las anteriores son las más significativas.
+
+- - -
+
+## Repaso de conceptos
+
+* Conocer el concepto de vector y sus aplicaciones.
+* Saber trabajar con vectores.
+* Conocer los principales algoritmos de ordenación y búsqueda en vectores.
+* Saber crear y trabajar con vectores de vectores y, en particular, matrices.
+* Conocer las diferencias entre `vector` y los _arrays_ tradicionales.
