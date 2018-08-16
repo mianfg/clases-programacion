@@ -45,6 +45,11 @@
 * [Algoritmo 3.6](#algoritmo-36--búsqueda-binaria) — búsqueda binaria
 * [Algoritmo 3.7](#algoritmo-37--búsqueda-del-máximo-de-un-vector) — búsqueda del máximo de un vector
 * [Algoritmo 3.8](#algoritmo-38--encontrar-un-vector-dentro-de-otro) — encontrar un vector dentro de otro
+* [Algoritmo 3.9](#algoritmo-39--inserción-de-un-valor-en-un-vector) — inserción de un valor en un vector
+* [Algoritmo 3.10](#algoritmo-310--eliminación-de-un-valor-de-un-vector) — eliminación de un valor de un vector
+* [Algoritmo 3.11](#algoritmo-311--algoritmo-de-ordenación-por-selección) — algoritmo de ordenación por selección
+* [Algoritmo 3.12](#algoritmo-312--algoritmo-de-ordenación-por-inserción) — algoritmo de ordenación por inserción
+* [Algoritmo 3.13](#algoritmo-313--método-de-la-burbuja-para-la-ordenación-de-vectores) — método de la burbuja para la ordenación de vectores
 
 - - -
 
@@ -528,7 +533,7 @@ int inicio_vector = 0;
 int j = 0;
 bool encontrado = false;
 
-for ( int i = 0; i < v.size() && !encontrado ) {
+for ( int i = 0; i < v.size() && !encontrado )
     if ( v[i] == v2[j] ) {
     	j++;
 	if ( j == v2.size() )
@@ -538,7 +543,6 @@ for ( int i = 0; i < v.size() && !encontrado ) {
 	inicio_vector = i;
 	i--;
     }
-}
 ~~~
 
 - - -
@@ -716,7 +720,7 @@ for ( int i = 0; i < v.size(); i++ ) {
 
 ###### Casos clave para comprobar este algoritmo
 
-Los mismos que en el [algoritmo 3.11](#here).
+Los mismos que en el [algoritmo 3.11](#algoritmo-311--algoritmo-de-ordenación-por-selección).
 
 - - -
 
@@ -737,15 +741,13 @@ Aclarémoslo con la siguiente animación:
 ~~~ c++
 vector<type> v(<tamaño>);  // vector a ordenar
 
-for ( int i = 0; i < v.size(); i++ ) {
-    for ( int j = v.size() - 1; j > i; j-- ) {
+for ( int i = 0; i < v.size(); i++ )
+    for ( int j = v.size() - 1; j > i; j-- )
         if ( vector[j] < vector[j-1] ) {
 	    int aux = vector[j];
 	    vector[j] = vector[j-1];
 	    vector[j-1] = aux;
 	}
-    }
-}
 ~~~
 
 ###### Una pequeña optimización de este algoritmo
@@ -759,20 +761,19 @@ bool continuar = true;
 
 for ( int i = 0; i < v.size() && continuar; i++ ) {
     continuar = false;
-    for ( int j = v.size() - 1; j > i; j-- ) {
+    for ( int j = v.size() - 1; j > i; j-- )
         if ( vector[j] < vector[j-1] ) {
 	    continuar = true;
 	    int aux = vector[j];
 	    vector[j] = vector[j-1];
 	    vector[j-1] = aux;
 	}
-    }
 }
 ~~~
 
 ###### Casos clave para comprobar este algoritmo
 
-Los mismos que en el [algoritmo 3.11](#here).
+Los mismos que en el [algoritmo 3.11](#algoritmo-311--algoritmo-de-ordenación-por-selección).
 
 - - -
 
