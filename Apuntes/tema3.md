@@ -671,7 +671,7 @@ for ( int i = 0; i < v.size(); i++ ) {
     int pos_minimo = i;
     
     for ( int j = i + 1; j < v.size(); j++ )
-        if ( v[j] < v[i] )
+        if ( v[j] < v[pos_minimo] )
 	    pos_minimo = j;
     
     int aux = v[i];
@@ -713,10 +713,12 @@ vector<type> v(<tamaño>);  // vector a ordenar
 for ( int i = 0; i < v.size(); i++ ) {
     int pos_intercambiar = i;
     
-    for ( int j = i; j > 0 && v[pos_intercambiar] < v[j-1]; j-- )
+    for ( int j = i; j > 0 && v[pos_intercambiar] < v[j-1]; j-- ) {
         v[j] = v[j-1];
+        pos_intercambiar = j;
+    }
     
-    v[j] = v[pos_intercambiar];
+    v[pos_intercambiar] = v[i];
 }
 ~~~
 
