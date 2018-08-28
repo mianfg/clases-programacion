@@ -85,6 +85,8 @@ La estructura de una función es como sigue:
 }
 ~~~
 
+![Imagen 4.1](./resources/tema4-img1.png)
+
 Las funciones se colocan (al menos así lo haremos hasta que no digamos lo contrario) entre la inclusión de bibliotecas y el `main()`. Además, en la declaración de una función hemos de distinguir los siguientes elementos:
 
 * **Cabecera**: es la que contiene el **nombre** de la función, así como los **parámetros** y el **tipo** que devuelve:
@@ -178,9 +180,7 @@ Cuando pasamos parámetros a una función:
 
 Por tanto, la cabecera o ___header___ de la función quedaría:
 
-~~~ c++
-<type> <nombre-función> (<type_1> <param_1>, ..., <type_n> <param_n>);
-~~~
+![Imagen 4.2](./resources/tema4-img2.png)
 
 Sin embargo, hay diversas formas de pasar estos parámetros:
 * Paso por **copia**.
@@ -190,6 +190,8 @@ Sin embargo, hay diversas formas de pasar estos parámetros:
 
 ### 3.1 Paso por copia
 
+![Imagen 4.3](./resources/tema4-img3.png)
+
 Es el paso por “defecto”. Cuando declaramos los parámetros por copia (de la forma anteriormente mencionada):
 
 * Se crea una **nueva variable**, con una copia del valor pasado a la función. Es decir, al modificar la variable en la función, **no se modifica la variable original** (la pasada a la función).
@@ -197,6 +199,8 @@ Es el paso por “defecto”. Cuando declaramos los parámetros por copia (de la
 * No importa que la variable pasada sea originalmente `const` o no.
 
 ### 3.2 Paso por copia constante
+
+![Imagen 4.4](./resources/tema4-img4.png)
 
 Basta añadir el nombre `const` delante del tipo del parámetro que queremos que se pase de forma constante.
 
@@ -207,12 +211,16 @@ Basta añadir el nombre `const` delante del tipo del parámetro que queremos que
 
 ### 3.3 Paso por referencia
 
+![Imagen 4.5](./resources/tema4-img5.png)
+
 Basta añadir el nombre `&` entre el tipo y el nombre de variable del parámetro que queremos que se pase por referencia.
 
 * En este caso **no se crea** una nueva variable. Por tanto, si modificamos el valor de la variable en la función, **también se modifica el valor de la variable para todo el programa**.
 * Hay que tener cuidado si pasamos variables que originalmente sean `const`, pues si en nuestra función se modifica la variable, y al pasar dicha variable al llamar a la función ésta es `const`, tendremos un error en tiempo de ejecución.
 
 ### 3.4 Paso por referencia constante
+
+![Imagen 4.6](./resources/tema4-img6.png)
 
 Basta añadir el nombre `const`, luego el tipo, el nombre `&` y finalmente el nombre de variable del parámetro que queremos que se pase.
 
@@ -226,7 +234,7 @@ Basta añadir el nombre `const`, luego el tipo, el nombre `&` y finalmente el no
 
 En la cabecera de la función hay una parte fundamental: el **tipo** de la función. Cuando hacemos una función, hemos de decir qué es lo que vamos a devolver.
 
-<type> <nombre-función> (<type_1> <param_1>, ..., <type_n> <param_n>);
+![Imagen 4.7](./resources/tema4-img7.png)
 
 Una función puede ser:
 - De **tipo `void`**: no devuelve nada (sin `return`).
