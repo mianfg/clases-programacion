@@ -109,7 +109,7 @@ Es posible que haya funciones que no tengan parámetros, en cuyo caso se dejan l
 
 - - -
 
-##### Ejemplo X. Declaración y llamada a una función: días hasta fecha
+##### Ejemplo X. Declaración y llamada a una función: días desde fecha hasta hoy
 
 Vamos a inventarnos una función. No la implementaremos, sencillamente la declararemos y veremos cómo se llamaría a ella.
 
@@ -145,6 +145,26 @@ void unaFuncionCualquiera(int a, char b, bool c);
 ~~~
 
 debemos llamarla con un `int`, un `char` y un `bool`, **en ese orden**, e **independientemente del nombre de dichas variables**. Si cambiamos el orden, es posible que el compilador realice conversiones de forma nativa, o que haya errores de compilación y/o ejecución.
+
+- - -
+
+##### Ejemplo X. Una función que te da los buenos días (sin importar si es de noche)
+
+Este ejemplo es un tanto indiferente, pero lo ponemos aquí para ilustrar que existen funciones sin parámetros. A continuación implementaremos la función `buenosDias`, que nos da los buenos días:
+
+~~~ c++
+void buenosDias() {
+    cout << "¡¡Buenos días!! :)" << endl;
+}
+~~~
+
+Para hacer uso de esta función, la llamamos del siguiente modo:
+
+~~~ c++
+buenosDias();
+~~~
+
+De este modo, se mostrará en pantalla la frase `¡¡Buenos días!! :)` seguida de un salto de línea. _¡Quién ha dicho que los programas no podían ser educados! ;)_
 
 - - -
 
