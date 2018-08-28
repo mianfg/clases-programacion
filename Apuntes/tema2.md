@@ -1,5 +1,4 @@
-### Tema 2.  
-# Estructuras de iteración y selección
+# Tema 2. Estructuras de iteración y selección
 
 > **Clases de programación en C++** · agosto de 2018  
 > Miguel Ángel Fernández Gutiérrez ([@mianfg](https://mianfg.bloomgogo.com))
