@@ -174,9 +174,9 @@ Una vez vista las partes que componen una función, vamos a detallar cada una de
 
 Cuando pasamos parámetros a una función:
 * Especificamos su **tipo**: C++ debe saber qué parámetros se pasan a una función. Es posible que se realicen conversiones (pasar un `int` a un `double` y viceversa, como ejemplo).
-Definimos un **nombre de variable** para cada parámetro, que es el que usaremos para hacer referencia a éstos en las sentencias.
+* Definimos un **nombre de variable** para cada parámetro, que es el que usaremos para hacer referencia a éstos en las sentencias.
 
-Por tanto, la cabecera o header de la función quedaría:
+Por tanto, la cabecera o ___header___ de la función quedaría:
 
 ~~~ c++
 <type> <nombre-función> (<type_1> <param_1>, ..., <type_n> <param_n>);
