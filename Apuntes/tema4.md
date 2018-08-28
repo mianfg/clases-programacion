@@ -391,6 +391,23 @@ Una función puede tener parámetros con valores por defecto, teniendo en cuenta
 
 ##### Ejemplo 4.7: `volumenCaja()` — función con parámetros con valor por defecto: volumen de una caja
 
+Sea la siguiente función `volumenCaja()`, que calcula el volumen de una caja:
+
+~~~ c++
+double volumenCaja(double largo=1.0, double ancho=1.0, double alto=1.0) {
+    return largo*ancho*alto;
+}
+~~~
+
+Veamos algunos ejemplos de uso de esta función con parámetros con valor por defecto:
+
+~~~ c++
+cout << "Volumen por defecto: " << volumenCaja() << endl;   // caja 1x1x1
+cout << "Volumen caja 10x1x1: " << volumenCaja(10) << endl;
+cout << "Volumen caja 10x5x1: " << volumenCaja(10, 5) << endl;
+cout << "Volumen caja 10x5x2: " << volumenCaja(10, 5, 2) << endl;
+~~~
+
 - - -
 
 ### 6.2  Sobrecarga de funciones
@@ -400,6 +417,24 @@ C++ permite definir varias funciones en el mismo ámbito con el mismo nombre. C+
 - - -
 
 ##### Ejemplo 4.8 — sobrecarga de funciones
+
+Sean las siguientes funciones:
+
+~~~ c++
+void funcion(double x);         // función no. 1
+void funcion(char x);           // función no. 2
+void funcion(int x, double y);  // función no. 3
+~~~
+
+Si las llamamos de la siguiente forma, hará uso de una función u otra:
+
+~~~ c++
+funcion(3.4);       // función no. 1
+funcion(7);         // función no. 1 con conversión implícita de int a double
+funcion('a');       // función no. 2
+funcion(4, 9.2);    // función no. 3
+funcion(4, 9);      // función no. 3 con conversión implícita de int a double (en el segundo parámetro)
+~~~
 
 - - -
 
