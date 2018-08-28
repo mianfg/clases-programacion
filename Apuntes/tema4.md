@@ -8,7 +8,7 @@
 
 ## 👉 Tabla de contenidos
 
-1. [Motivación al uso de funciones. Concepto de modularización y reutilización de código](#)
+1. [Motivación al uso de funciones](#)
 2. [Concepto de función](#)
 3. [Paso de parámetros a una función](#)  
     3.1 [Paso de parámetros por copia](#)  
@@ -31,7 +31,7 @@
 
 - - -
 
-## 1. Motivación al uso de funciones. Concepto de modularización y reutilización de código
+## 1. Motivación al uso de funciones
 
 Retomemos uno de los primeros problemas que nos planteamos al comenzar este curso: comprobar si un número es par o impar. Crearemos un programa que nos muestre por salida estándar si el número es par o impar.
 
@@ -144,46 +144,48 @@ Basta añadir el nombre `const` delante del tipo del parámetro que queremos que
 
 ### 3.3 Paso por referencia
 
-Basta añadir el nombre & entre el tipo y el nombre de variable del parámetro que queremos que se pase por referencia.
-En este caso no se crea una nueva variable. Por tanto, si modificamos el valor de la variable en la función, también se modifica el valor de la variable para todo el programa.
-Hay que tener cuidado si pasamos variables que originalmente sean const, pues si en nuestra función se modifica la variable, y al pasar dicha variable al llamar a la función ésta es const, tendremos un error en tiempo de ejecución.
+Basta añadir el nombre `&` entre el tipo y el nombre de variable del parámetro que queremos que se pase por referencia.
+
+* En este caso **no se crea** una nueva variable. Por tanto, si modificamos el valor de la variable en la función, **también se modifica el valor de la variable para todo el programa**.
+* Hay que tener cuidado si pasamos variables que originalmente sean `const`, pues si en nuestra función se modifica la variable, y al pasar dicha variable al llamar a la función ésta es `const`, tendremos un error en tiempo de ejecución.
 
 - - -
 
 ### 3.4 Paso por referencia constante
 
-Basta añadir el nombre const, luego el tipo, el nombre & y finalmente el nombre de variable del parámetro que queremos que se pase.
-En este caso no se crea una nueva variable. Es decir, no se desperdicia memoria en realizar una copia.
-Sin embargo, la variable no puede ser modificada dentro de la función, independientemente de si la variable es originalmente const o no.
-Es ideal para funciones donde se toman datos de entrada que no son modificados: hacen nuestro programa más eficiente.
+Basta añadir el nombre `const`, luego el tipo, el nombre `&` y finalmente el nombre de variable del parámetro que queremos que se pase.
+
+* En este caso **no se crea una nueva variable**. Es decir, **no se desperdicia memoria en realizar una copia**.
+* Sin embargo, la variable **no puede ser modificada dentro de la función**, independientemente de si la variable es originalmente `const` o no.
+* Es ideal para funciones donde se toman datos de entrada que no son modificados: hacen nuestro programa **más eficiente**.
 
 - - -
 
 ## 4. Devolución de valores en una función
 
-En la cabecera de la función hay una parte fundamental: el tipo de la función. Cuando hacemos una función, hemos de decir qué es lo que vamos a devolver.
+En la cabecera de la función hay una parte fundamental: el **tipo** de la función. Cuando hacemos una función, hemos de decir qué es lo que vamos a devolver.
+
 <type> <nombre-función> (<type_1> <param_1>, ..., <type_n> <param_n>);
 
 Una función puede ser:
-- De tipo void: no devuelve nada (sin return).- De tipo no void: devuelve un dato (con return).
-
-
-
-
-
-Queremos crear un programa que compruebe si un vector está ordenado o no.
-
-La solución es bastante sencilla: queremos comprobar si el vector `v`, de tipo `type` (con relación de orden) está ordenado.
-
-~~~ c++
-bool ordenado = true;
-for ( int i = 0; i < v.size() - 1 && ordenado; i++ )
-    if ( v[i] > v[i+1] )
-        ordenado = false;
-~~~
-
-Tras ejecutar este código, `ordenado` tendrá el valor `true` si el vector `v` está ordenado, y `false` en caso contrario.
+- De **tipo `void`**: no devuelve nada (sin `return`).
+- De **tipo no `void`**: devuelve un dato (con `return`).
 
 - - -
 
-Supongamos ahora que tenemos un vector de vectores `vv`, del mismo tipo que `v`, y queremos comprobar si los vectores que se encuentran dentro están orde
+### 4.1  Funciones `void`
+
+Son funciones que no devuelven nada. Basta declararlas de tipo `void`.
+
+* Este tipo de funciones **no tienen `return`**.
+* El paso de parámetros es exactamente igual que el explicado anteriormente.
+
+- - -
+
+### 4.2  Funciones no `void`
+
+Son funciones que devuelven **un único dato**, de un **tipo específico**. Basta declarar el tipo de dato que devolverá la función en la cabecera de ésta.
+
+* Este tipo de funciones **tienen `return`**. En él, se especifica qué se va a devolver, del tipo `return <expresión>;`.
+    > **MUY IMPORTANTE:** `<expresión>` debe ser un dato del tipo especificado a devolver, o una expresión que tenga como resultado dicho tipo de dato.
+* Podemos **devolver cualquier tipo de dato**: `int`, `bool`, `double`, `char`, …, incluso vectores de cualquier tipo.
