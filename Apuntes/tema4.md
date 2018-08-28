@@ -354,6 +354,37 @@ De hecho, ten en cuenta que si encontramos dos elementos en orden no creciente, 
 
 - - -
 
+## 5. Principio de ocultación
+
+Cada función tiene sus propios **datos locales**, como hemos visto antes. Estos datos no son accesible desde ningún otro sitio del programa salvo desde la propia función. Esto impide que la función interfiera en el funcionamiento de otras.
+
+De hecho, si creamos nuevas variables en una función, estas también son locales.
+
+En la llamada a una función no nos preocupamos de saber cómo realiza su tarea. Esto nos permite, por ejemplo, mejorar la implementación de una función sin tener que cambiar una línea de código del programa principal que la llama.
+
+Además, como dijimos al principio, de este modo podemos **asegurar que la función es segura, y actúa sin errores**. Esto nos permite depurar el programa mucho mejor, y centraliza los errores.
+
+## 6. Valores por defecto y sobrecarga
+
+Hay dos conceptos adicionales a la hora de definir funciones, que pueden ser útiles en algunas ocasiones.
+
+Estos conceptos son ampliación, y no son imprescindibles para programar funciones.
+
+Son los siguientes:
+
+* **Valores por defecto** en parámetros de funciones.
+* **Sobrecarga** de funciones.
+
+### 6.1  Parámetros con valor por defecto
+
+Una función puede tener parámetros con valores por defecto, teniendo en cuenta que:
+* Deben ser los últimos de la función.
+* En la llamada a la función, si se especifican un subconjunto de ellos, deben ser los primeros.
+
+### 6.2  Sobrecarga de funciones
+
+C++ permite definir varias funciones en el mismo ámbito con el mismo nombre. C++ selecciona la función adecuada de acuerdo al número, tipo y orden de los argumentos.
+
 ## 7. Diseño de funciones: precondiciones y documentación
 
 Una **precondición** es toda aquella restricción que deben satisfacer los parámetros para que la función pueda ejecutarse sin problemas. Hay dos alternativas:
@@ -443,3 +474,6 @@ Nótese que:
     * **`@precond <precondición>`:** describe las precondiciones de la función. Puede haber ninguna, una o varias precondiciones.
 
 - - -
+
+## 8. Funciones recursivas
+
