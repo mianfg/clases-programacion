@@ -347,3 +347,48 @@ bool estaOrdenado( const vector<int> & v ) {
 De hecho, ten en cuenta que si encontramos dos elementos en orden no creciente, al hacer `return false` también salimos del `for`, haciendo exactamente el mismo propósito que la condición compuesta en el ejemplo anterior.
 
 - - -
+
+## 7. Diseño de funciones: precondiciones y documentación
+
+Una **precondición** es toda aquella restricción que deben satisfacer los parámetros para que la función pueda ejecutarse sin problemas. Hay dos alternativas:
+
+* Comprobar dentro de la función si se satisfacen estas precondiciones, pudiendo lanzar un mensaje de error.
+* Decir al usuario que la función se comporta de forma certera si satisface ciertas precondiciones (_disclaimer_ o exención de responsabilidad), y es él mismo el que debe comprobarlo.
+
+- - -
+
+##### Ejemplo X. Función con precondición: factorial de un número
+
+Vamos a programar una función que devuelve el factorial de un número. Como es usual, describiremos sus elementos antes de implementarla:
+
+* **Nombre de la función**: `factorial`.
+* **Tipo que devuelve la función**: un valor `int`, correspondiente al factorial de `num`.
+* **Parámetros que se pasan a la función**:
+    * `int num`: pasamos un número entero por copia, no constante.
+
+Lo interesante de esta función es que [la definición de la operación factorial](https://es.wikipedia.org/wiki/Factorial) sólo nos permite calcular el factorial de un **número entero positivo (incluyendo el cero)**: aquí está nuestra **precondición**.
+
+Podríamos hacer muchas cosas para lidiar con este problema. Nosotros nos reduciremos a advertir al usuario de que nuestra función calcula el factorial de números positivos (incluyendo el cero), pero... ¿y si nos da un número entero negativo? ¡Siempre tenemos que devolver algo! Tomaremos como solución una muy frecuente: devolveremos el número `-1`. Si el programador advierte este número, sabrá que algo no ha ido bien.
+
+~~~ c++
+int factorial(int num) {
+    if ( num > 0 ) {
+        int multiplicar_por = num - 1;
+        while ( multiplicar_por > 1 ) {
+            num *= multiplicar_por;
+            multiplicar_por--;
+        }
+    } else if (num == 0)
+        num = 1;  // pues factorial(0) debe ser igual a 1
+    else
+        num = -1;  // hemos dicho que si num es negativo, devolvemos -1
+    
+    return num;
+}
+~~~
+
+> **Nota:** hay implementaciones más obvias que esta. Sin embargo, lo he hecho así para explicar un punto bastante importante, a continuación.
+
+Un aspecto interesante de esta función es que dentro de ella hemos modificado `num`. Pero recuerda: ¡no hay problema alguno porque `num` es realmente una copia de la variable que hemos pasado! Por tanto, al devolver `num` al acabar la función, estamos copiando el valor de esta variable local en el valor de retorno de la función. ¡Y todos contentos!
+
+- - -
