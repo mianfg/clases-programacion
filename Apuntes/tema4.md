@@ -119,8 +119,6 @@ Sin embargo, hay diversas formas de pasar estos parámetros:
 * Paso por **referencia**.
 * Paso por **referencia constante**.
 
-- - -
-
 ### 3.1 Paso por copia
 
 Es el paso por “defecto”. Cuando declaramos los parámetros por copia (de la forma anteriormente mencionada):
@@ -128,8 +126,6 @@ Es el paso por “defecto”. Cuando declaramos los parámetros por copia (de la
 * Se crea una **nueva variable**, con una copia del valor pasado a la función. Es decir, al modificar la variable en la función, **no se modifica la variable original** (la pasada a la función).
 * Esta nueva variable es **local a la función**, es decir, es **inaccesible desde fuera de la función**.
 * No importa que la variable pasada sea originalmente `const` o no.
-
-- - -
 
 ### 3.2 Paso por copia constante
 
@@ -140,16 +136,12 @@ Basta añadir el nombre `const` delante del tipo del parámetro que queremos que
 * Esta nueva variable es también **local a la función**.
 * Tampoco importa que la variable pasada originalmente sea `const` o no.
 
-- - -
-
 ### 3.3 Paso por referencia
 
 Basta añadir el nombre `&` entre el tipo y el nombre de variable del parámetro que queremos que se pase por referencia.
 
 * En este caso **no se crea** una nueva variable. Por tanto, si modificamos el valor de la variable en la función, **también se modifica el valor de la variable para todo el programa**.
 * Hay que tener cuidado si pasamos variables que originalmente sean `const`, pues si en nuestra función se modifica la variable, y al pasar dicha variable al llamar a la función ésta es `const`, tendremos un error en tiempo de ejecución.
-
-- - -
 
 ### 3.4 Paso por referencia constante
 
@@ -171,14 +163,35 @@ Una función puede ser:
 - De **tipo `void`**: no devuelve nada (sin `return`).
 - De **tipo no `void`**: devuelve un dato (con `return`).
 
-- - -
-
 ### 4.1  Funciones `void`
 
 Son funciones que no devuelven nada. Basta declararlas de tipo `void`.
 
 * Este tipo de funciones **no tienen `return`**.
 * El paso de parámetros es exactamente igual que el explicado anteriormente.
+
+- - -
+
+##### Ejemplo X. Comprobación de si un número es par o impar por salida estándar
+
+Resolveremos el problema con el que hemos motivado el uso a las funciones. Planteemos qué elementos necesita la función, y cómo la definiremos:
+
+* **Nombre de la función**: debe ser descriptivo, diremos que es `esPar`.
+* **Tipo que devuelve la función**: se trata de una función `void`.
+* **Parámetros que se pasan a la función**: debemos pasar un número, que llamaremos `num`. Lo pasaremos **por copia constante**. Para decidir cómo pasarlo, hemos pensado antes en lo siguiente:
+    * No queremos modificarlo, por eso será un paso **constante**.
+    * Al tratarse de un `int`, es indiferente si lo pasamos por copia o no, pues ocupan muy poco espacio (si se tratase de un vector, por ejemplo, sería bastante necesario pasarlo por referencia). Por eso lo pasaremos **por copia**.
+
+La función quedaría, de este modo, así:
+
+~~~ c++
+void esPar( const int num ) {
+    if ( num % 2 == 0 )
+        cout << num << " es par" << endl;
+    else
+        cout << num << " es impar" << endl;
+}
+~~~
 
 - - -
 
