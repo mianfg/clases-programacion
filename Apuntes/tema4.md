@@ -85,6 +85,19 @@ La estructura de una función es como sigue:
 }
 ~~~
 
+Las funciones se colocan (al menos así lo haremos hasta que no digamos lo contrario) entre la inclusión de bibliotecas y el `main()`. Además, en la declaración de una función hemos de distinguir los siguientes elementos:
+
+* **Cabecera**: es la que contiene el **nombre** de la función, así como los **parámetros** y el **tipo** que devuelve:
+~~~ c++
+<type> <nombre-función> (<parámetros>);
+~~~
+*  **Cuerpo**: entre llaves, contiene las **sentencias** de la función y el **valor de retorno**.
+~~~ c++
+<sentencias>
+return <expresión>;
+~~~
+
+
 
 Queremos crear un programa que compruebe si un vector está ordenado o no.
 
