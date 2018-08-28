@@ -8,32 +8,38 @@
 
 ## 👉 Tabla de contenidos
 
-1. [Motivación al uso de funciones](#)
-2. [Concepto de función](#)
-3. [Paso de parámetros a una función](#)  
-    3.1 [Paso de parámetros por copia](#)  
-    3.2 [Paso de parámetros por copia constante](#)  
-    3.3 [Paso de parámetros por referencia](#)  
-    3.4 [Paso de parámetros por referencia constante](#)  
-4. [Devolución de valores en una función](#)  
-    4.1 [Funciones `void`](#)  
-    4.2 [Funciones no `void`](#)  
-5. [Valores por defecto y sobrecarga](#)  
-6. [Diseño de funciones: los _disclaimer_](#)  
-7. [Funciones recursivas](#)  
-    7.1 [Caso general y caso base](#)  
-    7.2 [Funciones recursivas con varios puntos de salida](#)  
-    7.3 [Múltiples casos base y/o generales](#)
+1. [Motivación al uso de funciones](#1-motivación-al-uso-de-funciones)
+2. [Concepto de función](#2-concepto-de-función)
+3. [Paso de parámetros a una función](#3-paso-de-parámetros-a-una-función)  
+    3.1 [Paso de parámetros por copia](#31-paso-por-copia)  
+    3.2 [Paso de parámetros por copia constante](#32-paso-por-copia-constante)  
+    3.3 [Paso de parámetros por referencia](#33-paso-por-referencia)  
+    3.4 [Paso de parámetros por referencia constante](#34-paso-por-referencia-constante)  
+4. [Devolución de valores en una función](#4-devolución-de-valores-en-una-función)  
+    4.1 [Funciones `void`](#41--funciones-void)  
+    4.2 [Funciones no `void`](#42--funciones-no-void)  
+5. [Principio de ocultación](#5-principio-de-ocultación)  
+6. [Valores por defecto y sobrecarga](#6-valores-por-defecto-y-sobrecarga)
+    6.1 [Parámetros con valor por defecto](#61--parámetros-con-valor-por-defecto)
+    6.2 [Sobrecarga de funciones](#62--sobrecarga-de-funciones)
+7. [Diseño de funciones: precondiciones y documentación](#7-diseño-de-funciones-precondiciones-y-documentación)
+8. [Funciones recursivas](#8-funciones-recursivas)  
+    8.1 [Caso general y caso base](#)  
+    8.2 [Funciones recursivas con varios puntos de salida](#)  
+    8.3 [Múltiples casos base y/o generales](#)
 
 ##### Ejemplos
 
-* [Ejemplo 4.1: `diasHasta()`](#) — declaración y llamada a una función: días desde fecha hasta hoy
-* [Ejemplo 4.2: `buenosDias()`](#) — una función que te da los buenos días (sin importar si es de noche)
-* [Ejemplo 4.3: `esPar()`](#) — función void: comprobación de si un número es par o impar por salida estándar
-* [Ejemplo 4.4: `estaOrdenado()`](#) — función no void: comprobación de si un vector está ordenado (con error)
-* [Ejemplo 4.5: `estaOrdenado()`](#) — función no void: comprobación de si un vector está ordenado (arreglado)
-* [Ejemplo 4.6: `estaOrdenado()`](#) — función no void: comprobación de si un vector está ordenado (alternativo)
-* [Ejemplo 4.3: `esPar()`](#) — función void: comprobación de si un número es par o impar por salida estándar
+* [Ejemplo 4.1: `diasHasta()`](#ejemplo-41-diashasta--declaración-y-llamada-a-una-función-días-desde-fecha-hasta-hoy) — declaración y llamada a una función: días desde fecha hasta hoy
+* [Ejemplo 4.2: `buenosDias()`](#ejemplo-42-buenosdias--una-función-que-te-da-los-buenos-días-sin-importar-si-es-de-noche) — una función que te da los buenos días (sin importar si es de noche)
+* [Ejemplo 4.3: `esPar()`](#ejemplo-43-espar--función-void-comprobación-de-si-un-número-es-par-o-impar-por-salida-estándar) — función `void`: comprobación de si un número es par o impar por salida estándar
+* [Ejemplo 4.4: `estaOrdenado()`](#ejemplo-44-estaordenado--función-no-void-comprobación-de-si-un-vector-está-ordenado-con-error) — función no `void`: comprobación de si un vector está ordenado (con error)
+* [Ejemplo 4.5: `estaOrdenado()`](#ejemplo-45-estaordenado--función-no-void-comprobación-de-si-un-vector-está-ordenado-arreglado) — función no `void`: comprobación de si un vector está ordenado (arreglado)
+* [Ejemplo 4.6: `estaOrdenado()`](#ejemplo-46-estaordenado--función-no-void-comprobación-de-si-un-vector-está-ordenado-alternativo) — función no `void`: comprobación de si un vector está ordenado (alternativo)
+* [Ejemplo 4.7: `volumenCaja()`](#ejemplo-47-volumencaja--función-con-parámetros-con-valor-por-defecto-volumen-de-una-caja) — función con parámetros con valor por defecto: volumen de una caja
+* [Ejemplo 4.8](#ejemplo-48--sobrecarga-de-funciones) — sobrecarga de funciones
+* [Ejemplo 4.9: `factorial()`](#ejemplo-49-factorial--función-con-precondición-factorial-de-un-número) — función con precondición: factorial de un número
+* [Ejemplo 4.10: `factorial()`](#ejemplo-410-factorial--documentando-la-función-factorial) — documentando la función `factorial()`
 
 - - -
 
