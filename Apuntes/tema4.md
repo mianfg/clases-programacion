@@ -392,3 +392,48 @@ int factorial(int num) {
 Un aspecto interesante de esta función es que dentro de ella hemos modificado `num`. Pero recuerda: ¡no hay problema alguno porque `num` es realmente una copia de la variable que hemos pasado! Por tanto, al devolver `num` al acabar la función, estamos copiando el valor de esta variable local en el valor de retorno de la función. ¡Y todos contentos!
 
 - - -
+
+En la especificación de nuestro código, una de las partes imprescindibles es la **documentación**, que describe qué tarea realiza la función.
+
+Es muy útil para que otros programadores sepan qué es lo que hace nuestra función, qué papel cumple cada uno de los parámetros, qué es lo que se devuelve… Aquí también incluimos una descripción de las **precondiciones**.
+
+Existe un estándar para la documentación de funciones, que es el que se utiliza para generar documentación de forma automática (utilizando programas como [Doxygen](#here)). A continuación, veremos cómo documentar nuestro [ejemplo anterior](#here).
+
+- - -
+
+##### Ejemplo X. Documentando la función `factorial()`
+
+Todas las documentaciones siguen la siguiente plantilla:
+
+~~~ c++
+/**
+  * @brief Devuelve el factorial de un número
+  * @param num Número del que queremos devolver su factorial
+  * @return El factorial de num
+  * @precond num >= 0
+  */
+int factorial(int num) {
+    if ( num > 0 ) {
+        int multiplicar_por = num - 1;
+        while ( multiplicar_por > 1 ) {
+            num *= multiplicar_por;
+            multiplicar_por--;
+        }
+    } else if (num == 0)
+        num = 1;  // pues factorial(0) debe ser igual a 1
+    else
+        num = -1;  // hemos dicho que si num es negativo, devolvemos -1
+    
+    return num;
+}
+~~~
+
+Nótese que:
+* La documentación de una función es un comentario largo cualquiera (`/* ... */`), en el que la apertura del comentario tiene un asterisco extra, es decir, es un comentario largo de la forma `/** ... */`.
+* En el interior del comentario de documentación se insertan:
+    * **`@brief <descripción de la función>`:** describe qué hace la función. Sólo hay uno por función.
+    * **`@param <var> <descripción de var>`:** describe qué cometido tiene el parámetro `var` en la función. Hay uno por cada parámetro.
+    * **`@return <descripción del return>`:** describe qué devuelve la función. Sólo hay uno por función, y sólo en caso de que la función sea no `void`.
+    * **`@precond <precondición>`:** describe las precondiciones de la función. Puede haber ninguna, una o varias precondiciones.
+
+- - -
