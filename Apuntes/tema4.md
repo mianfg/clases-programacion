@@ -15,7 +15,7 @@
     3.2 [Paso de parámetros por copia constante](#)  
     3.3 [Paso de parámetros por referencia](#)  
     3.4 [Paso de parámetros por referencia constante](#)  
-4. [Devolución de valores de una función](#)  
+4. [Devolución de valores en una función](#)  
     4.1 [Funciones `void`](#)  
     4.2 [Funciones no `void`](#)  
 5. [Valores por defecto y sobrecarga](#)  
@@ -97,6 +97,55 @@ Las funciones se colocan (al menos así lo haremos hasta que no digamos lo contr
 return <expresión>;
 ~~~
 
+### Llamada a funciones
+
+Llamar a una función es tan sencillo como hacer:
+
+~~~ c++
+<nombre-función>(<parámetros>);
+~~~
+
+Es posible que haya funciones que no tengan parámetros, en cuyo caso se dejan los paréntesis. Veremos más adelante un ejemplo de ello.
+
+- - -
+
+##### Ejemplo X. Declaración y llamada a una función: días hasta fecha
+
+Vamos a inventarnos una función. No la implementaremos, sencillamente la declararemos y veremos cómo se llamaría a ella.
+
+Supongamos que creamos una función `diasHasta`, a la que pasamos una fecha y nos devuelve el número de días que han pasado desde esa fecha hasta hoy. Si la fecha es futura, devolverá un valor de días negativo.
+
+Planteemos cómo definiríamos esta función:
+
+~~~ c++
+int diasHasta(int dia, int mes, int anio) {
+    ...
+}
+~~~
+
+No te preocupes si no entiendes los parámetros leyendo hasta aquí, o el tipo. En el [apartado 3](#here) y en el [apartado 4](#here) tienes toda la información al respecto. Léelos y lugo vuelve aquí para entenderlo.
+
+Simplemente, observa cómo la declaración de esta función coincide con la "plantilla" que hemos especificado.
+
+Si queremos ahora llamar a esta función, podríamos utilizar este código:
+
+~~~ c++
+int dia, mes, anio;
+cout << "Inserte fecha: ";
+cin >> dia >> mes >> anio;
+cout << "Días desde esa fecha hasta hoy: " << diasHasta(dia, mes, anio) << endl;
+~~~
+
+Observa cómo es muy sencillo llamar a la función. De hecho, podemos llamar a la función todas las veces que la necesitemos: ***¡no hay límite!** (aunque recomendemos que dejes respirar a tu ordenador de vez en cuando...)*.
+
+Como último apunte respecto a este ejemplo, es posible que te hayas dado cuenta que hemos utilizado los mismos nombres de variable que en la declaración de la función. Esto **no es obligatorio**. Puedes llamar a la función **desde las variables que quieras con los nombres que quieras, siempre que se ajusten a la plantilla de la declaración**. Por ejemplo, si hemos definido una función del tipo
+
+~~~c++
+void unaFuncionCualquiera(int a, char b, bool c);
+~~~
+
+debemos llamarla con un `int`, un `char` y un `bool`, **en ese orden**, e **independientemente del nombre de dichas variables**. Si cambiamos el orden, es posible que el compilador realice conversiones de forma nativa, o que haya errores de compilación y/o ejecución.
+
 - - -
 
 ## 3. Paso de parámetros a una función
@@ -172,7 +221,7 @@ Son funciones que no devuelven nada. Basta declararlas de tipo `void`.
 
 - - -
 
-##### Ejemplo X. Comprobación de si un número es par o impar por salida estándar
+##### Ejemplo X. Función `void`: comprobación de si un número es par o impar por salida estándar
 
 Resolveremos el problema con el que hemos motivado el uso a las funciones. Planteemos qué elementos necesita la función, y cómo la definiremos:
 
