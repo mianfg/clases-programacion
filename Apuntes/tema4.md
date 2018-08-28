@@ -1,5 +1,4 @@
-### Tema 4.  
-# Modularización I: funciones
+# Tema 4. Modularización I: funciones
 
 > **Clases de programación en C++** · agosto de 2018  
 > Miguel Ángel Fernández Gutiérrez ([@mianfg](https://mianfg.bloomgogo.com))
