@@ -1,5 +1,4 @@
-### Tema 3.  
-# Vectores y matrices
+# Tema 3. Vectores y matrices
 
 > **Clases de programación en C++** · agosto de 2018  
 > Miguel Ángel Fernández Gutiérrez ([@mianfg](https://mianfg.bloomgogo.com))
