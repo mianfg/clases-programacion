@@ -202,14 +202,58 @@ Planteemos qué elementos necesita la función, y cómo la definiremos:
 * **Nombre de la función**: debe ser descriptivo, diremos que es `estaOrdenado`.
 * **Tipo que devuelve la función**: un valor `bool`, correspondiente a si el vector está ordenado (`true`) o no (`false`).
 * **Parámetros que se pasan a la función**:
-    * Debemos pasar un vector. Por tanto, sólo nos hace falta un parámetro. Haremos que el vector se pase `por referencia constante`, para no tener que crear una copia del vector (así agilizamos y optimizamos nuestro programa). Esto se hace definiendo dicho parámetro como `const vector<int> & v`.
+    * Debemos pasar un vector. Por tanto, sólo nos hace falta un parámetro. Haremos que el vector se pase **por referencia constante**, para no tener que crear una copia del vector (así agilizamos y optimizamos nuestro programa). Esto se hace definiendo dicho parámetro como `const vector<int> & v`.
 
-Una posible solución es:
+Una posible solución es, por tanto:
 
 ~~~ c++
 bool estaOrdenado( const vector<int> & v ) {
-
+    for ( int i = 0; i < v.size() - 1; i++ )
+        if ( v[i+1] < v[i] )
+            return false;
 }
 ~~~
 
-Sin embargo, **esta solución es completamente errónea**.
+Sin embargo, **esta solución es completamente errónea**. Recordemos que en una función no `void`, **siempre ha de devolverse algo**. En este caso, tenemos un `return false` únicamente para cuando encontremos que la función no está ordenada, por lo que en caso de que el vector esté ordenado, la función no devolvería nada. Esto es un **grave error** que solucionaremos a continuación.
+
+- - -
+
+##### Ejemplo X. Función no `void`: comprobación de si un vector está ordenado (arreglado)
+
+Modificaremos el código del ejemplo anterior teniendo en cuenta estas dos consideraciones:
+
+1. Al tratarse de una función no `void`, **siempre ha de devolver algo**. Para ello insertaremos una variable local de tipo `bool`, llamada `ordenado`. La modificaremos en nuestro código y la devolveremos al final.
+2. Si encontramos al recorrer el vector dos elementos que no estén en orden, no bastará seguir recorriendo el vector. Para ello, incorporaremos una condición extra a nuestro `for`.
+
+El código correcto, por tanto, sería:
+
+~~~ c++
+bool estaOrdenado( const vector<int> & v ) {
+    bool ordenado = true;
+    for ( int i = 0; i < v.size() - 1 && ordenado; i++ )
+        if ( v[i+1] < v[i] )
+            ordenado = false;
+    return ordenado;
+}
+~~~
+
+- - -
+
+##### Ejemplo X. Función no `void`: comprobación de si un vector está ordenado (alternativo)
+
+Finalmente, haremos una matización sobre funciones no `void`: podemos incluir en una función **tantos `return` como sea necesario**. La función dejará de ejecutarse en cuanto se encuentre el primer `return`.
+
+Por tanto el código anterior es completamente equivalente a:
+
+~~~ c++
+bool estaOrdenado( const vector<int> & v ) {
+    for ( int i = 0; i < v.size() - 1 && ordenado; i++ )
+        if ( v[i+1] < v[i] )
+            return false;
+    return true;
+}
+~~~
+
+De hecho, ten en cuenta que si encontramos dos elementos en orden no creciente, al hacer `return false` también salimos del `for`, haciendo exactamente el mismo propósito que la condición compuesta en el ejemplo anterior.
+
+- - -
