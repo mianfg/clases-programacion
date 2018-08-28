@@ -27,7 +27,9 @@
 
 ##### Ejemplos
 
-...
+* [Ejemplo 4.1 \[`diasHasta()`\]](#) — declaración y llamada a una función: días desde fecha hasta hoy
+* [Ejemplo 4.2 \[`buenosDias()`\]](#) — una función que te da los buenos días (sin importar si es de noche)
+* [Ejemplo 4.3 \[`diasHasta()`\]](#) — declaración y llamada a una función: días desde fecha hasta hoy
 
 - - -
 
