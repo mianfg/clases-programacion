@@ -27,9 +27,13 @@
 
 ##### Ejemplos
 
-* [Ejemplo 4.1 \[`diasHasta()`\]](#) — declaración y llamada a una función: días desde fecha hasta hoy
-* [Ejemplo 4.2 \[`buenosDias()`\]](#) — una función que te da los buenos días (sin importar si es de noche)
-* [Ejemplo 4.3 \[`diasHasta()`\]](#) — declaración y llamada a una función: días desde fecha hasta hoy
+* [Ejemplo 4.1: `diasHasta()`](#) — declaración y llamada a una función: días desde fecha hasta hoy
+* [Ejemplo 4.2: `buenosDias()`](#) — una función que te da los buenos días (sin importar si es de noche)
+* [Ejemplo 4.3: `esPar()`](#) — función void: comprobación de si un número es par o impar por salida estándar
+* [Ejemplo 4.4: `estaOrdenado()`](#) — función no void: comprobación de si un vector está ordenado (con error)
+* [Ejemplo 4.5: `estaOrdenado()`](#) — función no void: comprobación de si un vector está ordenado (arreglado)
+* [Ejemplo 4.6: `estaOrdenado()`](#) — función no void: comprobación de si un vector está ordenado (alternativo)
+* [Ejemplo 4.3: `esPar()`](#) — función void: comprobación de si un número es par o impar por salida estándar
 
 - - -
 
@@ -113,11 +117,11 @@ Es posible que haya funciones que no tengan parámetros, en cuyo caso se dejan l
 
 - - -
 
-##### Ejemplo X. Declaración y llamada a una función: días desde fecha hasta hoy
+##### Ejemplo 4.1: `diasHasta()` — declaración y llamada a una función: días desde fecha hasta hoy
 
 Vamos a inventarnos una función. No la implementaremos, sencillamente la declararemos y veremos cómo se llamaría a ella.
 
-Supongamos que creamos una función `diasHasta`, a la que pasamos una fecha y nos devuelve el número de días que han pasado desde esa fecha hasta hoy. Si la fecha es futura, devolverá un valor de días negativo.
+Supongamos que creamos una función `diasHasta()`, a la que pasamos una fecha y nos devuelve el número de días que han pasado desde esa fecha hasta hoy. Si la fecha es futura, devolverá un valor de días negativo.
 
 Planteemos cómo definiríamos esta función:
 
@@ -152,7 +156,7 @@ debemos llamarla con un `int`, un `char` y un `bool`, **en ese orden**, e **inde
 
 - - -
 
-##### Ejemplo X. Una función que te da los buenos días (sin importar si es de noche)
+##### Ejemplo 4.2: `buenosDias()` — una función que te da los buenos días (sin importar si es de noche)
 
 Este ejemplo es un tanto indiferente, pero lo ponemos aquí para ilustrar que existen funciones sin parámetros. A continuación implementaremos la función `buenosDias`, que nos da los buenos días:
 
@@ -251,7 +255,7 @@ Son funciones que no devuelven nada. Basta declararlas de tipo `void`.
 
 - - -
 
-##### Ejemplo X. Función `void`: comprobación de si un número es par o impar por salida estándar
+##### Ejemplo 4.3: `esPar()` — función `void`: comprobación de si un número es par o impar por salida estándar
 
 Resolveremos el problema con el que hemos motivado el uso a las funciones. Planteemos qué elementos necesita la función, y cómo la definiremos:
 
@@ -285,9 +289,9 @@ Son funciones que devuelven **un único dato**, de un **tipo específico**. Bast
 
 - - -
 
-##### Ejemplo X. Función no `void`: comprobación de si un vector está ordenado (con error)
+##### Ejemplo 4.4: `estaOrdenado()` — función no `void`: comprobación de si un vector está ordenado (con error)
 
-Haremos un programa para comprobar si un vector está ordenado. Para ello, crearemos la función `estaOrdenado`, al que se le pasa un vector `v`. La función devolverá un valor `bool`, que dirá si dicho vector está o no ordenado.
+Haremos un programa para comprobar si un vector está ordenado. Para ello, crearemos la función `estaOrdenado()`, al que se le pasa un vector `v`. La función devolverá un valor `bool`, que dirá si dicho vector está o no ordenado.
 
 Planteemos qué elementos necesita la función, y cómo la definiremos:
 
@@ -310,7 +314,7 @@ Sin embargo, **esta solución es completamente errónea**. Recordemos que en una
 
 - - -
 
-##### Ejemplo X. Función no `void`: comprobación de si un vector está ordenado (arreglado)
+##### Ejemplo 4.5: `estaOrdenado()` — función no `void`: comprobación de si un vector está ordenado (arreglado)
 
 Modificaremos el código del ejemplo anterior teniendo en cuenta estas dos consideraciones:
 
@@ -331,7 +335,7 @@ bool estaOrdenado( const vector<int> & v ) {
 
 - - -
 
-##### Ejemplo X. Función no `void`: comprobación de si un vector está ordenado (alternativo)
+##### Ejemplo 4.6: `estaOrdenado()` — función no `void`: comprobación de si un vector está ordenado (alternativo)
 
 Finalmente, haremos una matización sobre funciones no `void`: podemos incluir en una función **tantos `return` como sea necesario**. La función dejará de ejecutarse en cuanto se encuentre el primer `return`.
 
