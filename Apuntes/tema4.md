@@ -381,9 +381,21 @@ Una función puede tener parámetros con valores por defecto, teniendo en cuenta
 * Deben ser los últimos de la función.
 * En la llamada a la función, si se especifican un subconjunto de ellos, deben ser los primeros.
 
+- - -
+
+##### Ejemplo 4.7: `volumenCaja()` — función con parámetros con valor por defecto: volumen de una caja
+
+- - -
+
 ### 6.2  Sobrecarga de funciones
 
 C++ permite definir varias funciones en el mismo ámbito con el mismo nombre. C++ selecciona la función adecuada de acuerdo al número, tipo y orden de los argumentos.
+
+- - -
+
+##### Ejemplo 4.8 — sobrecarga de funciones
+
+- - -
 
 ## 7. Diseño de funciones: precondiciones y documentación
 
@@ -394,7 +406,7 @@ Una **precondición** es toda aquella restricción que deben satisfacer los par�
 
 - - -
 
-##### Ejemplo 4.X: `factorial()` — función con precondición: factorial de un número
+##### Ejemplo 4.9: `factorial()` — función con precondición: factorial de un número
 
 Vamos a programar una función que devuelve el factorial de un número. Como es usual, describiremos sus elementos antes de implementarla:
 
@@ -438,7 +450,7 @@ Existe un estándar para la documentación de funciones, que es el que se utiliz
 
 - - -
 
-##### Ejemplo 4.X: `factorial()` — documentando la función `factorial()`
+##### Ejemplo 4.10: `factorial()` — documentando la función `factorial()`
 
 Todas las documentaciones siguen la siguiente plantilla:
 
