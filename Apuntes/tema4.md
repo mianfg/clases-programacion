@@ -189,3 +189,27 @@ Son funciones que devuelven **un único dato**, de un **tipo específico**. Bast
 * Este tipo de funciones **tienen `return`**. En él, se especifica qué se va a devolver, del tipo `return <expresión>;`.
     > **MUY IMPORTANTE:** `<expresión>` debe ser un dato del tipo especificado a devolver, o una expresión que tenga como resultado dicho tipo de dato.
 * Podemos **devolver cualquier tipo de dato**: `int`, `bool`, `double`, `char`, …, incluso vectores de cualquier tipo.
+* Una función no `void` **siempre debe devolver algo**.
+
+- - -
+
+##### Ejemplo X. Función no `void`: comprobación de si un vector está ordenado (con error)
+
+Haremos un programa para comprobar si un vector está ordenado. Para ello, crearemos la función `estaOrdenado`, al que se le pasa un vector `v`. La función devolverá un valor `bool`, que dirá si dicho vector está o no ordenado.
+
+Planteemos qué elementos necesita la función, y cómo la definiremos:
+
+* **Nombre de la función**: debe ser descriptivo, diremos que es `estaOrdenado`.
+* **Tipo que devuelve la función**: un valor `bool`, correspondiente a si el vector está ordenado (`true`) o no (`false`).
+* **Parámetros que se pasan a la función**:
+    * Debemos pasar un vector. Por tanto, sólo nos hace falta un parámetro. Haremos que el vector se pase `por referencia constante`, para no tener que crear una copia del vector (así agilizamos y optimizamos nuestro programa). Esto se hace definiendo dicho parámetro como `const vector<int> & v`.
+
+Una posible solución es:
+
+~~~ c++
+bool estaOrdenado( const vector<int> & v ) {
+
+}
+~~~
+
+Sin embargo, **esta solución es completamente errónea**.
