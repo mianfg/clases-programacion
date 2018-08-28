@@ -363,7 +363,7 @@ Una **precondición** es toda aquella restricción que deben satisfacer los par�
 
 - - -
 
-##### Ejemplo X. Función con precondición: factorial de un número
+##### Ejemplo 4.X: `factorial()` — función con precondición: factorial de un número
 
 Vamos a programar una función que devuelve el factorial de un número. Como es usual, describiremos sus elementos antes de implementarla:
 
@@ -407,7 +407,7 @@ Existe un estándar para la documentación de funciones, que es el que se utiliz
 
 - - -
 
-##### Ejemplo X. Documentando la función `factorial()`
+##### Ejemplo 4.X: `factorial()` — documentando la función `factorial()`
 
 Todas las documentaciones siguen la siguiente plantilla:
 
