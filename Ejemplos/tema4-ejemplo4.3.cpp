@@ -1,6 +1,6 @@
 /*
- *  EJERCICIO 4.3 - esPar()
- *    Función void: comprobación de si un número es par o impar por salida estándar
+ *  EJEMPLO 4.3 - esPar()
+ *  Función void: comprobación de si un número es par o impar por salida estándar
  *
  *  Clases particulares de programación en C++
  *  Autor: Miguel Ángel Fernández Gutiérrez (@mianfg)

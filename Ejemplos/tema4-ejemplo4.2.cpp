@@ -1,6 +1,6 @@
 /*
- *  EJERCICIO 4.2 - buenosDias()
- *    Una función que te da los buenos días (sin importar si es de noche)
+ *  EJEMPLO 4.2 - buenosDias()
+ *  Una función que te da los buenos días (sin importar si es de noche)
  *
  *  Clases particulares de programación en C++
  *  Autor: Miguel Ángel Fernández Gutiérrez (@mianfg)

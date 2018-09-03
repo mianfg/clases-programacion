@@ -1,6 +1,6 @@
 /*
- *  EJEMPLO 4.4 - estaOrdenado()
- *  Función no void: comprobación de si un vector está ordenado (con error)
+ *  EJEMPLO 4.5 - estaOrdenado()
+ *  Función no void: comprobación de si un vector está ordenado (arreglado)
  *
  *  Clases particulares de programación en C++
  *  Autor: Miguel Ángel Fernández Gutiérrez (@mianfg)
@@ -12,9 +12,11 @@
 using namespace std;
 
 bool estaOrdenado( const vector<int> & v ) {
-    for ( int i = 0; i < v.size() - 1; i++ )
+    bool ordenado = true;
+    for ( int i = 0; i < v.size() - 1 && ordenado; i++ )
         if ( v[i+1] < v[i] )
-            return false;
+            ordenado = false;
+    return ordenado;
 }
 
 // estas son funciones extra (¡de regalo!) para hacer y mostrar vectores

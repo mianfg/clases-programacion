@@ -1,6 +1,6 @@
 /*
- *  EJERCICIO 4.1 - diasHasta()
- *    Declaración y llamada a una función: días desde fecha hasta hoy
+ *  EJEMPLO 4.1 - diasHasta()
+ *  Declaración y llamada a una función: días desde fecha hasta hoy
  *
  *  Clases particulares de programación en C++
  *  Autor: Miguel Ángel Fernández Gutiérrez (@mianfg)
