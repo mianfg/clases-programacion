@@ -28,9 +28,10 @@
 
 * [Ejemplo 4.1: `diasHasta()`](#ejemplo-41-diashasta--declaración-y-llamada-a-una-función-días-desde-fecha-hasta-hoy) — declaración y llamada a una función: días desde fecha hasta hoy
 * [Ejemplo 4.2: `buenosDias()`](#ejemplo-42-buenosdias--una-función-que-te-da-los-buenos-días-sin-importar-si-es-de-noche) — una función que te da los buenos días (sin importar si es de noche)
-
-__
-
+* [Ejemplo 4.3](#ejemplo-43--paso-de-parámetros-por-copia) — paso de parámetros por copia
+* [Ejemplo 4.4](#ejemplo-44--paso-de-parámetros-por-copia-constante) — paso de parámetros por copia constante
+* [Ejemplo 4.5](#ejemplo-45--paso-de-parámetros-por-referencia) — paso de parámetros por referencia
+* [Ejemplo 4.6](#ejemplo-46--paso-de-parámetros-por-referencia-constante) — paso de parámetros por referencia constante
 * [Ejemplo 4.7: `esPar()`](#ejemplo-47-espar--función-void-comprobación-de-si-un-número-es-par-o-impar-por-salida-estándar) — función `void`: comprobación de si un número es par o impar por salida estándar
 * [Ejemplo 4.8: `estaOrdenado()`](#ejemplo-48-estaordenado--función-no-void-comprobación-de-si-un-vector-está-ordenado-con-error) — función no `void`: comprobación de si un vector está ordenado (con error)
 * [Ejemplo 4.9: `estaOrdenado()`](#ejemplo-49-estaordenado--función-no-void-comprobación-de-si-un-vector-está-ordenado-arreglado) — función no `void`: comprobación de si un vector está ordenado (arreglado)
@@ -347,7 +348,20 @@ Basta añadir el nombre `const`, luego el tipo, el nombre `&` y finalmente el no
 
 > :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.06.cpp)
 
-_COMPLETAR_
+En este caso, accedemos a las variables directamente, sin crear una copia. Además, **no podemos modificarlas**.
+
+~~~ c++
+int multiplicar(const int & x, const int & y) {
+    x = 5;  // ¡nos daría ERROR!
+    return x*y;
+}
+
+int main() {
+    int a = 7, b = 2;
+    cout << multiplicar(a, b) << endl;   // muestra 10
+    cout << a << endl;                   // muestra 5
+}
+~~~
 
 ###### Explicación gráfica
 
