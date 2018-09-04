@@ -36,8 +36,8 @@
 * [Ejemplo 4.8](#ejemplo-48--sobrecarga-de-funciones) — sobrecarga de funciones
 * [Ejemplo 4.9: `factorial()`](#ejemplo-49-factorial--función-con-precondición-factorial-de-un-número) — función con precondición: factorial de un número
 * [Ejemplo 4.10: `factorial()`](#ejemplo-410-factorial--documentando-la-función-factorial) — documentando la función `factorial()`
-* [Ejemplo 4.11: `cubo()`](#ejemplo-411-cubo--cálculo-de-cubos) — cálculo de cubos
-* [Ejemplo 4.12: `cubo()`](#ejemplo-412-cubo--cálculo-de-cubos-alternativo) — cálculo de cubos (alternativo)
+* [Ejemplo 4.11: `cubo()`](#ejemplo-411-cubo--función-recursiva-cálculo-de-cubos) — función recursiva: cálculo de cubos
+* [Ejemplo 4.12: `cubo()`](#ejemplo-412-cubo--función-recursiva-cálculo-de-cubos-alternativo) — función recursiva: cálculo de cubos (alternativo)
 
 - - -
 
@@ -552,7 +552,7 @@ Una **función recursiva** es una función que se llama a sí misma. A continuac
 
 - - -
 
-##### Ejemplo 4.11: `cubo()` — cálculo de cubos
+##### Ejemplo 4.11: `cubo()` — función recursiva: cálculo de cubos
 
 > :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.11.cpp)
 
@@ -571,7 +571,7 @@ int cubo( int num ) {
 
 - - -
 
-##### Ejemplo 4.12: `cubo()` — cálculo de cubos (alternativo)
+##### Ejemplo 4.12: `cubo()` — función recursiva: cálculo de cubos (alternativo)
 
 > :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.12.cpp)
 
