@@ -28,16 +28,19 @@
 
 * [Ejemplo 4.1: `diasHasta()`](#ejemplo-41-diashasta--declaración-y-llamada-a-una-función-días-desde-fecha-hasta-hoy) — declaración y llamada a una función: días desde fecha hasta hoy
 * [Ejemplo 4.2: `buenosDias()`](#ejemplo-42-buenosdias--una-función-que-te-da-los-buenos-días-sin-importar-si-es-de-noche) — una función que te da los buenos días (sin importar si es de noche)
-* [Ejemplo 4.3: `esPar()`](#ejemplo-43-espar--función-void-comprobación-de-si-un-número-es-par-o-impar-por-salida-estándar) — función `void`: comprobación de si un número es par o impar por salida estándar
-* [Ejemplo 4.4: `estaOrdenado()`](#ejemplo-44-estaordenado--función-no-void-comprobación-de-si-un-vector-está-ordenado-con-error) — función no `void`: comprobación de si un vector está ordenado (con error)
-* [Ejemplo 4.5: `estaOrdenado()`](#ejemplo-45-estaordenado--función-no-void-comprobación-de-si-un-vector-está-ordenado-arreglado) — función no `void`: comprobación de si un vector está ordenado (arreglado)
-* [Ejemplo 4.6: `estaOrdenado()`](#ejemplo-46-estaordenado--función-no-void-comprobación-de-si-un-vector-está-ordenado-alternativo) — función no `void`: comprobación de si un vector está ordenado (alternativo)
-* [Ejemplo 4.7: `volumenCaja()`](#ejemplo-47-volumencaja--función-con-parámetros-con-valor-por-defecto-volumen-de-una-caja) — función con parámetros con valor por defecto: volumen de una caja
-* [Ejemplo 4.8](#ejemplo-48--sobrecarga-de-funciones) — sobrecarga de funciones
-* [Ejemplo 4.9: `factorial()`](#ejemplo-49-factorial--función-con-precondición-factorial-de-un-número) — función con precondición: factorial de un número
-* [Ejemplo 4.10: `factorial()`](#ejemplo-410-factorial--documentando-la-función-factorial) — documentando la función `factorial()`
-* [Ejemplo 4.11: `cubo()`](#ejemplo-411-cubo--función-recursiva-cálculo-de-cubos) — función recursiva: cálculo de cubos
-* [Ejemplo 4.12: `cubo()`](#ejemplo-412-cubo--función-recursiva-cálculo-de-cubos-alternativo) — función recursiva: cálculo de cubos (alternativo)
+
+__
+
+* [Ejemplo 4.7: `esPar()`](#ejemplo-47-espar--función-void-comprobación-de-si-un-número-es-par-o-impar-por-salida-estándar) — función `void`: comprobación de si un número es par o impar por salida estándar
+* [Ejemplo 4.8: `estaOrdenado()`](#ejemplo-48-estaordenado--función-no-void-comprobación-de-si-un-vector-está-ordenado-con-error) — función no `void`: comprobación de si un vector está ordenado (con error)
+* [Ejemplo 4.9: `estaOrdenado()`](#ejemplo-49-estaordenado--función-no-void-comprobación-de-si-un-vector-está-ordenado-arreglado) — función no `void`: comprobación de si un vector está ordenado (arreglado)
+* [Ejemplo 4.10: `estaOrdenado()`](#ejemplo-410-estaordenado--función-no-void-comprobación-de-si-un-vector-está-ordenado-alternativo) — función no `void`: comprobación de si un vector está ordenado (alternativo)
+* [Ejemplo 4.11: `volumenCaja()`](#ejemplo-411-volumencaja--función-con-parámetros-con-valor-por-defecto-volumen-de-una-caja) — función con parámetros con valor por defecto: volumen de una caja
+* [Ejemplo 4.12](#ejemplo-412--sobrecarga-de-funciones) — sobrecarga de funciones
+* [Ejemplo 4.13: `factorial()`](#ejemplo-413-factorial--función-con-precondición-factorial-de-un-número) — función con precondición: factorial de un número
+* [Ejemplo 4.14: `factorial()`](#ejemplo-414-factorial--documentando-la-función-factorial) — documentando la función `factorial()`
+* [Ejemplo 4.15: `cubo()`](#ejemplo-415-cubo--función-recursiva-cálculo-de-cubos) — función recursiva: cálculo de cubos
+* [Ejemplo 4.16: `cubo()`](#ejemplo-416-cubo--función-recursiva-cálculo-de-cubos-alternativo) — función recursiva: cálculo de cubos (alternativo)
 
 - - -
 
@@ -212,6 +215,40 @@ Es el paso por “defecto”. Cuando declaramos los parámetros por copia (de la
 * Esta nueva variable es **local a la función**, es decir, es **inaccesible desde fuera de la función**.
 * No importa que la variable pasada sea originalmente `const` o no.
 
+- - -
+
+##### Ejemplo 4.3 — paso de parámetros por copia
+
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.03.cpp)
+
+Sea la siguiente función:
+
+~~~ c++
+int multiplicar(int x, int y) {
+    return x*y;
+}
+~~~
+
+en la que hemos pasado los parámetros **por copia**. Por tanto, al llamar a la función, se crean en memoria dos nuevas variables **accesibles únicamente desde la propia función**, con los mismos valores que los pasados. Si modificamos esos valores, no se modifica el valor original. A continuación, un claro ejemplo:
+
+~~~ c++
+int multiplicar(int x, int y) {
+    x = 5;  // lo modificamos queriendo
+    return x*y;
+}
+
+int main() {
+    int a = 7, b = 2;
+    cout << multiplicar(a, b) << endl;   // muestra 10
+    cout << a << endl;                   // muestra 7
+    
+    // ¡podemos pasar valores directamente!
+    cout << multiplicar(10, 4) << endl;  // muestra 20
+}
+~~~
+
+- - -
+
 ### 3.2 Paso por copia constante
 
 ![Imagen 4.4](./resources/tema4-img4.png)
@@ -223,6 +260,33 @@ Basta añadir el nombre `const` delante del tipo del parámetro que queremos que
 * Esta nueva variable es también **local a la función**.
 * Tampoco importa que la variable pasada originalmente sea `const` o no.
 
+- - -
+
+##### Ejemplo 4.4 — paso de parámetros por copia constante
+
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.04.cpp)
+
+Sea la misma función inicial que la anterior, con un cambio en el paso de parámetros:
+
+~~~ c++
+int multiplicar(const int x, const int y) {
+    return x*y;
+}
+~~~
+
+en la que hemos pasado los parámetros **por copia consante**. Por tanto, al llamar a la función, se crean en memoria dos nuevas variables **accesibles únicamente desde la propia función**, pero **no modificables** en la función, con los mismos valores que los pasados.
+
+En este caso, el siguiente código daría un **error de compilación**, pues tanto `a` como `b` son `const`.
+
+~~~ c++
+int multiplicar(const int x, const int y) {
+    x = 5;  // ERROR
+    return x*y;
+}
+~~~
+
+- - -
+
 ### 3.3 Paso por referencia
 
 ![Imagen 4.5](./resources/tema4-img5.png)
@@ -231,6 +295,29 @@ Basta añadir el nombre `&` entre el tipo y el nombre de variable del parámetro
 
 * En este caso **no se crea** una nueva variable. Por tanto, si modificamos el valor de la variable en la función, **también se modifica el valor de la variable para todo el programa**.
 * Hay que tener cuidado si pasamos variables que originalmente sean `const`, pues si en nuestra función se modifica la variable, y al pasar dicha variable al llamar a la función ésta es `const`, tendremos un error en tiempo de ejecución.
+
+- - -
+
+##### Ejemplo 4.5 — paso de parámetros por referencia
+
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.05.cpp)
+
+En este caso, al contrario que en el (ejemplo 4.4)[#here], **no se crea ninguna copia**. Si modificamos la variable desde la función, **también se modifica en el resto del programa**.
+
+~~~ c++
+int multiplicar(int & x, int & y) {
+    x = 5;  // lo modificamos queriendo
+    return x*y;
+}
+
+int main() {
+    int a = 7, b = 2;
+    cout << multiplicar(a, b) << endl;   // muestra 10
+    cout << a << endl;                   // muestra 5
+}
+~~~
+
+- - -
 
 ### 3.4 Paso por referencia constante
 
@@ -241,6 +328,14 @@ Basta añadir el nombre `const`, luego el tipo, el nombre `&` y finalmente el no
 * En este caso **no se crea una nueva variable**. Es decir, **no se desperdicia memoria en realizar una copia**.
 * Sin embargo, la variable **no puede ser modificada dentro de la función**, independientemente de si la variable es originalmente `const` o no.
 * Es ideal para funciones donde se toman datos de entrada que no son modificados: hacen nuestro programa **más eficiente**.
+
+- - -
+
+##### Ejemplo 4.6 — paso de parámetros por referencia constante
+
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.06.cpp)
+
+_COMPLETAR_
 
 - - -
 
@@ -263,9 +358,9 @@ Son funciones que no devuelven nada. Basta declararlas de tipo `void`.
 
 - - -
 
-##### Ejemplo 4.3: `esPar()` — función `void`: comprobación de si un número es par o impar por salida estándar
+##### Ejemplo 4.7: `esPar()` — función `void`: comprobación de si un número es par o impar por salida estándar
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.03.cpp)
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.07.cpp)
 
 Resolveremos el problema con el que hemos motivado el uso a las funciones. Planteemos qué elementos necesita la función, y cómo la definiremos:
 
@@ -299,9 +394,9 @@ Son funciones que devuelven **un único dato**, de un **tipo específico**. Bast
 
 - - -
 
-##### Ejemplo 4.4: `estaOrdenado()` — función no `void`: comprobación de si un vector está ordenado (con error)
+##### Ejemplo 4.8: `estaOrdenado()` — función no `void`: comprobación de si un vector está ordenado (con error)
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.04.cpp)
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.08.cpp)
 
 Haremos un programa para comprobar si un vector está ordenado. Para ello, crearemos la función `estaOrdenado()`, al que se le pasa un vector `v`. La función devolverá un valor `bool`, que dirá si dicho vector está o no ordenado.
 
@@ -326,9 +421,9 @@ Sin embargo, **esta solución es completamente errónea**. Recordemos que en una
 
 - - -
 
-##### Ejemplo 4.5: `estaOrdenado()` — función no `void`: comprobación de si un vector está ordenado (arreglado)
+##### Ejemplo 4.9: `estaOrdenado()` — función no `void`: comprobación de si un vector está ordenado (arreglado)
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.05.cpp)
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.09.cpp)
 
 Modificaremos el código del ejemplo anterior teniendo en cuenta estas dos consideraciones:
 
@@ -349,9 +444,9 @@ bool estaOrdenado( const vector<int> & v ) {
 
 - - -
 
-##### Ejemplo 4.6: `estaOrdenado()` — función no `void`: comprobación de si un vector está ordenado (alternativo)
+##### Ejemplo 4.10: `estaOrdenado()` — función no `void`: comprobación de si un vector está ordenado (alternativo)
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.06.cpp)
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.10.cpp)
 
 Finalmente, haremos una matización sobre funciones no `void`: podemos incluir en una función **tantos `return` como sea necesario**. La función dejará de ejecutarse en cuanto se encuentre el primer `return`.
 
@@ -399,9 +494,9 @@ Una función puede tener parámetros con valores por defecto, teniendo en cuenta
 
 - - -
 
-##### Ejemplo 4.7: `volumenCaja()` — función con parámetros con valor por defecto: volumen de una caja
+##### Ejemplo 4.11: `volumenCaja()` — función con parámetros con valor por defecto: volumen de una caja
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.07.cpp)
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.11.cpp)
 
 Sea la siguiente función `volumenCaja()`, que calcula el volumen de una caja:
 
@@ -428,9 +523,9 @@ C++ permite definir varias funciones en el mismo ámbito con el mismo nombre. C+
 
 - - -
 
-##### Ejemplo 4.8 — sobrecarga de funciones
+##### Ejemplo 4.12 — sobrecarga de funciones
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.08.cpp)
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.12.cpp)
 
 Sean las siguientes funciones:
 
@@ -461,9 +556,9 @@ Una **precondición** es toda aquella restricción que deben satisfacer los par�
 
 - - -
 
-##### Ejemplo 4.9: `factorial()` — función con precondición: factorial de un número
+##### Ejemplo 4.13: `factorial()` — función con precondición: factorial de un número
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.09.cpp)
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.13.cpp)
 
 Vamos a programar una función que devuelve el factorial de un número. Como es usual, describiremos sus elementos antes de implementarla:
 
@@ -507,9 +602,9 @@ Existe un estándar para la documentación de funciones, que es el que se utiliz
 
 - - -
 
-##### Ejemplo 4.10: `factorial()` — documentando la función `factorial()`
+##### Ejemplo 4.14: `factorial()` — documentando la función `factorial()`
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.10.cpp)
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.14.cpp)
 
 Todas las documentaciones siguen la siguiente plantilla:
 
@@ -552,9 +647,9 @@ Una **función recursiva** es una función que se llama a sí misma. A continuac
 
 - - -
 
-##### Ejemplo 4.11: `cubo()` — función recursiva: cálculo de cubos
+##### Ejemplo 4.15: `cubo()` — función recursiva: cálculo de cubos
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.11.cpp)
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.15.cpp)
 
 Esta función calcula el cubo de tres números multiplicándolos, y teniendo en cuenta su signo: si es un número negativo, devuelve el valor absoluto de su cubo.
 
@@ -571,9 +666,9 @@ int cubo( int num ) {
 
 - - -
 
-##### Ejemplo 4.12: `cubo()` — función recursiva: cálculo de cubos (alternativo)
+##### Ejemplo 4.16: `cubo()` — función recursiva: cálculo de cubos (alternativo)
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.12.cpp)
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.16.cpp)
 
 Podemos llamar recursivamente a la función incluso desde el propio `return`.
 
