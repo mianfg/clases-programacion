@@ -247,6 +247,10 @@ int main() {
 }
 ~~~
 
+###### Explicación gráfica
+
+![Imagen 4.ej1](./resources/tema4-imgej1.gif)
+
 - - -
 
 ### 3.2 Paso por copia constante
