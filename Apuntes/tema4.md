@@ -359,7 +359,7 @@ Por tanto el código anterior es completamente equivalente a:
 
 ~~~ c++
 bool estaOrdenado( const vector<int> & v ) {
-    for ( int i = 0; i < v.size() - 1 && ordenado; i++ )
+    for ( int i = 0; i < v.size() - 1; i++ )
         if ( v[i+1] < v[i] )
             return false;
     return true;
