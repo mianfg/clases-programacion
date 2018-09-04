@@ -220,7 +220,7 @@ Es el paso por “defecto”. Cuando declaramos los parámetros por copia (de la
 
 ##### Ejemplo 4.3 — paso de parámetros por copia
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.03.cpp)
+> :strong: Intenta escribir el código en tu ordenador... ¡y comprueba qué pasa!
 
 Sea la siguiente función:
 
@@ -269,7 +269,7 @@ Basta añadir el nombre `const` delante del tipo del parámetro que queremos que
 
 ##### Ejemplo 4.4 — paso de parámetros por copia constante
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.04.cpp)
+> :strong: Intenta escribir el código en tu ordenador... ¡y comprueba qué pasa!
 
 Sea la misma función inicial que la anterior, con un cambio en el paso de parámetros:
 
@@ -309,7 +309,7 @@ Basta añadir el nombre `&` entre el tipo y el nombre de variable del parámetro
 
 ##### Ejemplo 4.5 — paso de parámetros por referencia
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.05.cpp)
+> :strong: Intenta escribir el código en tu ordenador... ¡y comprueba qué pasa!
 
 En este caso, al contrario que en el (ejemplo 4.4)[#here], **no se crea ninguna copia**. Si modificamos la variable desde la función, **también se modifica en el resto del programa**.
 
@@ -346,7 +346,7 @@ Basta añadir el nombre `const`, luego el tipo, el nombre `&` y finalmente el no
 
 ##### Ejemplo 4.6 — paso de parámetros por referencia constante
 
-> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.06.cpp)
+> :strong: Intenta escribir el código en tu ordenador... ¡y comprueba qué pasa!
 
 En este caso, accedemos a las variables directamente, sin crear una copia. Además, **no podemos modificarlas**.
 
