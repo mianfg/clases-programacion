@@ -36,6 +36,8 @@
 * [Ejemplo 4.8](#ejemplo-48--sobrecarga-de-funciones) — sobrecarga de funciones
 * [Ejemplo 4.9: `factorial()`](#ejemplo-49-factorial--función-con-precondición-factorial-de-un-número) — función con precondición: factorial de un número
 * [Ejemplo 4.10: `factorial()`](#ejemplo-410-factorial--documentando-la-función-factorial) — documentando la función `factorial()`
+* [Ejemplo 4.11: `cubo()`](#ejemplo-411-cubo--cálculo-de-cubos) — cálculo de cubos
+* [Ejemplo 4.12: `cubo()`](#ejemplo-412-cubo--cálculo-de-cubos-alternativo) — cálculo de cubos (alternativo)
 
 - - -
 
@@ -120,6 +122,8 @@ Es posible que haya funciones que no tengan parámetros, en cuyo caso se dejan l
 - - -
 
 ##### Ejemplo 4.1: `diasHasta()` — declaración y llamada a una función: días desde fecha hasta hoy
+
+> :inbox_tray: Descarga el código de este programa [aquí](../Ejemplos/tema4-ejemplo4.1.cpp)
 
 Vamos a inventarnos una función. No la implementaremos, sencillamente la declararemos y veremos cómo se llamaría a ella.
 
