@@ -289,6 +289,10 @@ int multiplicar(const int x, const int y) {
 }
 ~~~
 
+###### Explicación gráfica
+
+![Imagen 4.ej2](./resources/tema4-imgej2.gif)
+
 - - -
 
 ### 3.3 Paso por referencia
@@ -321,6 +325,10 @@ int main() {
 }
 ~~~
 
+###### Explicación gráfica
+
+![Imagen 4.ej3](./resources/tema4-imgej3.gif)
+
 - - -
 
 ### 3.4 Paso por referencia constante
@@ -340,6 +348,10 @@ Basta añadir el nombre `const`, luego el tipo, el nombre `&` y finalmente el no
 > :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.06.cpp)
 
 _COMPLETAR_
+
+###### Explicación gráfica
+
+![Imagen 4.ej4](./resources/tema4-imgej4.gif)
 
 - - -
 
