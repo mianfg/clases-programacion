@@ -123,7 +123,7 @@ Es posible que haya funciones que no tengan parámetros, en cuyo caso se dejan l
 
 ##### Ejemplo 4.1: `diasHasta()` — declaración y llamada a una función: días desde fecha hasta hoy
 
-> :inbox_tray: Descarga el código de este programa [aquí](../Ejemplos/tema4-ejemplo4.1.cpp)
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.01.cpp)
 
 Vamos a inventarnos una función. No la implementaremos, sencillamente la declararemos y veremos cómo se llamaría a ella.
 
@@ -163,6 +163,8 @@ debemos llamarla con un `int`, un `char` y un `bool`, **en ese orden**, e **inde
 - - -
 
 ##### Ejemplo 4.2: `buenosDias()` — una función que te da los buenos días (sin importar si es de noche)
+
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.02.cpp)
 
 Este ejemplo es un tanto indiferente, pero lo ponemos aquí para ilustrar que existen funciones sin parámetros. A continuación implementaremos la función `buenosDias`, que nos da los buenos días:
 
@@ -263,6 +265,8 @@ Son funciones que no devuelven nada. Basta declararlas de tipo `void`.
 
 ##### Ejemplo 4.3: `esPar()` — función `void`: comprobación de si un número es par o impar por salida estándar
 
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.03.cpp)
+
 Resolveremos el problema con el que hemos motivado el uso a las funciones. Planteemos qué elementos necesita la función, y cómo la definiremos:
 
 * **Nombre de la función**: debe ser descriptivo, diremos que es `esPar`.
@@ -297,6 +301,8 @@ Son funciones que devuelven **un único dato**, de un **tipo específico**. Bast
 
 ##### Ejemplo 4.4: `estaOrdenado()` — función no `void`: comprobación de si un vector está ordenado (con error)
 
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.04.cpp)
+
 Haremos un programa para comprobar si un vector está ordenado. Para ello, crearemos la función `estaOrdenado()`, al que se le pasa un vector `v`. La función devolverá un valor `bool`, que dirá si dicho vector está o no ordenado.
 
 Planteemos qué elementos necesita la función, y cómo la definiremos:
@@ -322,6 +328,8 @@ Sin embargo, **esta solución es completamente errónea**. Recordemos que en una
 
 ##### Ejemplo 4.5: `estaOrdenado()` — función no `void`: comprobación de si un vector está ordenado (arreglado)
 
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.05.cpp)
+
 Modificaremos el código del ejemplo anterior teniendo en cuenta estas dos consideraciones:
 
 1. Al tratarse de una función no `void`, **siempre ha de devolver algo**. Para ello insertaremos una variable local de tipo `bool`, llamada `ordenado`. La modificaremos en nuestro código y la devolveremos al final.
@@ -342,6 +350,8 @@ bool estaOrdenado( const vector<int> & v ) {
 - - -
 
 ##### Ejemplo 4.6: `estaOrdenado()` — función no `void`: comprobación de si un vector está ordenado (alternativo)
+
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.06.cpp)
 
 Finalmente, haremos una matización sobre funciones no `void`: podemos incluir en una función **tantos `return` como sea necesario**. La función dejará de ejecutarse en cuanto se encuentre el primer `return`.
 
@@ -391,6 +401,8 @@ Una función puede tener parámetros con valores por defecto, teniendo en cuenta
 
 ##### Ejemplo 4.7: `volumenCaja()` — función con parámetros con valor por defecto: volumen de una caja
 
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.07.cpp)
+
 Sea la siguiente función `volumenCaja()`, que calcula el volumen de una caja:
 
 ~~~ c++
@@ -417,6 +429,8 @@ C++ permite definir varias funciones en el mismo ámbito con el mismo nombre. C+
 - - -
 
 ##### Ejemplo 4.8 — sobrecarga de funciones
+
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.08.cpp)
 
 Sean las siguientes funciones:
 
@@ -448,6 +462,8 @@ Una **precondición** es toda aquella restricción que deben satisfacer los par�
 - - -
 
 ##### Ejemplo 4.9: `factorial()` — función con precondición: factorial de un número
+
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.09.cpp)
 
 Vamos a programar una función que devuelve el factorial de un número. Como es usual, describiremos sus elementos antes de implementarla:
 
@@ -493,6 +509,8 @@ Existe un estándar para la documentación de funciones, que es el que se utiliz
 
 ##### Ejemplo 4.10: `factorial()` — documentando la función `factorial()`
 
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.10.cpp)
+
 Todas las documentaciones siguen la siguiente plantilla:
 
 ~~~ c++
@@ -536,6 +554,8 @@ Una **función recursiva** es una función que se llama a sí misma. A continuac
 
 ##### Ejemplo 4.11: `cubo()` — cálculo de cubos
 
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.11.cpp)
+
 Esta función calcula el cubo de tres números multiplicándolos, y teniendo en cuenta su signo: si es un número negativo, devuelve el valor absoluto de su cubo.
 
 ~~~ c++
@@ -552,6 +572,8 @@ int cubo( int num ) {
 - - -
 
 ##### Ejemplo 4.12: `cubo()` — cálculo de cubos (alternativo)
+
+> :inbox_tray: Descarga el código de este ejemplo [aquí](../Ejemplos/tema4-ejemplo4.12.cpp)
 
 Podemos llamar recursivamente a la función incluso desde el propio `return`.
 
