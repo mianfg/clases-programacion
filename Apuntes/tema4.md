@@ -22,10 +22,7 @@
     6.1 [Parámetros con valor por defecto](#61--parámetros-con-valor-por-defecto)  
     6.2 [Sobrecarga de funciones](#62--sobrecarga-de-funciones)  
 7. [Diseño de funciones: precondiciones y documentación](#7-diseño-de-funciones-precondiciones-y-documentación)
-8. [Funciones recursivas](#8-funciones-recursivas)  
-    8.1 [Caso general y caso base](#)  
-    8.2 [Funciones recursivas con varios puntos de salida](#)  
-    8.3 [Múltiples casos base y/o generales](#)
+8. [Funciones recursivas](#8-funciones-recursivas)
 
 ##### Ejemplos
 
@@ -529,3 +526,44 @@ Nótese que:
 
 ## 8. Funciones recursivas
 
+Una **función recursiva** es una función que se llama a sí misma. A continuación, una función recursiva para calcular cubos:
+
+- - -
+
+##### Ejemplo 4.11: `cubo()` — cálculo de cubos
+
+Esta función calcula el cubo de tres números multiplicándolos, y teniendo en cuenta su signo: si es un número negativo, devuelve el valor absoluto de su cubo.
+
+~~~ c++
+int cubo( int num ) {
+    int resultado;
+    if ( num >= 0 )
+        resultado = num*num*num;
+    else
+        resultado = cubo(-num);
+    return resultado;
+}
+~~~
+
+- - -
+
+##### Ejemplo 4.12: `cubo()` — cálculo de cubos (alternativo)
+
+Podemos llamar recursivamente a la función incluso desde el propio `return`.
+
+~~~ c++
+int cubo( int num ) {
+    if ( num >= 0 )
+        return num*num*num;
+    else
+        return cubo(-num);
+}
+~~~
+
+- - -
+
+Las funciones recursivas son la solución de unos tipos de problemas muy específicos: no todos los problemas pueden ser resueltos de forma recursiva.
+
+La recursividad es una técnica **peligrosa**, que **gasta mucha memoria**. Existen lenguajes de programación, como Haskell, enfocados a recursividad. C++ no es uno de ellos.
+
+> Conocerás más sobre funciones recursivas en la relación de ejercicios de este tema.
