@@ -1,5 +1,6 @@
 /*
- *  EJEMPLO 4.8 - Sobrecarga de funciones
+ *  EJEMPLO 4.8 - estaOrdenado()
+ *  Función no void: comprobación de si un vector está ordenado (con error)
  *
  *  Clases particulares de programación en C++
  *  Autor: Miguel Ángel Fernández Gutiérrez (@mianfg)
@@ -7,25 +8,45 @@
  */
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-// vamos a insertar en las funciones mensajes por salida estándar para
-// poder distinguir en cada caso qué función usaría C++
-void funcion(double x) {
-    cout << "Hemos usado funcion(double x) (función no. 1)" << endl;
+bool estaOrdenado( const vector<int> & v ) {
+    for ( int i = 0; i < v.size() - 1; i++ )
+        if ( v[i+1] < v[i] )
+            return false;
 }
-void funcion(char x) {
-    cout << "Hemos usado funcion(char x) (función no. 2)" << endl;
+
+// estas son funciones extra (¡de regalo!) para hacer y mostrar vectores
+// de hecho, aquí probamos cómo podemos hacer uso del anidamiento de funciones
+void mostrarVector( const vector<int> & v ) {
+    for ( int i = 0; i < v.size(); i++ )
+        cout << v[i] << ' ';
+    cout << endl;
 }
-void funcion(int x, double y) {
-    cout << "Hemos usado funcion(int x, double y) (función no. 3)" << endl;
+void crearVectorPositivos( vector<int> & v ) {
+    v.clear();
+    cout << "Vamos a crear un vector. Inserte números enteros positivos. Inserte un número negativo para finalizar." << endl;
+    int entrada = 0;
+    while ( entrada > 0 ) {
+        cout << "Inserte un número: ";
+        cin >> entrada;
+        if ( entrada > 0 ) {
+            v.push_back(entrada);
+            cout << "    Elemento insertado: " << entrada << endl;
+        } else {
+            cout << "Vector finalizado. Vector guardado: " << endl;
+        }
+    }
+    mostrarVector();
 }
 
 int main() {
-    funcion(3.4);       // función no. 1
-    funcion(7);         // función no. 1 con conversión implícita de int a double
-    funcion('a');       // función no. 2
-    funcion(4, 9.2);    // función no. 3
-    funcion(4, 9);      // función no. 3 con conversión implícita de int a double (en el segundo parámetro)
+    vector<int> vect;
+    crearVectorPositivos(vect);
+    if ( estaOrdenado(vect) )
+        cout << "¡Genial! El vector está ordenado" << endl;
+    else
+        cout << "Oops... parece que el vector está desordenado" << endl;
 }

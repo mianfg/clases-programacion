@@ -1,6 +1,6 @@
 /*
- *  EJEMPLO 4.10 - factorial()
- *  Documentando la función factorial()
+ *  EJEMPLO 4.10 - estaOrdenado()
+ *  Función no void: comprobación de si un vector está ordenado (alternativo)
  *
  *  Clases particulares de programación en C++
  *  Autor: Miguel Ángel Fernández Gutiérrez (@mianfg)
@@ -8,33 +8,46 @@
  */
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-/**
-  * @brief Devuelve el factorial de un número
-  * @param num Número del que queremos devolver su factorial
-  * @return El factorial de num
-  * @precond num >= 0
-  */
-int factorial(int num) {
-    if ( num > 0 ) {
-        int multiplicar_por = num - 1;
-        while ( multiplicar_por > 1 ) {
-            num *= multiplicar_por;
-            multiplicar_por--;
+bool estaOrdenado( const vector<int> & v ) {
+    for ( int i = 0; i < v.size() - 1; i++ )
+        if ( v[i+1] < v[i] )
+            return false;
+    return true;
+}
+
+// estas son funciones extra (¡de regalo!) para hacer y mostrar vectores
+// de hecho, aquí probamos cómo podemos hacer uso del anidamiento de funciones
+void mostrarVector( const vector<int> & v ) {
+    for ( int i = 0; i < v.size(); i++ )
+        cout << v[i] << ' ';
+    cout << endl;
+}
+void crearVectorPositivos( vector<int> & v ) {
+    v.clear();
+    cout << "Vamos a crear un vector. Inserte números enteros positivos. Inserte un número negativo para finalizar." << endl;
+    int entrada = 0;
+    while ( entrada > 0 ) {
+        cout << "Inserte un número: ";
+        cin >> entrada;
+        if ( entrada > 0 ) {
+            v.push_back(entrada);
+            cout << "    Elemento insertado: " << entrada << endl;
+        } else {
+            cout << "Vector finalizado. Vector guardado: " << endl;
         }
-    } else if (num == 0)
-        num = 1;  // pues factorial(0) debe ser igual a 1
-    else
-        num = -1;  // hemos dicho que si num es negativo, devolvemos -1
-    
-    return num;
+    }
+    mostrarVector();
 }
 
 int main() {
-    int num;
-    cout << "Inserte un número entero: ";
-    cin >> num;
-    cout << num << "!=" << factorial(num) << endl;
+    vector<int> vect;
+    crearVectorPositivos(vect);
+    if ( estaOrdenado(vect) )
+        cout << "¡Genial! El vector está ordenado" << endl;
+    else
+        cout << "Oops... parece que el vector está desordenado" << endl;
 }
