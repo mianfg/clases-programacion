@@ -22,7 +22,7 @@ bool estaOrdenado( const vector<int> & v ) {
 
 // estas son funciones extra (¡de regalo!) para hacer y mostrar vectores
 // de hecho, aquí probamos cómo podemos hacer uso del anidamiento de funciones
-void mostrarVector( const vector<int> & v ) {
+void mostrarVector( vector<int> & v ) {
     for ( int i = 0; i < v.size(); i++ )
         cout << v[i] << ' ';
     cout << endl;
@@ -31,17 +31,17 @@ void crearVectorPositivos( vector<int> & v ) {
     v.clear();
     cout << "Vamos a crear un vector. Inserte números enteros positivos. Inserte un número negativo para finalizar." << endl;
     int entrada = 0;
-    while ( entrada > 0 ) {
+    while ( entrada >= 0 ) {
         cout << "Inserte un número: ";
         cin >> entrada;
-        if ( entrada > 0 ) {
+        if ( entrada >= 0 ) {
             v.push_back(entrada);
             cout << "    Elemento insertado: " << entrada << endl;
         } else {
             cout << "Vector finalizado. Vector guardado: " << endl;
         }
     }
-    mostrarVector();
+    mostrarVector(v);
 }
 
 int main() {
