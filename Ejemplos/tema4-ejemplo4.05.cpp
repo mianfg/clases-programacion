@@ -22,7 +22,7 @@ bool estaOrdenado( const vector<int> & v ) {
 
 // estas son funciones extra (¡de regalo!) para hacer y mostrar vectores
 // de hecho, aquí probamos cómo podemos hacer uso del anidamiento de funciones
-void mostrarVector( vector<int> & v ) {
+void mostrarVector( const vector<int> & v ) {
     for ( int i = 0; i < v.size(); i++ )
         cout << v[i] << ' ';
     cout << endl;
