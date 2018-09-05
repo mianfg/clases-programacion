@@ -5,7 +5,7 @@
 
 - - -
 
-:pencil2: Encuentra la relación de ejercicios de este tema [aquí](../Ejercicios/relacion4.md).
+:pencil: Encuentra la **relación de ejercicios** de este tema [aquí](../Ejercicios/relacion4.md).
 
 - - -
 ## 👉 Tabla de contenidos
