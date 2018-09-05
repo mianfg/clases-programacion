@@ -62,7 +62,7 @@ Diseñe e implemente una función que reciba dos números enteros `a` y `b` y qu
 
 Escriba un programa que lea 4 números `a`, `b`, `c` y `d` que definen el polinomio _a*x^3 + b*x^2 + c*x + d_, que lo evalúe en un punto y que muestre ese valor. Para ello, defina la función `evaluar()` que recibe los cuatro valores junto con un valor `x` donde evaluarlo, y que devuelve un número resultado de la evaluación.
 
-Para resolverlo, por un lado deberá reutilizar la función del [ejercicio 4.4](#here), y por otro, evitar declarar ninguna variable local en la función `evaluar()`.
+Para resolverlo, por un lado deberá reutilizar la función del [ejercicio 4.4](#ejercicio-44--potencia-de-un-número), y por otro, evitar declarar ninguna variable local en la función `evaluar()`.
 
 ###### Cabecera de la función:
 ~~~c++
@@ -107,7 +107,7 @@ void intercambiar(double & x, double & y);
 
 Escriba una función `ordenar2()` para ordenar los valores de dos variables de tipo `double`. Es decir, en la llamada se pasarán dos variables y, al finalizar, la primera variable tendrá el menor y la segunda el mayor de los valores.
 
-Para resolverlo, use la función `intercambiar()` del [ejercicio 4.7](#here).
+Para resolverlo, use la función `intercambiar()` del [ejercicio 4.7](#ejercicio-47--intercambio-de-valores).
 
 Como puede comprobar en la solución del ejercicio, desde la función `ordenar2()` pasamos dos variables a la función `intercambiar()`. Realmente, estos dos objetos no están creados ahí, sino que son dos objetos que se han pasado, a su vez, desde otra función. Dicho de otra forma, son dos referencias a dos objetos que, declarados fuera de `ordenar2()`, se pasan a la función de intercambio.
 
@@ -121,7 +121,7 @@ Escriba una función `ordenar3()` para ordenar los valores de tres variables de 
 
 > **Intenta pensar el problema primero** antes de leer lo de abajo. ¡Seguro que tú llegas a la solución!
 
-Este problema puede resolverse haciendo uso de la función `ordenar2()` del [ejercicio 4.8](#here), teniendo en cuenta que, para ordenar tres valores, basta ordenar los dos primeros, luego los dos últimos y de nuevo los dos primeros.
+Este problema puede resolverse haciendo uso de la función `ordenar2()` del [ejercicio 4.8](#ejercicio-48--ordenar-dos-valores), teniendo en cuenta que, para ordenar tres valores, basta ordenar los dos primeros, luego los dos últimos y de nuevo los dos primeros.
 
 - - -
 
@@ -173,7 +173,7 @@ Observe que ahora la función `main()` se dedica casi en exclusiva a llamar a ot
 
 ##### Ejercicio 4.11 — Media, desviación y varianza de un vector de números
 
-Modifique el programa del [ejercicio X](#here) de forma que modularice el código mediante las siguientes funciones:
+Modifique el programa del [ejercicio 3.4](../Ejercicios/relacion3.md#ejercicio-34--media-desviación-y-varianza) de forma que modularice el código mediante las siguientes funciones:
 
 * Leer los datos. No recibe ningún parámetro y devuelve un vector con los datos leídos desde la entrada estándar. Los datos son una secuencia de números que termina en un número negativo que actúa como centinela.
 * Calcular la media. Recibe un vector de números reales y devuelve la media de dichos valores.
@@ -204,7 +204,7 @@ Haga un programa que lea desde la entrada estándar un valor `n`, y una serie de
 ##### Ejercicio 4.13 — Factorización de un número
 
 Implemente un programa que lea una serie de números enteros desde la entrada estándar y que muestre al usuario su factorización. El programa estará pidiendo números y mostrando su factorización hasta que el usuario desee terminar. Dicho programa incluirá, al menos, las siguientes funciones:
-* Función para calcular los primos menores que un número dado mediante el algoritmo de la Criba de Eratóstenes (que ya resolvió en el [ejercicio X](#here)).
+* Función para calcular los primos menores que un número dado mediante el algoritmo de la Criba de Eratóstenes (que ya resolvió en el [ejercicio 3.5](../Ejercicios/relacion3.md#ejercicio-35--criba-de-eratóstenes)).
 * Función que, dado un valor entero, devuelva un vector con su descomposición en factores primos. Esta función hará uso del resultado de la criba para ir probando la divisibilidad del número.
 A continuación se muestra un ejemplo de ejecución:
 
@@ -244,7 +244,7 @@ El programa mostrará un menú de opciones al usuario para decidir en cada momen
 
 ##### Ejercicio 4.15 — Mediana de un vector
 
-Considere de nuevo el [ejercicio X](#here) y modularícelo adecuadamente. Deberá incluir funciones al menos para:
+Considere de nuevo el [ejercicio 3.16](../Ejercicios/relacion3.md#ejercicio-316--mediana) y modularícelo adecuadamente. Deberá incluir funciones al menos para:
 
 * Leer un vector de números enteros.
 * Ordenar un vector de números enteros. Puede usar el algoritmo que considere oportuno.
@@ -260,7 +260,7 @@ Implemente una función que calcule el mayor elemento de una matriz de números 
 
 ##### Ejercicio 4.17 — Medias de las filas de una matriz
 
-Haciendo uso de una de las funciones del [ejercicio 4.11](#here) realice una función que reciba como dato una matriz de reales y que devuelva un vector con las medias de cada fila.
+Haciendo uso de una de las funciones del [ejercicio 4.11](#ejercicio-411--media-desviación-y-varianza-de-un-vector-de-números) realice una función que reciba como dato una matriz de reales y que devuelva un vector con las medias de cada fila.
 
 - - -
 
@@ -278,13 +278,14 @@ Implemente una función que calcule el [número áureo](http://es.wikipedia.org/
 
 Diseñe e implemente dos funciones para calcular el valor de π de acuerdo a los siguientes métodos iterativos:
 
-_INSERTAR MÉTODOS ITERATIVOS <HERE>_
+* Haciendo uso de la [serie de Leibniz](https://es.wikipedia.org/wiki/Serie_de_Leibniz).
+* Haciendo uso del [producto de Wallis](https://es.wikipedia.org/wiki/Producto_de_Wallis).
 
 - - -
 
 ##### Ejercicio 4.20 — Días para el cumpleaños
 
-Haga un programa que lea dos fechas: la fecha actual y su fecha de nacimiento. A continuación mostrará cuántos días faltan para su próximo cumpleaños. Deberá reutilizar las funciones para leer fechas y para calcular el día juliano del [ejercicio 4.10](#here). A continuación tiene varios ejemplos de ejecución:
+Haga un programa que lea dos fechas: la fecha actual y su fecha de nacimiento. A continuación mostrará cuántos días faltan para su próximo cumpleaños. Deberá reutilizar las funciones para leer fechas y para calcular el día juliano del [ejercicio 4.10](#ejercicio-410--fecha-con-formato). A continuación tiene varios ejemplos de ejecución:
 
 ~~~
 Dígame la fecha actual: 2 8 2010
