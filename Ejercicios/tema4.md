@@ -369,6 +369,172 @@ Debe implementar todas estas funciones y otras si las necesitas. Debe deducir la
 
 ##### Ejercicio 4.22 ¬ El ahorcado
 
+Implemente el juego del ahorcado en C++ . Este es un juego para dos personas (_jugador1_ y _jugador2_) y la dinámica es la siguiente:
+
+* El _jugador1_ se inventa una palabra y el _jugador2_ debe acertarla en un número máximo de intentos.
+* En cada intento, el _jugador2_ dice una letra y el _jugador1_ le dice si está o no presente en la palabra que se inventó. Además, si está, debe mostrarle en qué posiciones está.
+* No se permite que el _jugador2_ repita letras.
+
+Más concretamente, el programa debe realizar estas tareas:
+1. Al comienzo, el programa le pide al _jugador1_ que le diga la palabra que se ha inventado. El _jugador2_ no debería verla. El _jugador1_ también podrá indicar el límite de intentos para adivinar.  
+    Para almacenar la palabra usaremos un objeto de tipo `string`. Observe que debe tener cuidado con que el usuario escriba palabras válidas (sin caracteres que no sean alfabéticos). Tenga presente también que se distinguen mayúsculas y minúsculas.  
+    Por ejemplo, si la palabra que se ha inventado es “ballena” y queremos tener un máximo de 4 intentos, el comienzo de la ejecución del programa podría ser este:  
+    ~~~
+    Hay dos jugadores:
+    1.- El que se inventa la palabra
+    2.- El que adivina la palabra
+    Jugador 1: escribe una palabra
+    Jugador 2: ¡No mires!
+    La palabra debe tener al menos una letra: ballena
+    Jugador 1: ¿de cuántos intentos disponemos? 4
+    ~~~
+2. Comenzamos el juego mostrando al _jugador2_ las letras que tiene la palabra que debe adivinar y otra información relevante (número de intentos que le quedan, letras que ha dicho...).
+3. Ahora el _jugador2_ irá diciendo letras y el programa le irá indicando si están o no mostrando, en cada intento, información sobre la evolución del juego.
+    * Si el jugador acierta se mostrarán las letras en la posición correspondiente.
+    * Si el jugador falla se descontará un intento y se guardará la letra que ha dicho para que lo tenga presente.
+    * También se informará cuando el _jugador2_ repita letras sin penalizar dichos intentos.
+
+A continuación vemos una posible ejecución para averiguar la palabra “ballena” introducida previamente:
+
+~~~
+La palabra es: -------
+Letras usadas:
+Intentos: 4
+Dime una letra: u
+Mal, la letra no está
+
+La palabra es: -------
+Letras usadas: u
+Intentos: 3
+Dime una letra: a
+Bien, la letra está en la palabra oculta
+
+La palabra es: -a----a
+Letras usadas: u a
+Intentos: 3
+Dime una letra: a
+¡ Esa letra ya la dijiste !
+
+La palabra es: -a----a
+Letras usadas: u a
+Intentos: 3
+Dime una letra: n
+Bien, la letra está en la palabra oculta
+
+La palabra es: -a---na
+Letras usadas: u a n
+Intentos: 3
+Dime una letra:
+~~~
+
+Debe modularizar convenientemente este programa.
+
+###### Ampliación
+
+Puede hacer más interesante este juego si consigue que, en lugar de que sea el usuario el que escribe la palabra a buscar, sea el propio ordenador el que se la invente. Para ello puede disponer de un listado de palabras almacenado en un vector de cadenas de caracteres. El programa comenzará eligiendo una de ellas al azar: bastaría con inventarse un número entero entre 0 y el número de palabras almacenadas menos uno, que haría referencia a la posición del vector –la palabra– que vamos a elegir para jugar.
+
+Dicho vector de palabras puede codificarse en el propio programa o bien se puede disponer de un fichero de texto plano con las palabras que se leerá (mediante la técnica de copiar y pegar) al comienzo de la ejecución. Igualmente el número de intentos podría generarse aleatoriamente, o incluso generarse en función del tamaño de la palabra a buscar o el número de letras distintas que tiene.
+
 - - -
 
 ##### Ejercicio 4.23 ¬ Buscaminas
+
+El juego del buscaminas comienza con un tablero de F filas y C columnas, donde se ocultan N minas. Inicialmente no se sabe nada sobre lo que hay debajo de cada casilla, pudiendo ser una casilla sin mina o
+con mina.
+El problema consiste en localizar las minas sin detonar ninguna de ellas. En cada paso, el jugador escoge entre:
+1. Destapar una casilla. Si es una mina, habrá detonado y el juego ha terminado sin éxito. Si no lo es, se abrirá la casilla
+y el resto de casillas del entorno.
+2. Marcar una casilla como posición probable de una mina. Es decir, el jugador determina que esta casilla nunca se
+abrirá, ya que piensa que tiene una mina.
+Si el juego continúa y llega el momento en que todas las casillas se han abierto (excepto las que contienen una mina),
+no quedarán casillas por abrir y, por tanto, se habrá ganado el juego.
+Para poder guiar al jugador de forma que pueda averiguar dónde se encuentran las minas, el juego ofrece pistas sobre
+dónde podrían estar las minas. En concreto, cuando se abre una casilla sin mina existen dos posibilidades:
+1. Está vacía, sin mina, y no hay ninguna mina al lado. En este caso, el juego explora automáticamente las 8 casillas
+que hay a su alrededor, abriendo aquellas que no tengan mina.
+2. Está vacía, sin mina, pero tiene una o más minas al lado. En este caso el juego se limita a mostrar al jugador la
+casilla como vacía, pero mostrando un número que indica el número de minas que están en su entorno.
+El jugador deberá analizar los números que se van mostrando para deducir dónde se sitúan las N minas que sabemos
+oculta el tablero.
+
+###### La dinámica de juego
+
+Se pretende obtener un programa sencillo que pueda usarse con la consola. Por tanto, las entradas y salidas deberán
+realizarse con cin>> y cout<<. Se propone la siguiente interfaz:
+• Inicialmente comienza el juego pidiendo los parámetros de dificultad. Estos parámetros están compuestos por el
+número de filas, el número de columnas, y el número de minas ocultas. Observe que el número de minas no puede
+ser demasiado grande. Por ejemplo, podemos obligar a que siempre haya un número mínimo de 5 minas y un
+número máximo que corresponde al 50 % de casillas en el tablero.
+• En cada iteración, el juego muestra el tablero actual y pregunta por una acción a realizar. La acción puede ser:
+• Abrir una posición. El usuario escribe tres datos, el primero será una palabra “a” o “abrir” (con cualquier
+combinación mayúsculas/minúsculas), y los dos siguientes la fila y columna correspondientes. En este caso, el
+programa abre la casilla indicada modificando el tablero según corresponda. Observe que esta acción no hace
+nada si la casilla ya está abierta o tiene una marca.
+• Marcar/Desmarcar una posición. El usuario escribe tres datos, el primero una palabra “m” o “marcar” (con
+cualquier combinación mayúsculas/minúsculas), y los dos siguientes la fila y columna correspondiente. Si la
+casilla está sin marcar la pone como marcada, y en caso de que ya esté marcada elimina la marca.
+• El juego termina con éxito cuando todas las casillas sin mina están abiertas. Por otro lado, el juego termina sin éxito
+si se realiza una acción de apertura sobre una casilla que contiene una mina.
+
+###### Diseño propuesto
+
+Existen distintas alternativas para almacenar el tablero del juego. En principio, la más sencilla es almacenar la
+información en un vector de vectores de enteros, y codificar con distintos enteros la situación de cada casilla, incluyendo
+información sobre el contenido, el estado (abierta o no) y si está marcada.
+Para simplificar el problema, proponemos una forma de codificar dicha información, aunque pueden establecerse
+otras. En nuestra solución, proponemos que se guarde toda la información posible en el tablero, de forma que sea más
+sencillo y eficiente visualizarlo o procesarlo. En concreto, proponemos que el tablero contenga un entero con la siguiente
+codificación:
+• Si contiene un número del 0 al 9, es una casilla oculta. Además, el entero indica el número de minas que hay
+alrededor (del 0 al 8), o indica que es una mina (el 9).
+• Si contiene un número del 10 al 19, es una casilla que se ha abierto. Contiene la misma información que los números
+del 0 al 9, aunque como abiertas. Así, por ejemplo, el número 3 indica que está oculta y hay 3 minas alrededor, y el
+número 3+10 también indica que hay 3 minas alrededor, aunque es una casilla abierta.
+• Si contiene un número del 20 al 29, es una casilla marcada. Contiene la misma información que los números del 0 al
+9, aunque como marcada. Por ejemplo, el número 3+20 indica que hay 3 minas alrededor y que el usuario la tiene
+como marcada.
+Con esta codificación, podemos deducir que una partida se ha perdido cuando hemos abierto una casilla 9.
+Algunas de las funciones o módulos que puede contener la solución son:
+• Generar el tablero.
+• Imprimir el tablero. Esta función debería facilitar al usuario observar el estado actual del tablero para poder tomar
+una decisión.
+• Solicitar una jugada. Deberá pedir una terna (acción, fila, columna) para procesar la jugada. Recuerde que la acción
+se especifica con una palabra, y que dicha palabra puede estar en minúscula o mayúscula.
+• Comprobar si se ha resuelto el tablero. Será necesario comprobar que no quedan casillas por abrir y que las marcas
+son correctas.
+• Abrir casilla. Corresponde al procesamiento de la acción de abrir sobre una determinada casilla (se explica más
+adelante).
+Lógicamente, se puede decidir el conjunto de funciones que considere más conveniente, incluyendo éstas, parte de
+éstas, y otras que probablemente necesitará.
+
+###### Generación del tablero
+
+La generación del tablero consiste en crear una estructura bidimensional con tantas filas y columnas como se desee, y
+generar aleatoriamente la posición de las minas.
+Se debe tener especial cuidado en la generación de minas ya que, al generar la posición de las minas de forma aleatoria,
+podría ocurrir que se intente colocar más de una vez una mina en una misma casilla. Lógicamente, sólo es posible tener
+una mina en una casilla, y por tanto, si ya existe una mina, deberá repetirse la generación en una casilla distinta.
+Una vez generadas las minas, se deberá recorrer el tablero para asignar, a cada una de las restantes casillas, el valor
+entero que corresponde al número de minas en su entorno.
+
+###### Algoritmo para "abrir" una casilla
+
+La parte más complicada, desde el punto de vista algorítmico, es probablemente la apertura de una posición o casilla.
+Esta dificultad se debe a que abrir una casilla puede provocar la apertura de algunas de su entorno y éstas, a su vez, otras
+adicionales, de forma que se pueden encadenar un número muy alto de aperturas.
+La idea es que la apertura de una casilla que no tiene mina en ella ni en su entorno (codificada como cero) dispara la
+apertura de cualquier casilla de su alrededor. Un algoritmo sencillo para resolver el problema a partir de una casilla ( f i , c i )
+es el siguiente:
+1. Añadir la casilla ( f i , c i ) al conjunto C de casillas por abrir.
+2. Mientras queden casillas por procesar en C:
+a) Extraer una casilla ( f , c) del conjunto C de pendientes.
+b) Si la casilla ( f , c) tiene un número entre 1 y 8, modificar como abierta.
+c) Si la casilla ( f , c) tiene un número cero (vacía, oculta y sin minas vecinas), ponerla como abierta e insertar
+todas sus vecinas al conjunto C de pendientes.
+Una vez que el conjunto C queda vacío, todas las casillas vacías conectadas con la original ( f i , c i ) se habrán visitado,
+es decir, se habrán abierto. Observe que cualquier casilla con un valor distinto de cero que se abra no propagará el efecto
+de apertura a sus vecinas. Además, las casillas que estén marcadas por el usuario (tienen un valor entre 20 y 29) ni se
+abrirán ni propagarán la apertura.
+
+
+- - -
