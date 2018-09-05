@@ -11,7 +11,6 @@ Bienvenido al repositorio de las Clases de Programación de [Miguel Ángel (@mia
 | [Ejercicios](./Ejercicios) | Ejercicios de programación, por temas. |
 | [Soluciones](./Soluciones) | Soluciones a algunos de los ejercicios. |
 | [Manuales](./Manuales) | Manuales de uso de `git`, GitHub, Markdown... entre otros. |
-| [Recursos](./Recursos) | Programas y recursos utilizados para las explicaciones. |
 
 ## Qué es lo que vamos a aprender
 
