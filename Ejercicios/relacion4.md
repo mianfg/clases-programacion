@@ -3,6 +3,12 @@
 > **Clases de programación en C++** · septiembre de 2018  
 > Miguel Ángel Fernández Gutiérrez ([@mianfg](https://mianfg.bloomgogo.com))
 
+- - -
+
+:pencil: Encuentra los **apuntes** de este tema [aquí](../Apuntes/tema4.md).
+
+- - -
+
 ## Ejercicios orientados
 
 ### Parametrización de las funciones. Parámetros y devolución
