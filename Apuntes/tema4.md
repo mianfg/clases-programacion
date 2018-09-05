@@ -5,6 +5,9 @@
 
 - - -
 
+:pencil2: Encuentra la relación de ejercicios de este tema [aquí](../Ejercicios/relacion4.md).
+
+- - -
 ## 👉 Tabla de contenidos
 
 1. [Motivación al uso de funciones](#1-motivación-al-uso-de-funciones)
