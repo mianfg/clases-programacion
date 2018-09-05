@@ -6,9 +6,10 @@ Bienvenido al repositorio de las Clases de Programación de [Miguel Ángel (@mia
 
 | Carpeta | Descripción |
 | --- | --- |
-| [Apuntes](./Apuntes) | Aquí subiremos los apuntes del curso (que lo haréis vosotros), en **Markdown**.
+| [Apuntes](./Apuntes) | Aquí subiremos los apuntes del curso (que lo haréis vosotros), en **Markdown**. |
+| [Ejemplos](./Ejemplos) | Código funcional y descargable, en `.cpp`, de los ejemplos de los apuntes. |
 | [Ejercicios](./Ejercicios) | Ejercicios de programación, por temas. |
-| [Entregas](./Entregas) | Aquí podrás subir tus ejercicios (dentro hay una carpeta por alumno), y de ese modo podemos revisar los fallos y las dudas. |
+| [Soluciones](./Soluciones) | Soluciones a algunos de los ejercicios. |
 | [Manuales](./Manuales) | Manuales de uso de `git`, GitHub, Markdown... entre otros. |
 | [Recursos](./Recursos) | Programas y recursos utilizados para las explicaciones. |
 
