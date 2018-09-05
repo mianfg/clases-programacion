@@ -4,3 +4,7 @@
 > Miguel Ángel Fernández Gutiérrez ([@mianfg](https://mianfg.bloomgogo.com))
 
 En esta carpeta encontrarás programas más complejos, completos y bien documentados, excelentes para consolidar conceptos.
+
+## Programas en esta carpeta
+
+| [`hangman.cpp`](./hangman.cpp) | El clásico juego del ahorcado. |
