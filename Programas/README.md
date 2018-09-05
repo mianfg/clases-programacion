@@ -7,4 +7,6 @@ En esta carpeta encontrarás programas más complejos, completos y bien document
 
 ## Programas en esta carpeta
 
+| Nombre | Descripción |
+| --- | --- |
 | [`hangman.cpp`](./hangman.cpp) | El clásico juego del ahorcado. |
