@@ -10,6 +10,7 @@ Bienvenido al repositorio de las Clases de Programación de [Miguel Ángel (@mia
 | [Ejemplos](./Ejemplos) | Código funcional y descargable, en `.cpp`, de los ejemplos de los apuntes. |
 | [Ejercicios](./Ejercicios) | Ejercicios de programación, por temas. |
 | [Soluciones](./Soluciones) | Soluciones a algunos de los ejercicios. |
+| [Programas](./Programas) | Programas completos más complejos. |
 | [Manuales](./Manuales) | Manuales de uso de `git`, GitHub, Markdown... entre otros. |
 
 ## Qué es lo que vamos a aprender
